@@ -1,9 +1,12 @@
 import React from "react";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
     <>
-      <h2>This is EL.C page</h2>
+      <Header />
+      <Footer />
     </>
   );
 }
