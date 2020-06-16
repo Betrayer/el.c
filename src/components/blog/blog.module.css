@@ -1,0 +1,10 @@
+@media (min-width: 768px) {
+  .postGrid {
+    display: grid;
+    grid-template-columns: 1.5fr 3fr 2fr 2fr 1.5fr;
+    grid-template-rows: 20% 15% 25% 10% 20% 10%;
+    grid-gap: 0px;
+    /* height: 100vh; */
+    padding: 5px;
+  }
+}
