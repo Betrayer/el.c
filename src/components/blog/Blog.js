@@ -56,9 +56,16 @@ const Blog = () => {
   return (
     <div className={styles.bg}>
       <div>Header</div>
+      <div className={styles.imgWrapper}>
       <div className={styles.mainImg}></div>
+      <div className={styles.mainImgTextWrapper}>
+          <h3 className={styles.mainImgTitle}>Наш блог</h3>
+          <p className={styles.mainImgText}>Любой может сделать из простого сложное.</p>
+          <p className={styles.mainImgText}>Мы умеем превратить сложное в простое.</p>
+      </div>
+      </div>
       <div className={styles.container}>
-        <h2 className={styles.blogTitle}>Blog</h2>
+        <h2 className={styles.blogTitle}>Блог</h2>
         <ul className={styles.postGrid}>
           {posts.map((post) => (
             <li key={post.id} className={styles.post}>
