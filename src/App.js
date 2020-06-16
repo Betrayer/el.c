@@ -1,14 +1,15 @@
 import React from "react";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
-import Services from "./components/services/Services";
+import Blog from './components/blog/Blog.js'
+import './app.module.css'
 
 function App() {
   return (
     <>
-      <Header />
-      <Services />
-      <Footer />
+      {/* <Header /> */}
+      <Blog />
+      {/* <Footer /> */}
     </>
   );
 }

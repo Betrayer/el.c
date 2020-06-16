@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "M PLUS 1p";
+  font-style: normal;
+  font-weight: 100;
+  src: local("M PLUS 1p Thin"), local("MPLUS1p-Thin"),
+    url("./assets/fonts/MPLUS1p-Thin.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "M PLUS 1p";
+  font-style: normal;
+  font-weight: 300;
+  src: local("M PLUS 1p Light"), local("MPLUS1p-Light"),
+    url("./assets/fonts/MPLUS1p-Light.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "M PLUS 1p";
+  font-style: normal;
+  font-weight: 400;
+  src: local("M PLUS 1p Regular"), local("MPLUS1p-Regular"),
+    url("./assets/fonts/MPLUS1p-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "M PLUS 1p";
+  font-style: normal;
+  font-weight: 500;
+  src: local("M PLUS 1p Medium"), local("MPLUS1p-Medium"),
+    url("./assets/fonts/MPLUS1p-Medium.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "M PLUS 1p";
+  font-style: normal;
+  font-weight: 700;
+  src: local("M PLUS 1p Bold"), local("MPLUS1p-Bold"),
+    url("./assets/fonts/MPLUS1p-Bold.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "M PLUS 1p";
+  font-style: normal;
+  font-weight: 800;
+  src: local("M PLUS 1p Extra-bold"), local("MPLUS1p-Extrabold"),
+    url("./assets/fonts/MPLUS1p-ExtraBold.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "M PLUS 1p";
+  font-style: normal;
+  font-weight: 900;
+  src: local("M PLUS 1p Black"), local("MPLUS1p-Black"),
+    url("./assets/fonts/MPLUS1p-Black.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+* {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+input {
+  border: none;
+  background-color: transparent;
+}
+input:focus{
+  outline: none;
+}
+ul {
+  padding: 0;
+}
