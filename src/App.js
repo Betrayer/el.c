@@ -4,13 +4,15 @@ import Footer from "./components/footer/Footer";
 import Blog from './components/blog/Blog.js'
 import Services from "./components/services/Services";
 import MainBlog from "./components/mainBlog/MainBlog";
+import ExtendedMenu from "./components/extendedMenu/ExtendedMenu";
 import './app.module.css'
 
 function App() {
   return (
     <>
+    <ExtendedMenu />
       {/* <Header /> */}
-      <Services />
+      {/* <Services /> */}
       {/* <Blog /> */}
       <MainBlog />
       {/* <Footer /> */}

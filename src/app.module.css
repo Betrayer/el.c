@@ -74,6 +74,9 @@ input:focus{
 ul {
   padding: 0;
 }
+a{
+  color: #fff;
+}
 
 .container{
   width: 280px;
