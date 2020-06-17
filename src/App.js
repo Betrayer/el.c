@@ -12,7 +12,7 @@ function App() {
     <>
     <ExtendedMenu />
       {/* <Header /> */}
-      {/* <Services /> */}
+      <Services />
       {/* <Blog /> */}
       <MainBlog />
       {/* <Footer /> */}
