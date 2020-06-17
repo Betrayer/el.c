@@ -16,10 +16,10 @@ function App() {
     //   {routing}
     // </Router>
     <>
-    <ExtendedMenu />
-    <Main/>
       {/* <Header /> */}
-      {/* <Services /> */}
+    {/* <ExtendedMenu /> */}
+    <Main/>
+      <Services />
       {/* <Blog /> */}
       {/* <MainBlog /> */}
       {/* <Footer /> */}

@@ -28,13 +28,9 @@ const Header = () => {
     alert("langSwitch");
   };
 
-  const openMenu = () => {
-    setActive(!active);
-  };
 
   return (
     <>
-      <ExtendedMenu activeMenu={active} openMenu={openMenu} />
       <section className={css.header}>
         <div className={css.navWrapper}>
           <div className={css.logoWrapper}>
@@ -78,6 +74,7 @@ const Header = () => {
           </div>
         </div>
       </section>
+      <ExtendedMenu activeMenu={active} />
     </>
   );
 };

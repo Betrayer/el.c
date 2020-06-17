@@ -38,6 +38,7 @@
   background: transparent;
   width: 274px;
   height: auto;
+  margin-left: 20%;
 }
 .circle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
