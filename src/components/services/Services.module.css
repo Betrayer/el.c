@@ -1,24 +1,141 @@
 .services_container {
-  height: 776px;
+  width: 100%;
   background-color: #424b5a;
 }
 
-.services_list {
-  display: flex;
-  justify-content: space-around;
+.services_wrapper {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+.services_title {
+  font-family: 'MPLUS1p';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 75px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  padding-bottom: 20px;
 }
 
-.services_list li{
+.services_item_title {
+    text-align: center;
+  font-family: 'MPLUS1p';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0.02em;
+  color: white;
+  padding-bottom: 20px;
+}
+
+.services_text {
+    text-align: center;
+  font-family: 'MPLUS1p';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  color: white;
+  padding-bottom: 20px;
+}
+
+.services_logo {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .services_logo {
+    display: block;
+  }
+  .services_container {
+    height: 776px;
+    background-color: #424b5a;
+  }
+
+  .services_title {
+    font-family: Mplus 1p;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 75px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+  }
+
+  .services_item_title {
+    font-family: Mplus 1p;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+  }
+
+  .services_text {
+    font-family: Mplus 1p;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+  }
+
+  .services_logo {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+  }
+
+  .services_wrapper {
+    width: 1100px;
+    margin: 0 auto;
+  }
+
+  .services_list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .services_list li {
     width: 300px;
-}
+    color: white;
+  }
 
-.services_box1 {
-  order: 1;
-}
+  .services_box1 {
+    order: 1;
+    height: 450px;
+  }
+  .services_box2 {
+    order: 3;
+    height: 450px;
+  }
+  .services_box3 {
+    order: 2;
+    top: 50px;
+  }
 
-.services_box2 {
-  order: 3;
-}
-.services_box3 {
-  order: 2;
+  .services_box1_list {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .services_box2_list {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .services_box3 {
+    height: 200px;
+    bottom: 20px;
+    margin-top: 490px;
+  }
 }
