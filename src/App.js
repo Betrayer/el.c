@@ -19,7 +19,7 @@ function App() {
       {/* <Header /> */}
     {/* <ExtendedMenu /> */}
     <Main/>
-      <Services />
+      {/* <Services /> */}
       {/* <Blog /> */}
       {/* <MainBlog /> */}
       {/* <Footer /> */}
