@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import styles from "./extendedMenu.module.css";
 
-const ExtendedMenu = () => {
-  const [active, setActive] = useState(false);
+const ExtendedMenu = ({ activeMenu }) => {
   const menuLinks = ["Портфолио", "Услуги", "О нас", "Блог"];
 
   return (
     <>
-      <div style={{ backgroundColor: "#000", padding: "20px" }}>
+      {/* <div style={{ backgroundColor: "#000", padding: "20px" }}>
         <button
           onClick={() => setActive(!active)}
           className={active ? styles.menuActive : styles.menu}
@@ -18,14 +17,14 @@ const ExtendedMenu = () => {
             <path d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path>
           </svg>
         </button>
-      </div>
+      </div> */}
       <div className={styles.menuWrapper}>
         <div
           className={
-            active ? styles.menuWhiteLayerActive : styles.menuWhiteLayer
+            activeMenu ? styles.menuWhiteLayerActive : styles.menuWhiteLayer
           }
         ></div>
-        <div className={active ? styles.menuBgLayerActive : styles.menuBgLayer}>
+        <div className={activeMenu ? styles.menuBgLayerActive : styles.menuBgLayer}>
           <div className={styles.rightSide}>
             <nav className={styles.menuNav}>
               <ul className={styles.menuNavList}>
@@ -34,7 +33,7 @@ const ExtendedMenu = () => {
                     key={ind}
                     style={{ transitionDelay: `${ind * 0.1 + 0.4}s` }}
                     className={
-                      active
+                        activeMenu
                         ? styles.menuSocialsLinkActive
                         : styles.menuPageLink
                     }

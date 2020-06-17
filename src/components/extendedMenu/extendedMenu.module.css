@@ -71,7 +71,7 @@
 .menuBgLayerActive,
 .menuBgLayer {
   background-color: #fff;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 100px);
   transform: translateX(-100%);
   position: fixed;
   top: 80px;
