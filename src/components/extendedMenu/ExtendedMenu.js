@@ -3,7 +3,7 @@ import styles from "./extendedMenu.module.css";
 
 const ExtendedMenu = () => {
   const [active, setActive] = useState(false);
-  const menuLinks = ['Портфолио', 'Услуги', 'О нас', 'Блог']
+  const menuLinks = ["Портфолио", "Услуги", "О нас", "Блог"];
 
   return (
     <>
@@ -29,7 +29,19 @@ const ExtendedMenu = () => {
           <div className={styles.rightSide}>
             <nav className={styles.menuNav}>
               <ul className={styles.menuNavList}>
-                  {menuLinks.map((link, ind) => <li key={ind} style={{transitionDelay: `${ind * 0.1 + 0.4}s`}} className={active ? styles.menuSocialsLinkActive :styles.menuPageLink}>{link}</li>)}
+                {menuLinks.map((link, ind) => (
+                  <li
+                    key={ind}
+                    style={{ transitionDelay: `${ind * 0.1 + 0.4}s` }}
+                    className={
+                      active
+                        ? styles.menuSocialsLinkActive
+                        : styles.menuPageLink
+                    }
+                  >
+                    <span className={styles.menuPageLinkText}>{link}</span>
+                  </li>
+                ))}
               </ul>
             </nav>
             <div className={styles.menuSocials}>
