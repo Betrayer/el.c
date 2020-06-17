@@ -1,0 +1,15 @@
+.footer {
+  width: 100wv;
+  height: 100px;
+  background-color: #000;
+}
+
+.socialsHeader {
+  color: #aaa;
+}
+
+.socialIconWrapper {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}

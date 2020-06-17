@@ -20,7 +20,7 @@ function App() {
       {/* <Services /> */}
       {/* <Blog /> */}
       <MainBlog />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
