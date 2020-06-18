@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from "react";
 // import { withRouter, useHistory } from "react-router-dom";
 // import FB from 'fb'
+import Header from "../header/Header";
 import styles from "./blog.module.css";
+import Footer from "../footer/Footer";
 
 const Blog = () => {
     const [isFetching, setIsFetching] = useState(false);
     const [postsToShow, setPostsToShow] = useState([])
   const [posts, setPosts] = useState([
     {
-      message: "first post",
-      img: "https://source.unsplash.com/5VXH4RG88gc",
-      id: 1,
-    },
-    {
       message: "coffee",
       img: "https://source.unsplash.com/XtUd5SiX464",
       id: 2,
+    },
+    {
+      message: "first post",
+      img: "https://source.unsplash.com/5VXH4RG88gc",
+      id: 1,
     },
     {
       message:
@@ -132,6 +134,11 @@ const Blog = () => {
     if (!isFetching) return;
     fetchMoreListItems();
     }, [isFetching]);
+    useEffect(() => {
+      fetchMoreListItems();
+      }, []);
+
+
     function handleScroll() {
         const windowHeight =
           "innerHeight" in window
@@ -158,7 +165,7 @@ const Blog = () => {
 
   return (
     <div className={styles.bg}>
-      <div>Header</div>
+      <Header />
       <div className={styles.imgWrapper}>
       <div className={styles.mainImg}></div>
       <div className={styles.mainImgTextWrapper}>
@@ -183,7 +190,7 @@ const Blog = () => {
           ))}
         </ul>
       </div>
-      <div>footer</div>
+      <Footer />
     </div>
   );
 };

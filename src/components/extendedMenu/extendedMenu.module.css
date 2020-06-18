@@ -71,10 +71,10 @@
 .menuBgLayerActive,
 .menuBgLayer {
   background-color: #fff;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 50px);
   transform: translateX(-100%);
   position: fixed;
-  top: 80px;
+  top: 50px;
   width: 100vw;
   transition: transform 0.3s ease-in-out;
 }
@@ -119,3 +119,11 @@
 .leftSide {
   display: none;
 }
+@media (min-width: 768px) {
+.menuWhiteLayer,
+.menuWhiteLayerActive,
+.menuBgLayerActive,
+.menuBgLayer {
+  top: 80px;
+  height: calc(100vh - 80px);
+}}
