@@ -32,7 +32,7 @@ const ExtendedMenu = ({ activeMenu }) => {
               </ul>
             </nav>
             <div className={styles.menuSocials}>
-              <h3 className={styles.menuSocialsTitle}>Social media</h3>
+              <h3 className={styles.menuSocialsTitle}>Мы в соцсетях</h3>
               <ul className={styles.menuSocialsList}>
                 <li className={styles.menuSocialsLink}>
                   <a
@@ -41,7 +41,7 @@ const ExtendedMenu = ({ activeMenu }) => {
                     target="_blank"
                     href="https://twitter.com/AnteBadzim"
                   >
-                    <span className={styles.menuSocialsIcon}></span>
+                    
                   </a>
                 </li>
                 <li className={styles.menuSocialsLink}>
@@ -69,7 +69,7 @@ const ExtendedMenu = ({ activeMenu }) => {
           </div>
           <div className={styles.leftSide}>
             <p className={styles.someText}>
-              Самые свежие работы Каждый созданный нами интернет сайт является
+              Самые свежие работы каждый созданный нами интернет сайт является
               результатом умелой комбинации маркетинговой тратегии, креативного
               дизайна и современных технологий разработки!
             </p>
