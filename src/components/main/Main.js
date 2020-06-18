@@ -11,7 +11,7 @@ const Main = () => {
     <>
       <Header />
       <Services />
-      <Portfolio />
+      {/* <Portfolio /> */}
       <MainBlog />
       <Footer />
     </>
