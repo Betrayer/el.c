@@ -1,13 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import ExtendedMenu from "../extendedMenu/ExtendedMenu";
 import css from "./header.module.css";
 
 const Header = () => {
   const [active, setActive] = useState(false);
+  const [russian, setRussian] = useState(false);
+  const [ukrainian, setUkrainian] = useState(false);
+  const [english, setEnglish] = useState(false);
+  const [langSwitcher, setLangSwitcher] = useState(false);
+
+  useEffect(() => {
+    setRussian(true);
+  }, []);
 
   const langSwitch = () => {
-    alert("langSwitch");
+    setLangSwitcher(!langSwitcher);
+  };
+
+  const changeToRussian = () => {
+    setRussian(true);
+    setUkrainian(false);
+    setEnglish(false);
+    setLangSwitcher(!langSwitcher);
+  };
+
+  const changeToUkrainian = () => {
+    setUkrainian(true);
+    setRussian(false);
+    setEnglish(false);
+    setLangSwitcher(!langSwitcher);
+  };
+
+  const changeToEnglish = () => {
+    setEnglish(true);
+    setRussian(false);
+    setUkrainian(false);
+    setLangSwitcher(!langSwitcher);
   };
 
   return (
@@ -20,7 +49,7 @@ const Header = () => {
           <div className={css.menuWrapper}>
             <ul className={css.menuList}>
               <li className={css.menuListItem}>
-                <NavLink to="/shit" className={css.menuItem}>
+                <NavLink to="/portfolio" className={css.menuItem}>
                   Портфолио
                 </NavLink>
               </li>
@@ -36,9 +65,42 @@ const Header = () => {
               </li>
             </ul>
             <div className={css.langWrapper}>
-              <p className={css.lang} onClick={langSwitch}>
-                RU
-              </p>
+              {russian ? (
+                <p className={css.lang} onClick={langSwitch}>
+                  RU
+                </p>
+              ) : (
+                <></>
+              )}
+              {ukrainian ? (
+                <p className={css.lang} onClick={langSwitch}>
+                  UKR
+                </p>
+              ) : (
+                <></>
+              )}
+              {english ? (
+                <p className={css.lang} onClick={langSwitch}>
+                  EN
+                </p>
+              ) : (
+                <></>
+              )}
+              {langSwitcher ? (
+                <div className={css.langs}>
+                  <span className={css.langSpan} onClick={changeToRussian}>
+                    RU
+                  </span>
+                  <span className={css.langSpan} onClick={changeToUkrainian}>
+                    UKR
+                  </span>
+                  <span className={css.langSpan} onClick={changeToEnglish}>
+                    EN
+                  </span>
+                </div>
+              ) : (
+                <></>
+              )}
             </div>
             <button
               onClick={() => setActive(!active)}

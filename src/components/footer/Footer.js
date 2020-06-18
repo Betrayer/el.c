@@ -7,17 +7,17 @@ const Footer = () => {
       <span className={css.socialsHeader}>Мы в соцсетях</span>
       <ul className={css.socialsList}>
         <li className={css.socialsListItem}>
-          <a href="#" className={css.iconLink}>
+          <a href="https://twitter.com/explore" target="_blank" className={css.iconLink}>
             <div className={css.socialIconWrapperTwitter}></div>
           </a>
         </li>
         <li className={css.socialsListItem}>
-          <a href="#" className={css.iconLink}>
+          <a href="https://www.facebook.com" target="_blank" className={css.iconLink}>
             <div className={css.socialIconWrapperFacebook}></div>
           </a>
         </li>
         <li className={css.socialsListItem}>
-          <a href="#" className={css.iconLink}>
+          <a href="https://www.instagram.com" target="_blank" className={css.iconLink}>
             <div className={css.socialIconWrapperInstagram}></div>
           </a>
         </li>
