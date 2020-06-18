@@ -15,7 +15,7 @@
   height: calc(100% + 20px);
   width: 1px;
   bottom: 8px;
-  left: 18%;
+  left: 4%;
   background-color: #fff;
 }
 .container::before{
@@ -49,12 +49,16 @@
   margin-bottom: 50px;
   max-width: 250px;
 }
+.btnWrapper{
+  position: absolute;
+  right: 0;
+  bottom: -200px;
+}
 .learnMore {
   position: relative;
   background: transparent;
-  width: 274px;
+  width: 214px;
   height: auto;
-  margin-left: 29%;
   margin-top: 50px;
   margin-bottom: 170px;
 }
@@ -68,6 +72,7 @@
   background: #ffffff;
   border-radius: 20px;
 }
+
 .icon,
 .arrow {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -100,7 +105,7 @@
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50px;
   right: 0;
   bottom: 0;
   padding: 0.75rem 0;
@@ -109,16 +114,9 @@
   line-height: 1.6;
   text-align: center;
   text-transform: uppercase;
+  font-size: 13px;
 }
-.learnMore:hover .circle {
-  width: 100%;
-}
-.learnMore:hover .arrow {
-  transform: translate(7.0rem, 0);
-}
-.learnMore:hover .buttonText {
-  color: #10131f;
-}
+
 @media (min-width: 768px) {
   .container {
     width: 100%;
@@ -155,9 +153,27 @@
   .post:nth-child(2) {
     margin-top: 10px;
   }
+  .btnWrapper{
+    position: absolute;
+    right: 40px;
+    bottom: -200px;
+  }
   .learnMore{
       margin-top: 40px;
-      margin-left: 65.4%;
+      width: 264px;
+  }
+  .learnMore:hover .circle {
+    width: 100%;
+  }
+  .learnMore:hover .arrow {
+    transform: translate(7rem, 0);
+  }
+  .learnMore:hover .buttonText {
+    color: #10131f;
+  }
+  .buttonText {
+    left: 0px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -194,9 +210,9 @@
   .post:nth-child(3) {
     margin-top: 70px;
   }
+ 
   .learnMore{
     margin-top: 10px;
-    margin-left: 78.2%;
 }
 }
 

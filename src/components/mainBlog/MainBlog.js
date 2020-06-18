@@ -58,6 +58,7 @@ const MainBlog = () => {
             </li>
           ))}
         </ul>
+        <div className={styles.btnWrapper}>
         <button
           onMouseOver={() => setArrow(true)}
           onMouseLeave={() => setArrow(false)}
@@ -71,7 +72,7 @@ const MainBlog = () => {
             )}
           </span>
           <span className={styles.buttonText}>узнать подробнее</span>
-        </button>
+        </button></div>
       </div>
     </div>
   );
