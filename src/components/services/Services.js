@@ -5,7 +5,7 @@ import css from "./Services.module.css";
 const TEXTS = ["Наши услуги", "Что мы можем"];
 
 const Services = () => {
-  const [index, setIndex] = React.useState(0);
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
     indexChange();
@@ -18,6 +18,7 @@ const Services = () => {
     if(index < TEXTS.length)
     {setTimeout(() => setIndex(index + 1), 3000)};
   };
+  
   return (
     <section className={css.services_container}>
       <div className={css.services_wrapper}>

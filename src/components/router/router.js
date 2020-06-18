@@ -17,7 +17,7 @@ const lazy404 = lazy(
 const lazyPortfolio = lazy(
   () =>
     import(
-      "../pages/portfolio/Portfolio.js"
+      "../pages/portfolioPage/PortfolioPage.js"
     ) /* webpackChunkName = "Portfolio" */
 );
 
