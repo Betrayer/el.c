@@ -32,7 +32,7 @@ const ExtendedMenu = ({ activeMenu }) => {
               </ul>
             </nav>
             <div className={styles.menuSocials}>
-              <h3 className={styles.menuSocialsTitle}>Social media</h3>
+              <h3 className={styles.menuSocialsTitle}>Мы в соцсетях</h3>
               <ul className={styles.menuSocialsList}>
                 <li className={styles.menuSocialsLink}>
                   <a

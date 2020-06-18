@@ -43,14 +43,15 @@
 }
 
 .langWrapper {
-  width: 26px;
+  width: 36px;
+  position: relative;
 }
 
 .langWrapper::after {
   content: "";
   background-color: tomato;
   height: 1px;
-  width: 26px;
+  width: 36px;
   position: absolute;
 }
 
@@ -62,6 +63,32 @@
   color: white;
   text-align: center;
 }
+
+.langs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 8px;
+  width: 36px;
+  height: 100px;
+  position: absolute;
+  background-color: #000;
+  border-radius: 6px;
+}
+
+.langSpan {
+  color: #fff;
+  width: 36px;
+  height: 26px;
+  cursor: pointer;
+  text-align: center;
+  z-index: 1;
+}
+
+.langSpan:hover {
+  background-color: rgb(80, 80, 80);
+}
+
 .menu,
   .menuActive {
     width: 36px;

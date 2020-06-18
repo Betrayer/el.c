@@ -4,12 +4,14 @@ import Header from "../header/Header";
 import Services from "../services/Services";
 import MainBlog from "../mainBlog/MainBlog";
 import Footer from "../footer/Footer";
+import Portfolio from "../portfolio/Portfolio"; 
 
 const Main = () => {
   return (
     <>
       <Header />
       <Services />
+      {/* <Portfolio /> */}
       <MainBlog />
       <Footer />
     </>
