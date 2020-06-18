@@ -65,7 +65,10 @@
 .menuActive .menuSvg path:nth-child(3) {
   --offset: 58px;
 }
-
+.menuWrapper {
+  position: sticky;
+  z-index: 4;
+}
 .menuWhiteLayer,
 .menuWhiteLayerActive,
 .menuBgLayerActive,
@@ -73,8 +76,8 @@
   background-color: #fff;
   height: calc(100vh - 50px);
   transform: translateX(-100%);
-  position: fixed;
-  top: 50px;
+  position: absolute;
+  /* top: 50px; */
   width: 100vw;
   transition: transform 0.3s ease-in-out;
 }
@@ -97,12 +100,13 @@
   padding-left: 20px;
 }
 .menuNavList {
+  padding-top: 20px;
   width: 100%;
 }
 .menuPageLink,
 .menuSocialsLinkActive {
   cursor: pointer;
-  font-size: 42px;
+  font-size: 38px;
   transform: translateX(-100%);
   transition: all 0.2s ease-in-out;
   transition-delay: 0.5s;
@@ -116,14 +120,179 @@
 .menuSocials {
   margin-top: 70px;
 }
+.menuSocialsTitle {
+  padding: 10px 0;
+}
+.menuSocialsList {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+}
+.menuSocialsLink {
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+.menuSocialsCircle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+.menuSocialsLink::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-image: url(../../assets/icons/socials/facebook.svg);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menuSocialsLink:nth-child(1)::after {
+  background-image: url(../../assets/icons/socials/twitter.svg);
+}
+.menuSocialsLink:nth-child(3)::after {
+  background-image: url(../../assets/icons/socials/instagram.svg);
+}
 .leftSide {
   display: none;
 }
 @media (min-width: 768px) {
-.menuWhiteLayer,
-.menuWhiteLayerActive,
-.menuBgLayerActive,
-.menuBgLayer {
-  top: 80px;
-  height: calc(100vh - 80px);
-}}
+  .menuBgLayerActive,
+  .menuBgLayer {
+    display: flex;
+  }
+  .menuBgLayerActive::before{
+    width: 1px;
+    height: 110vh;
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 34%;
+    background-color: rgba(255, 255, 255, 0.4);;
+  }
+  .menuBgLayerActive::after{
+    width:100vw ;
+    height: 1px;
+    content: "";
+    position: absolute;
+    top: 346px;
+    background-color: rgba(255, 255, 255, 0.4);;
+  }
+  .rightSide {
+    width: 33%;
+    padding-left: 30px;
+    margin-top: 64px;
+  }
+  .rightSide::before {
+    width: 34% ;
+    height: 1px;
+    content: "";
+    position: absolute;
+    top: 80px;
+    background-color: rgba(255, 255, 255, 0.4);
+    left: 0;
+  }
+  .menuPageLink,
+  .menuSocialsLinkActive {
+    font-size: 32px;
+    line-height: 45px;
+    margin-top: 14px;
+  }
+  .menuSocialsTitle{
+    font-size: 24px;
+    padding-bottom: 28px;
+  }
+  .leftSide {
+    display: inline-block;
+    width: 66%;
+    margin-top: 40px;
+    padding-left: 14%;
+    position: relative;
+  }
+  .leftSide::after{
+    content: "";
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background-color: rgba(48, 48, 48, 0.4);
+    position: absolute;
+    top: 306px;
+    left: 1.6%;
+  }
+  .someText{
+    max-width: 410px;
+    width: 80%;
+    font-size: 22px;
+  }
+  .menuContacts{
+    margin-top: 160px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 1200px) {
+  .menuWhiteLayer,
+  .menuWhiteLayerActive,
+  .menuBgLayerActive,
+  .menuBgLayer {
+    top: 0px;
+    height: calc(100vh - 80px);
+  }
+  .menuBgLayerActive::before{
+    height: calc(100vh + 20px);
+    bottom: 0px;
+    left: 34%;
+  }
+  .menuBgLayerActive::after{
+    top: 366px;
+  }
+  .rightSide {
+    width: 33%;
+    padding-left: 10%;
+    margin-top: 70px;
+  }
+  .rightSide::before {
+    top: 90px;
+    background-color: rgba(255, 255, 255, 0.4);
+    left: 0;
+  }
+  .menuPageLink,
+  .menuSocialsLinkActive {
+    margin-top: 20px;
+  }
+  .menuSocials{
+    margin-top: 56px;
+  }
+  .menuSocialsTitle{
+    font-size: 30px;
+    padding-bottom: 28px;
+  }
+  .menuSocialsList {
+    display: flex;
+    width: 230px;
+  }
+  .menuSocialsLink {
+    width: 44px;
+    height: 44px;
+  }
+  .leftSide {
+    margin-top: 48px;
+    padding-left: 12%;
+  }
+  .leftSide::after{
+    width: 420px;
+    height: 420px;
+    top: 318px;
+  }
+  .someText{
+    max-width: 508px;
+  }
+  .menuContacts{
+    font-size: 28px;
+    margin-top: 290px;
+  }
+}
