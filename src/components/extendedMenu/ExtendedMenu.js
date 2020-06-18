@@ -48,7 +48,7 @@ const ExtendedMenu = ({ activeMenu }) => {
               <ul className={styles.menuSocialsList}>
                 <li className={styles.menuSocialsLink}>
                   <a
-                    ç
+                    className={styles.menuSocialsCircle}
                     rel="noopener noreferrer"
                     target="_blank"
                     href="https://twitter.com/AnteBadzim"
