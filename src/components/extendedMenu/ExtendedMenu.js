@@ -24,7 +24,9 @@ const ExtendedMenu = ({ activeMenu }) => {
             activeMenu ? styles.menuWhiteLayerActive : styles.menuWhiteLayer
           }
         ></div>
-        <div className={activeMenu ? styles.menuBgLayerActive : styles.menuBgLayer}>
+        <div
+          className={activeMenu ? styles.menuBgLayerActive : styles.menuBgLayer}
+        >
           <div className={styles.rightSide}>
             <nav className={styles.menuNav}>
               <ul className={styles.menuNavList}>
@@ -33,7 +35,7 @@ const ExtendedMenu = ({ activeMenu }) => {
                     key={ind}
                     style={{ transitionDelay: `${ind * 0.1 + 0.4}s` }}
                     className={
-                        activeMenu
+                      activeMenu
                         ? styles.menuSocialsLinkActive
                         : styles.menuPageLink
                     }

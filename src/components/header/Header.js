@@ -1,33 +1,14 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import ExtendedMenu from "../extendedMenu/ExtendedMenu";
 import css from "./header.module.css";
 
 const Header = () => {
   const [active, setActive] = useState(false);
-  const history = useHistory();
-
-  const hello = () => {
-    alert("HELLO THERE");
-  };
-
-  const toPortfolio = () => {
-    alert("I am portfolio");
-  };
-
-  const toServices = () => {
-    alert("I am services");
-    // history.push("/services");
-  };
-
-  const toAboutUs = () => {
-    alert("I am about us");
-  };
 
   const langSwitch = () => {
     alert("langSwitch");
   };
-
 
   return (
     <>
@@ -39,19 +20,19 @@ const Header = () => {
           <div className={css.menuWrapper}>
             <ul className={css.menuList}>
               <li className={css.menuListItem}>
-                <p className={css.menuItem} onClick={toPortfolio}>
+                <NavLink to="/shit" className={css.menuItem}>
                   Портфолио
-                </p>
+                </NavLink>
               </li>
               <li className={css.menuListItem}>
-                <p className={css.menuItem} onClick={toServices}>
+                <NavLink to="/shit" className={css.menuItem}>
                   Услуги
-                </p>
+                </NavLink>
               </li>
               <li className={css.menuListItem}>
-                <p className={css.menuItem} onClick={toAboutUs}>
+                <NavLink to="/shit" className={css.menuItem}>
                   О нас
-                </p>
+                </NavLink>
               </li>
             </ul>
             <div className={css.langWrapper}>
@@ -59,7 +40,6 @@ const Header = () => {
                 RU
               </p>
             </div>
-            {/* <div className={css.burger}> */}
             <button
               onClick={() => setActive(!active)}
               className={active ? css.menuActive : css.menu}
@@ -70,7 +50,6 @@ const Header = () => {
                 <path d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path>
               </svg>
             </button>
-            {/* </div> */}
           </div>
         </div>
       </section>
