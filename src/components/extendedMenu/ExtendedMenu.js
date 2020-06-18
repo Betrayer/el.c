@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import styles from "./extendedMenu.module.css";
 
-const ExtendedMenu = ({ activeMenu, openMenu }) => {
-  const [active, setActive] = useState(activeMenu);
+const ExtendedMenu = ({ activeMenu }) => {
   const menuLinks = ["Портфолио", "Услуги", "О нас", "Блог"];
 
   return (
@@ -22,10 +21,12 @@ const ExtendedMenu = ({ activeMenu, openMenu }) => {
       <div className={styles.menuWrapper}>
         <div
           className={
-            active ? styles.menuWhiteLayerActive : styles.menuWhiteLayer
+            activeMenu ? styles.menuWhiteLayerActive : styles.menuWhiteLayer
           }
         ></div>
-        <div className={active ? styles.menuBgLayerActive : styles.menuBgLayer}>
+        <div
+          className={activeMenu ? styles.menuBgLayerActive : styles.menuBgLayer}
+        >
           <div className={styles.rightSide}>
             <nav className={styles.menuNav}>
               <ul className={styles.menuNavList}>
@@ -34,12 +35,12 @@ const ExtendedMenu = ({ activeMenu, openMenu }) => {
                     key={ind}
                     style={{ transitionDelay: `${ind * 0.1 + 0.4}s` }}
                     className={
-                      active
+                      activeMenu
                         ? styles.menuSocialsLinkActive
                         : styles.menuPageLink
                     }
                   >
-                    {link}
+                    <span className={styles.menuPageLinkText}>{link}</span>
                   </li>
                 ))}
               </ul>
