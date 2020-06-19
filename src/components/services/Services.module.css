@@ -97,6 +97,21 @@
   transform: translate(-50%, -50%);
 }
 
+.services_cirlce1{
+  width: 150px;
+    position: absolute;
+    left: 50%;
+    top: 41%;
+  transform: translate(-50%, -50%);
+}
+.services_cirlce2{
+  width: 250px;
+    position: absolute;
+    left: 50%;
+    top: 41%;
+  transform: translate(-50%, -50%);
+}
+
 .services_line1 {
   position: absolute;
   left: 66px;
@@ -145,13 +160,13 @@
 .services_line5 {
   position: absolute;
   left: 103.7px;
-  top: 323px;
+  top: 310px;
   transform: rotate(57deg);
 }
 .services_dot5 {
   position: absolute;
   left: 138.6px;
-  top: 297px;
+  top: 284px;
 }
 
 .learnMore {

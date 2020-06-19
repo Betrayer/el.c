@@ -36,6 +36,16 @@ const Services = () => {
           alt="services_logo"
         />
         <img
+          className={css.services_cirlce1}
+          src={require("../../assets/photos/services_circle.png")}
+          alt="services_circle"
+        />
+         <img
+          className={css.services_cirlce2}
+          src={require("../../assets/photos/services_circle2.png")}
+          alt="services_circle"
+        />
+        <img
           className={css.services_dot1}
           src={require("../../assets/photos/services_dot.png")}
           alt="services_line"
