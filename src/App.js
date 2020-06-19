@@ -1,24 +1,12 @@
 import React from "react";
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
-import Blog from './components/blog/Blog.js'
-import Services from "./components/services/Services";
-import MainBlog from "./components/mainBlog/MainBlog";
-import ExtendedMenu from "./components/extendedMenu/ExtendedMenu";
-import './app.module.css'
-import Main from "./components/main/Main";
+import { BrowserRouter as Router } from "react-router-dom";
+import { useRouter } from "./components/router/router";
+import "./app.module.css";
 
-function App() {
+function App(props) {
+  const routing = useRouter(props);
   return (
-    <>
-    <ExtendedMenu />
-    <Main/>
-      {/* <Header /> */}
-      {/* <Services /> */}
-      {/* <Blog /> */}
-      {/* <MainBlog /> */}
-      {/* <Footer /> */}
-    </>
+    <Router>{routing}</Router>
   );
 }
 

@@ -3,9 +3,44 @@ import css from "./footer.module.css";
 
 const Footer = () => {
   return (
-    <>
-      <h2>i am footer</h2>
-    </>
+    <section className={css.footer}>
+      <span className={css.socialsHeader}>Мы в соцсетях</span>
+      <ul className={css.socialsList}>
+        <li className={css.socialsListItem}>
+          <a
+            href="https://twitter.com/explore"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={css.iconLink}
+          >
+            <div className={css.socialIconWrapperTwitter}></div>
+          </a>
+        </li>
+        <li className={css.socialsListItem}>
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={css.iconLink}
+          >
+            <div className={css.socialIconWrapperFacebook}></div>
+          </a>
+        </li>
+        <li className={css.socialsListItem}>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={css.iconLink}
+          >
+            <div className={css.socialIconWrapperInstagram}></div>
+          </a>
+        </li>
+      </ul>
+      <span className={css.socialsCopyright}>
+        © 2020 ELC | All rights reserved
+      </span>
+    </section>
   );
 };
 

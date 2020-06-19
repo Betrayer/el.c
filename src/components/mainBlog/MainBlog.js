@@ -42,7 +42,7 @@ const MainBlog = () => {
   ]);
 
   return (
-    <div className={styles.bg}>
+    <section className={styles.bg}>
       <div className={styles.container}>
         <h2 className={styles.blogTitle}>Блог</h2>
         <ul className={styles.postGrid}>
@@ -58,6 +58,7 @@ const MainBlog = () => {
             </li>
           ))}
         </ul>
+        <div className={styles.btnWrapper}>
         <button
           onMouseOver={() => setArrow(true)}
           onMouseLeave={() => setArrow(false)}
@@ -71,9 +72,9 @@ const MainBlog = () => {
             )}
           </span>
           <span className={styles.buttonText}>узнать подробнее</span>
-        </button>
+        </button></div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,48 +1,47 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./extendedMenu.module.css";
 
-const ExtendedMenu = () => {
-  const [active, setActive] = useState(false);
-  const menuLinks = ['Портфолио', 'Услуги', 'О нас', 'Блог']
+const ExtendedMenu = ({ activeMenu }) => {
+  const menuLinks = ["Портфолио", "Услуги", "О нас", "Блог"];
 
   return (
     <>
-      <div style={{ backgroundColor: "#000", padding: "20px" }}>
-        <button
-          onClick={() => setActive(!active)}
-          className={active ? styles.menuActive : styles.menu}
-        >
-          <svg className={styles.menuSvg} viewBox="0 0 64 48">
-            <path d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"></path>
-            <path d="M19,24 L45,24 C61.2371586,24 57,49 41,33 L32,24"></path>
-            <path d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path>
-          </svg>
-        </button>
-      </div>
       <div className={styles.menuWrapper}>
         <div
           className={
-            active ? styles.menuWhiteLayerActive : styles.menuWhiteLayer
+            activeMenu ? styles.menuWhiteLayerActive : styles.menuWhiteLayer
           }
         ></div>
-        <div className={active ? styles.menuBgLayerActive : styles.menuBgLayer}>
+        <div className={activeMenu ? styles.menuBgLayerActive : styles.menuBgLayer}>
           <div className={styles.rightSide}>
             <nav className={styles.menuNav}>
               <ul className={styles.menuNavList}>
-                  {menuLinks.map((link, ind) => <li key={ind} style={{transitionDelay: `${ind * 0.1 + 0.4}s`}} className={active ? styles.menuSocialsLinkActive :styles.menuPageLink}>{link}</li>)}
+                {menuLinks.map((link, ind) => (
+                  <li
+                    key={ind}
+                    style={{ transitionDelay: `${ind * 0.1 + 0.4}s` }}
+                    className={
+                        activeMenu
+                        ? styles.menuSocialsLinkActive
+                        : styles.menuPageLink
+                    }
+                  >
+                    <span className={styles.menuPageLinkText}>{link}</span>
+                  </li>
+                ))}
               </ul>
             </nav>
             <div className={styles.menuSocials}>
-              <h3 className={styles.menuSocialsTitle}>Social media</h3>
+              <h3 className={styles.menuSocialsTitle}>Мы в соцсетях</h3>
               <ul className={styles.menuSocialsList}>
                 <li className={styles.menuSocialsLink}>
                   <a
-                    ç
+                    className={styles.menuSocialsCircle}
                     rel="noopener noreferrer"
                     target="_blank"
                     href="https://twitter.com/AnteBadzim"
                   >
-                    <span className={styles.menuSocialsIcon}></span>
+                    
                   </a>
                 </li>
                 <li className={styles.menuSocialsLink}>
@@ -70,7 +69,7 @@ const ExtendedMenu = () => {
           </div>
           <div className={styles.leftSide}>
             <p className={styles.someText}>
-              Самые свежие работы Каждый созданный нами интернет сайт является
+              Самые свежие работы каждый созданный нами интернет сайт является
               результатом умелой комбинации маркетинговой тратегии, креативного
               дизайна и современных технологий разработки!
             </p>

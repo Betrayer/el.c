@@ -1,106 +1,298 @@
-
-.menu, .menuActive {
-    width: 36px;
-    height: 36px;
-    padding: 0;
-    margin: 0;
-    outline: none;
-    position: relative;
-    border: none;
-    background: none;
-    cursor: pointer;
-    -webkit-appearence: none;
-    -webkit-tap-highlight-color: transparent;
+.menu,
+.menuActive {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+  -webkit-appearence: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.menuSvg {
+  width: 64px;
+  height: 48px;
+  top: -6px;
+  left: -14px;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  display: block;
+  position: absolute;
+}
+.menuSvg path {
+  -webkit-transition: stroke-dasharray var(--duration, 0.85s)
+      var(--easing, ease) var(--delay, 0s),
+    stroke-dashoffset var(--duration, 0.85s) var(--easing, ease)
+      var(--delay, 0s);
+  transition: stroke-dasharray var(--duration, 0.85s) var(--easing, ease)
+      var(--delay, 0s),
+    stroke-dashoffset var(--duration, 0.85s) var(--easing, ease)
+      var(--delay, 0s);
+  stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+  stroke-dashoffset: var(--offset, 126px);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.menuSvg path:nth-child(2) {
+  --duration: 0.7s;
+  --easing: ease-in;
+  --offset: 100px;
+  --array-2: 74px;
+}
+.menuSvg path:nth-child(3) {
+  --offset: 133px;
+  --array-2: 107px;
+}
+.menuActive .menuSvg path {
+  --offset: 57px;
+}
+.menuActive .menuSvg path:nth-child(1),
+.menuActive .menuSvg path:nth-child(3) {
+  --delay: 0.15s;
+  --easing: cubic-bezier(0.2, 0.4, 0.2, 1.1);
+}
+.menuActive .menuSvg path:nth-child(2) {
+  --duration: 0.4s;
+  --offset: 2px;
+  --array-1: 1px;
+}
+.menuActive .menuSvg path:nth-child(3) {
+  --offset: 58px;
+}
+.menuWrapper {
+  position: sticky;
+  z-index: 4;
+}
+.menuWhiteLayer,
+.menuWhiteLayerActive,
+.menuBgLayerActive,
+.menuBgLayer {
+  background-color: #fff;
+  height: calc(100vh - 50px);
+  transform: translateX(-100%);
+  position: absolute;
+  /* top: 50px; */
+  width: 100vw;
+  transition: transform 0.3s ease-in-out;
+}
+.menuBgLayerActive,
+.menuBgLayer {
+  color: #fff;
+  background-color: #000;
+  position: absolute;
+  z-index: 3;
+}
+.menuWhiteLayer,
+.menuBgLayerActive {
+  transition-delay: 0.1s;
+}
+.menuWhiteLayerActive,
+.menuBgLayerActive {
+  transform: translateX(0%);
+}
+.rightSide {
+  padding-left: 20px;
+}
+.menuNavList {
+  padding-top: 20px;
+  width: 100%;
+}
+.menuPageLink,
+.menuSocialsLinkActive {
+  cursor: pointer;
+  font-size: 38px;
+  transform: translateX(-100%);
+  transition: all 0.2s ease-in-out;
+  transition-delay: 0.5s;
+  opacity: 0;
+  position: relative;
+}
+.menuSocialsLinkActive {
+  transform: translateX(0%);
+  opacity: 1;
+}
+.menuSocials {
+  margin-top: 70px;
+}
+.menuSocialsTitle {
+  padding: 10px 0;
+}
+.menuSocialsList {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+}
+.menuSocialsLink {
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+.menuSocialsCircle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+.menuSocialsLink::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-image: url(../../assets/icons/socials/facebook.svg);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menuSocialsLink:nth-child(1)::after {
+  background-image: url(../../assets/icons/socials/twitter.svg);
+}
+.menuSocialsLink:nth-child(3)::after {
+  background-image: url(../../assets/icons/socials/instagram.svg);
+}
+.leftSide {
+  display: none;
+}
+@media (min-width: 768px) {
+  .menuBgLayerActive,
+  .menuBgLayer {
+    display: flex;
   }
-  .menuSvg{
-    width: 64px;
-    height: 48px;
-    top: -6px;
-    left: -14px;
-    stroke: #fff;
-    stroke-width: 4px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    fill: none;
-    display: block;
+  .menuBgLayerActive::before{
+    width: 1px;
+    height: 110vh;
+    content: "";
     position: absolute;
+    bottom: 0px;
+    left: 34%;
+    background-color: rgba(255, 255, 255, 0.4);;
   }
-  .menuSvg path {
-    -webkit-transition: stroke-dasharray var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s);
-    transition: stroke-dasharray var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s);
-    stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
-    stroke-dashoffset: var(--offset, 126px);
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
+  .menuBgLayerActive::after{
+    width:100vw ;
+    height: 1px;
+    content: "";
+    position: absolute;
+    top: 346px;
+    background-color: rgba(255, 255, 255, 0.4);;
   }
-  .menuSvg path:nth-child(2) {
-    --duration: .7s;
-    --easing: ease-in;
-    --offset: 100px;
-    --array-2: 74px;
+  .rightSide {
+    width: 33%;
+    padding-left: 30px;
+    margin-top: 64px;
   }
-  .menuSvg path:nth-child(3) {
-    --offset: 133px;
-    --array-2: 107px;
-  }
-  .menuActive .menuSvg path {
-    --offset: 57px;
-  }
-  .menuActive .menuSvg path:nth-child(1), .menuActive .menuSvg path:nth-child(3) {
-    --delay: .15s;
-    --easing: cubic-bezier(.2, .4, .2, 1.1);
-  }
-  .menuActive .menuSvg path:nth-child(2) {
-    --duration: .4s;
-    --offset: 2px;
-    --array-1: 1px;
-  }
-  .menuActive .menuSvg path:nth-child(3) {
-    --offset: 58px;
-  }
-
-.menuWhiteLayer, .menuWhiteLayerActive, .menuBgLayerActive, .menuBgLayer{
-    background-color: #fff;
-    height: calc(100vh - 80px);
-    transform: translateX(-100%);
-    position: fixed;
+  .rightSide::before {
+    width: 34% ;
+    height: 1px;
+    content: "";
+    position: absolute;
     top: 80px;
-    width: 100vw;
-    transition: transform .3s ease-in-out; 
-}
-.menuBgLayerActive, .menuBgLayer{
-    color: #fff;
-    background-color: #000;
+    background-color: rgba(255, 255, 255, 0.4);
+    left: 0;
+  }
+  .menuPageLink,
+  .menuSocialsLinkActive {
+    font-size: 32px;
+    line-height: 45px;
+    margin-top: 14px;
+  }
+  .menuSocialsTitle{
+    font-size: 24px;
+    padding-bottom: 28px;
+  }
+  .leftSide {
+    display: inline-block;
+    width: 66%;
+    margin-top: 40px;
+    padding-left: 14%;
+    position: relative;
+  }
+  .leftSide::after{
+    content: "";
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background-color: rgba(48, 48, 48, 0.4);
     position: absolute;
+    top: 306px;
+    left: 1.6%;
+  }
+  .someText{
+    max-width: 410px;
+    width: 80%;
+    font-size: 22px;
+  }
+  .menuContacts{
+    margin-top: 160px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+  }
 }
- .menuWhiteLayer, .menuBgLayerActive{
-    transition-delay: .1s;
-}
-.menuWhiteLayerActive, .menuBgLayerActive{
-    transform: translateX(0%);
-}
-.rightSide{
-    padding-left: 20px;
-}
-.menuNavList{
-    width: 100%;
-}
-.menuPageLink, .menuSocialsLinkActive{
-    cursor: pointer;
-    font-size: 26px;
-    margin-top: 10px;
-    transform: translateX(-100%);
-    transition: all .2s ease-in-out; 
-    transition-delay: .5s;
-    opacity: 0;
-}
-.menuSocialsLinkActive{
-    transform: translateX(0%);
-    opacity: 1;
-}
-.menuSocials{
+@media (min-width: 1200px) {
+  .menuWhiteLayer,
+  .menuWhiteLayerActive,
+  .menuBgLayerActive,
+  .menuBgLayer {
+    top: 0px;
+    height: calc(100vh - 80px);
+  }
+  .menuBgLayerActive::before{
+    height: calc(100vh + 20px);
+    bottom: 0px;
+    left: 34%;
+  }
+  .menuBgLayerActive::after{
+    top: 366px;
+  }
+  .rightSide {
+    width: 33%;
+    padding-left: 10%;
     margin-top: 70px;
-}
-.leftSide{
-    display: none;
+  }
+  .rightSide::before {
+    top: 90px;
+    background-color: rgba(255, 255, 255, 0.4);
+    left: 0;
+  }
+  .menuPageLink,
+  .menuSocialsLinkActive {
+    margin-top: 20px;
+  }
+  .menuSocials{
+    margin-top: 56px;
+  }
+  .menuSocialsTitle{
+    font-size: 30px;
+    padding-bottom: 28px;
+  }
+  .menuSocialsList {
+    display: flex;
+    width: 230px;
+  }
+  .menuSocialsLink {
+    width: 44px;
+    height: 44px;
+  }
+  .leftSide {
+    margin-top: 48px;
+    padding-left: 12%;
+  }
+  .leftSide::after{
+    width: 420px;
+    height: 420px;
+    top: 318px;
+  }
+  .someText{
+    max-width: 508px;
+  }
+  .menuContacts{
+    font-size: 28px;
+    margin-top: 290px;
+  }
 }
