@@ -146,7 +146,12 @@
   height: 36px;
   border-radius: 50%;
   display: block;
-  position: relative;
+  position: gi;
+}
+.menuSocialsLink,
+.menuSocialsLink:before {
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
 }
 .menuSocialsLink,
 .menuSocialsLink:before {

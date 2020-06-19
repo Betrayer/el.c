@@ -35,7 +35,7 @@ const ExtendedMenu = ({ activeMenu }) => {
               <h3 className={styles.menuSocialsTitle}>Мы в соцсетях</h3>
               <ul className={styles.menuSocialsList}>
                 {/* для ежика */}
-                <li className={styles.menuSocialsLink} onClick={(e)=> console.log('e', e.target)}>
+                <li className={styles.menuSocialsLink}>
                   <a
                     className={styles.menuSocialsCircle}
                     rel="noopener noreferrer"

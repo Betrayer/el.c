@@ -4,6 +4,7 @@
 }
 
 .services_wrapper {
+  position: relative;
   width: 280px;
   margin: 0 auto;
 }
@@ -92,65 +93,65 @@
   width: 70px;
   height: 116px;
   left: 50%;
-  top: 48%;
+  top: 42%;
   transform: translate(-50%, -50%);
 }
 
 .services_line1 {
   position: absolute;
-  left: 25%;
-    top: 36%;
+  left: 66px;
+  top: 139px;
 }
 .services_dot1 {
   position: absolute;
-  left: 34%;
-  top: 38.4%;
+  left: 94px;
+  top: 157.2px;
 }
 
 .services_line2 {
   position: absolute;
-  left: 26%;
-    top: 46%;
-    transform: rotate(-70deg);
+  left: 61px;
+  top: 206px;
+  transform: rotate(-70deg);
 }
 .services_dot2 {
   position: absolute;
-  left: 35%;
-  top: 49.4%;
+  left: 90px;
+  top: 232px;
 }
 
 .services_line3 {
   position: absolute;
-  left: 66%;
-  top: 50%;
+  left: 196px;
+  top: 233px;
   transform: rotate(-16deg);
 }
 .services_dot3 {
   position: absolute;
-  left: 63%;
-  top: 38.3%;
+  left: 179px;
+  top: 155px;
 }
 .services_line4 {
   position: absolute;
-  left: 51%;
-  top: 36%;
+  left: 140px;
+  top: 137px;
   transform: rotate(106deg);
 }
 .services_dot4 {
   position: absolute;
-  left: 62%;
-  top: 50.9%;
+  left: 184px;
+  top: 240.7px;
 }
 .services_line5 {
   position: absolute;
-  left: 38%;
-  top: 61%;
-  transform: rotate(58deg);
+  left: 103.7px;
+  top: 323px;
+  transform: rotate(57deg);
 }
 .services_dot5 {
   position: absolute;
-  left: 49%;
-  top: 57.5%;
+  left: 138.6px;
+  top: 297px;
 }
 
 .learnMore {
