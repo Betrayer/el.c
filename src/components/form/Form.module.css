@@ -1,0 +1,289 @@
+* {
+  /* outline: 1px solid red; */
+}
+.containerForm {
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
+  justify-content: center;
+  padding-top: 60px;
+  background-color: #000000;
+}
+.formImgDiv {
+  display: none;
+}
+
+.formTitle {
+  font-weight: 600;
+  text-align: left;
+  padding-left: 10px;
+  color: #ffffff;
+  font-size: 24px;
+}
+.formTitleForm {
+  font-weight: 600;
+  text-align: left;
+  padding-left: 10px;
+  color: #000000;
+  font-size: 24px;
+}
+.formText {
+  font-weight: 900;
+  font-size: 14px;
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+.formContactText {
+  font-weight: 700;
+  font-size: 14px;
+  padding-left: 10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  color: #10131f;
+}
+.formInput {
+  margin-left: 10px;
+  width: 280px;
+}
+.formDiv {
+  position: relative;
+}
+
+.formDiv::after {
+  content: "";
+  background-color: #000000;
+  height: 1px;
+  width: 280px;
+  position: absolute;
+  top: 23px;
+  left: 10px;
+}
+
+.learnMore {
+  margin-top: 30px;
+  position: relative;
+  background: transparent;
+  width: 274px;
+  height: auto;
+}
+.circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+}
+.icon,
+.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #10131f;
+  left: 40%;
+  transform: translateX(-50%);
+  width: 1.125rem;
+  height: 0.125rem;
+}
+.icon {
+  background: none;
+}
+.icon::before,
+.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.294rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #10131f;
+  border-right: 0.125rem solid #10131f;
+  transform: rotate(45deg);
+}
+.buttonText {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+.learnMore:hover .circle {
+  width: 100%;
+}
+.learnMore:hover .arrow {
+  transform: translate(7rem, 0);
+}
+.learnMore:hover .buttonText {
+  color: #10131f;
+}
+.learnMoreWhite {
+  margin-top: 30px;
+  position: relative;
+  background: transparent;
+  width: 274px;
+  height: auto;
+}
+
+.circleWhite {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border-radius: 20px;
+}
+.iconWhite,
+.arrowWhite {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+  left: 40%;
+  transform: translateX(-50%);
+  width: 1.125rem;
+  height: 0.125rem;
+}
+.iconWhite {
+  background: none;
+}
+.iconWhite::before,
+.arrowWhite::before {
+  position: absolute;
+  content: "";
+  top: -0.294rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #ffffff;
+  border-right: 0.125rem solid #ffffff;
+  transform: rotate(45deg);
+}
+.buttonTextWhite {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  color: #000;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+.learnMoreWhite:hover .circleWhite {
+  width: 100%;
+}
+.learnMoreWhite:hover .arrowWhite {
+  transform: translate(7rem, 0);
+}
+.learnMoreWhite:hover .buttonTextWhite {
+  color: #fff;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  width: 100%;
+  align-items: left;
+  margin: 0;
+  background-color: #ffffff;
+}
+.formContainer {
+  margin: 0 auto;
+  position: absolute;
+  width: 320px;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.formX {
+  background-color: #000;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  font-size: 30px;
+  width: 44px;
+  height: 44px;
+  margin-left: 264px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    width: 768px;
+    margin: 0 auto;
+  }
+  .formImgDiv {
+    background-image: url("../../assets/photo/photo_2020-06-19_13-49-26.jpg");
+    width: 384px;
+    display: flex;
+    height: 432px;
+    background-size: cover;
+  }
+  .containerForm {
+    width: 384px;
+  }
+  .formContainer {
+    top: unset;
+    transform: translateX(0);
+    width: 384px;
+  }
+  .form {
+    padding: 0;
+  }
+  .formX {
+    margin-left: 328px;
+    margin-bottom: -10px;
+  }
+
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .formImgDiv {
+    /* background-image: url("../../assets/photo/photo_2020-06-19_13-49-26.jpg"); */
+    width: 600px;
+    display: flex;
+    height:  600px;
+    /* background-size: cover; */
+  }
+  .containerForm {
+    width: 600px;
+  }
+  .formContainer {
+    /* top: unset;
+    transform: translateX(0);
+    width: 384px; */
+  }
+  .form {
+    /* padding: 0; */
+  }
+  .formX {
+    /* margin-left: 328px;
+    margin-bottom: -10px; */
+  }
+
+}
