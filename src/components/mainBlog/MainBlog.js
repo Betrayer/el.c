@@ -42,7 +42,7 @@ const MainBlog = () => {
   ]);
 
   return (
-    <div className={styles.bg}>
+    <section className={styles.bg}>
       <div className={styles.container}>
         <h2 className={styles.blogTitle}>Блог</h2>
         <ul className={styles.postGrid}>
@@ -74,7 +74,7 @@ const MainBlog = () => {
           <span className={styles.buttonText}>узнать подробнее</span>
         </button></div>
       </div>
-    </div>
+    </section>
   );
 };
 
