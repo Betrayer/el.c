@@ -133,7 +133,6 @@ const Form = (props) => {
                 value={feedback}
               />
             </div>
-
             <div className={css.buttonFlexWhite}>
               <button
                 onMouseOver={() => setArrow(true)}
@@ -151,7 +150,6 @@ const Form = (props) => {
                 <span className={css.buttonTextWhite}>Отправить заявку</span>
               </button>
             </div>
-    
             <p className={css.formContactText}>+380 50 500 50 50</p>
             <p className={css.formContactText}>
               hgc weuhwe ch wechuewouwec weiu 28
@@ -172,7 +170,4 @@ Form.propTypes = {
   env: PropTypes.object.isRequired,
 };
 
-Form.propTypes = {
-  env: PropTypes.object.isRequired,
-};
 export default Form;
