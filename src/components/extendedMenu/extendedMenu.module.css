@@ -145,6 +145,8 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
+  display: block;
+  position: relative;
 }
 .menuSocialsLink,
 .menuSocialsLink:before {
@@ -327,6 +329,10 @@
     width: 230px;
   }
   .menuSocialsLink {
+    width: 44px;
+    height: 44px;
+  }
+  .menuSocialsCircle {
     width: 44px;
     height: 44px;
   }
