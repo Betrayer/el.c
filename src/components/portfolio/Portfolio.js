@@ -12,6 +12,7 @@ const portfolio = () => {
               src={require("../../assets/photos/portfolio/LovePRIM.jpg")}
               width="210"
               height="150"
+              alt="online_store"
             />
           </li>
         </ul>
