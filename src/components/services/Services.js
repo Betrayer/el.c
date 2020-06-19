@@ -16,10 +16,11 @@ const Services = () => {
     if (index === TEXTS.length) {
       setTimeout(() => setIndex(1), 3000);
     }
-    if(index < TEXTS.length)
-    {setTimeout(() => setIndex(index + 1), 3000)};
+    if (index < TEXTS.length) {
+      setTimeout(() => setIndex(index + 1), 3000);
+    }
   };
-  
+
   return (
     <section className={css.services_container}>
       <div className={css.services_wrapper}>
@@ -34,28 +35,58 @@ const Services = () => {
           src={require("../../assets/photos/services_bird.png")}
           alt="services_logo"
         />
-        <ul className={css.services_list}>
-          <li className={css.services_box1}>
-          <img
+        <img
           className={css.services_dot1}
           src={require("../../assets/photos/services_dot.png")}
           alt="services_line"
         />
-         <img
+        <img
           className={css.services_dot2}
           src={require("../../assets/photos/services_dot.png")}
           alt="services_line"
         />
-          <img
+        <img
           className={css.services_line1}
           src={require("../../assets/photos/services_line.png")}
           alt="services_line"
         />
-         <img
+        <img
           className={css.services_line2}
           src={require("../../assets/photos/services_line.png")}
           alt="services_line"
         />
+        <img
+          className={css.services_dot3}
+          src={require("../../assets/photos/services_dot.png")}
+          alt="services_line"
+        />
+        <img
+          className={css.services_dot4}
+          src={require("../../assets/photos/services_dot.png")}
+          alt="services_line"
+        />
+        <img
+          className={css.services_line3}
+          src={require("../../assets/photos/services_line.png")}
+          alt="services_line"
+        />
+        <img
+          className={css.services_line4}
+          src={require("../../assets/photos/services_line.png")}
+          alt="services_line"
+        />
+        <img
+          className={css.services_line5}
+          src={require("../../assets/photos/services_line.png")}
+          alt="services_line"
+        />
+        <img
+          className={css.services_dot5}
+          src={require("../../assets/photos/services_dot.png")}
+          alt="services_line"
+        />
+        <ul className={css.services_list}>
+          <li className={css.services_box1}>
             <ul className={css.services_box1_list}>
               <li className={css.services_box1_item}>
                 <h3 className={css.services_item_title}>Title1</h3>
@@ -78,26 +109,6 @@ const Services = () => {
             </ul>
           </li>
           <li className={css.services_box2}>
-          <img
-          className={css.services_dot3}
-          src={require("../../assets/photos/services_dot.png")}
-          alt="services_line"
-        />
-         <img
-          className={css.services_dot4}
-          src={require("../../assets/photos/services_dot.png")}
-          alt="services_line"
-        />
-          <img
-          className={css.services_line3}
-          src={require("../../assets/photos/services_line.png")}
-          alt="services_line"
-        />
-         <img
-          className={css.services_line4}
-          src={require("../../assets/photos/services_line.png")}
-          alt="services_line"
-        />
             <ul className={css.services_box2_list}>
               <li className={css.services_box2_item}>
                 <h3 className={css.services_item_title}>Title3</h3>
@@ -120,16 +131,6 @@ const Services = () => {
             </ul>
           </li>
           <li className={css.services_box3}>
-          <img
-          className={css.services_line5}
-          src={require("../../assets/photos/services_line.png")}
-          alt="services_line"
-        />
-         <img
-          className={css.services_dot5}
-          src={require("../../assets/photos/services_dot.png")}
-          alt="services_line"
-        />
             <h3 className={css.services_item_title}>Title5</h3>
             <p className={css.services_text}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
