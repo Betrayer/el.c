@@ -44,7 +44,13 @@ const Header = () => {
       <section className={css.header}>
         <div className={css.navWrapper}>
           <div className={css.logoWrapper}>
-            <p className={css.logo}>Logo</p>
+            <img
+              className={css.logo}
+              src={require("../../assets/logo/logo_4.png")}
+              width="90"
+              height="auto"
+              alt="logo"
+            />
           </div>
           <div className={css.menuWrapper}>
             <ul className={css.menuList}>
