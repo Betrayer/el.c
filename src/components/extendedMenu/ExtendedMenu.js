@@ -34,6 +34,7 @@ const ExtendedMenu = ({ activeMenu }) => {
             <div className={styles.menuSocials}>
               <h3 className={styles.menuSocialsTitle}>Мы в соцсетях</h3>
               <ul className={styles.menuSocialsList}>
+                {/* для ежика */}
                 <li className={styles.menuSocialsLink}>
                   <a
                     className={styles.menuSocialsCircle}
@@ -41,7 +42,6 @@ const ExtendedMenu = ({ activeMenu }) => {
                     target="_blank"
                     href="https://twitter.com/AnteBadzim"
                   >
-                    
                   </a>
                 </li>
                 <li className={styles.menuSocialsLink}>
@@ -51,7 +51,6 @@ const ExtendedMenu = ({ activeMenu }) => {
                     target="_blank"
                     href="https://www.facebook.com/favouriteprimark/"
                   >
-                    <span className={styles.menuSocialsIcon}></span>
                   </a>
                 </li>
                 <li className={styles.menuSocialsLink}>
@@ -61,9 +60,9 @@ const ExtendedMenu = ({ activeMenu }) => {
                     target="_blank"
                     href="http://instagram.com/ante"
                   >
-                    <span className={styles.menuSocialsIcon}></span>
                   </a>
                 </li>
+                {/* для ежика */}
               </ul>
             </div>
           </div>
