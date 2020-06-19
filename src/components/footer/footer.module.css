@@ -1,0 +1,218 @@
+.footer {
+  width: 100wv;
+  height: 120px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.socialsHeader {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.socialsList {
+  width: 144px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100vw;
+  background-color: #fff;
+  bottom: 30px;
+}
+
+.socialIconWrapperTwitter {
+  background-image: url(../../assets/icons/socials/twitter.svg);
+}
+
+.socialIconWrapperInstagram {
+  background-image: url(../../assets/icons/socials/instagram.svg);
+}
+
+.socialIconWrapperFacebook {
+  background-image: url(../../assets/icons/socials/facebook.svg);
+}
+
+.socialIconWrapperTwitter,
+.socialIconWrapperInstagram,
+.socialIconWrapperFacebook {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  transition: 0.3s ease-in-out;
+}
+
+.socialIconWrapperTwitter:hover,
+.socialIconWrapperInstagram:hover,
+.socialIconWrapperFacebook:hover {
+  transform: scale(1.3);
+  backface-visibility: hidden;
+}
+
+.socialsCopyright {
+  color: rgb(255, 255, 255);
+  font-size: 10px;
+}
+
+.menuSocialsLink {
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.menuSocialsCircle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.menuSocialsLink,
+.menuSocialsLink:before {
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+
+.menuSocialsLink,
+.menuSocialsLink:before {
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+
+.menuSocialsLink::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-image: url(../../assets/icons/socials/facebook.svg);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s;
+}
+
+.menuSocialsLink:nth-child(1)::after {
+  background-image: url(../../assets/icons/socials/twitter.svg);
+}
+
+.menuSocialsLink:nth-child(3)::after {
+  background-image: url(../../assets/icons/socials/instagram.svg);
+}
+
+.menuSocialsLink:before {
+  top: 90%;
+  left: -110%;
+}
+
+.menuSocialsLink:focus:before,
+.menuSocialsLink:hover:before {
+  top: -10%;
+  left: -10%;
+}
+
+.menuSocialsLink:before {
+  content: "";
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.menuSocialsLink:before {
+  background-color: #3b5998;
+}
+
+.menuSocialsLink:nth-child(1)::before {
+  background-color: #3cf;
+}
+
+.menuSocialsLink:nth-child(3)::before {
+  background: linear-gradient(#4f5bd5, #962fbf, #d62976, #fa7e1e, #feda75);
+}
+
+.menuSocialsLink:focus,
+.menuSocialsLink:hover {
+  transform: scale(1.26);
+}
+
+.menuSocialsLink:focus::after,
+.menuSocialsLink:hover::after {
+  background-image: url(../../assets/icons/socials/facebookWh.svg);
+}
+
+.menuSocialsLink:nth-child(1):focus::after,
+.menuSocialsLink:nth-child(1):hover::after {
+  background-image: url(../../assets/icons/socials/twitterWh.svg);
+}
+
+.menuSocialsLink:nth-child(3):focus::after,
+.menuSocialsLink:nth-child(3):hover::after {
+  background-image: url(../../assets/icons/socials/instagramWh.svg);
+}
+
+@media (min-width: 768px) {
+  .socialsHeader {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    height: 160px;
+  }
+
+  .socialsHeader {
+    font-size: 20px;
+  }
+
+  .footer:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100vw;
+    background-color: #fff;
+    bottom: 40px;
+  }
+
+  .socialIconWrapperTwitter,
+  .socialIconWrapperInstagram,
+  .socialIconWrapperFacebook {
+    width: 36px;
+    height: 36px;
+  }
+
+  .socialsList {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menuSocialsLink {
+    width: 44px;
+    height: 44px;
+  }
+
+  .menuSocialsCircle {
+    width: 44px;
+    height: 44px;
+  }
+}

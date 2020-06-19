@@ -1,24 +1,13 @@
 import React from "react";
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
-import Blog from "./components/blog/Blog.js";
-import Form from "./components/form/Form";
-import PropTypes from "prop-types";
-
+import { BrowserRouter as Router } from "react-router-dom";
+import { useRouter } from "./components/router/router";
 import "./app.module.css";
 
 function App(props) {
+  const routing = useRouter(props);
   return (
-    <>
-      {/* <Header /> */}
-      <Blog />
-      <Form env={props.env} />
-      {/* <Footer /> */}
-    </>
+    <Router>{routing}</Router>
   );
 }
-App.propTypes = {
-  env: PropTypes.object.isRequired,
-};
 
 export default App;
