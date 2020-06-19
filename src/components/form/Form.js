@@ -133,13 +133,7 @@ const Form = (props) => {
                 value={feedback}
               />
             </div>
-            {/* <div className="btn-group"> */}
-            {/* <button
-                className="btn btn--cancel"
-                onClick={(e) => handleCancel(e)}
-              >
-                Cancel
-              </button> */}
+
             <div className={css.buttonFlexWhite}>
               <button
                 onMouseOver={() => setArrow(true)}
@@ -157,8 +151,7 @@ const Form = (props) => {
                 <span className={css.buttonTextWhite}>Отправить заявку</span>
               </button>
             </div>
-            {/* <input type="submit" value="Submit" className="btn btn--submit" /> */}
-            {/* </div> */}
+    
             <p className={css.formContactText}>+380 50 500 50 50</p>
             <p className={css.formContactText}>
               hgc weuhwe ch wechuewouwec weiu 28
@@ -173,6 +166,10 @@ const Form = (props) => {
       </div>
     </>
   );
+};
+
+Form.propTypes = {
+  env: PropTypes.object.isRequired,
 };
 
 Form.propTypes = {
