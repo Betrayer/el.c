@@ -4,6 +4,7 @@
 }
 
 .services_wrapper {
+  position: relative;
   width: 280px;
   margin: 0 auto;
 }
@@ -98,59 +99,59 @@
 
 .services_line1 {
   position: absolute;
-  left: 83px;
-    top: 189px;
+  left: 66px;
+  top: 139px;
 }
 .services_dot1 {
   position: absolute;
-  left: 112px;
-    top: 208px;
+  left: 94px;
+  top: 157.2px;
 }
 
 .services_line2 {
   position: absolute;
-  left: 82px;
-    top: 254px;
+  left: 61px;
+  top: 206px;
   transform: rotate(-70deg);
 }
 .services_dot2 {
   position: absolute;
-  left: 112px;
-  top: 280px;
+  left: 90px;
+  top: 232px;
 }
 
 .services_line3 {
   position: absolute;
-  left: 212px;
-  top: 290px;
+  left: 196px;
+  top: 233px;
   transform: rotate(-16deg);
 }
 .services_dot3 {
   position: absolute;
-  left: 199px;
-  top: 208px;
+  left: 179px;
+  top: 155px;
 }
 .services_line4 {
   position: absolute;
-  left: 160px;
-  top: 190px;
+  left: 140px;
+  top: 137px;
   transform: rotate(106deg);
 }
 .services_dot4 {
   position: absolute;
-  left: 200px;
-  top: 297.7px;
+  left: 184px;
+  top: 240.7px;
 }
 .services_line5 {
   position: absolute;
-  left: 121.7px;
-    top: 385px;
-  transform: rotate(58deg);
+  left: 103.7px;
+  top: 323px;
+  transform: rotate(57deg);
 }
 .services_dot5 {
   position: absolute;
-  left: 157px;
-    top: 362px;
+  left: 138.6px;
+  top: 297px;
 }
 
 .learnMore {
