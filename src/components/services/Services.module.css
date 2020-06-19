@@ -4,12 +4,12 @@
 }
 
 .services_wrapper {
-    width: 280px;
-    margin: 0 auto;
-  }
+  width: 280px;
+  margin: 0 auto;
+}
 
 .services_title {
-  font-family: 'MPLUS1p';
+  font-family: "MPLUS1p";
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
@@ -20,8 +20,8 @@
 }
 
 .services_item_title {
-    text-align: center;
-  font-family: 'MPLUS1p';
+  text-align: center;
+  font-family: "MPLUS1p";
   font-style: normal;
   font-weight: 800;
   font-size: 16px;
@@ -32,8 +32,9 @@
 }
 
 .services_text {
-    text-align: center;
-  font-family: 'MPLUS1p';
+  display: none;
+  text-align: center;
+  font-family: "MPLUS1p";
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
@@ -43,14 +44,186 @@
   padding-bottom: 20px;
 }
 
+.services_list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services_list li {
+  width: 50px;
+  color: white;
+}
+
+.services_box1 {
+  order: 1;
+  height: 200px;
+}
+.services_box2 {
+  order: 3;
+  height: 200px;
+}
+.services_box3 {
+  order: 2;
+  top: 50px;
+}
+
+.services_box1_list {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.services_box2_list {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.services_box3 {
+  height: 50px;
+  bottom: 20px;
+  margin-top: 255px;
+}
+
 .services_logo {
-  display: none;
+  position: absolute;
+  width: 70px;
+  height: 116px;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+}
+
+.services_line1 {
+  position: absolute;
+  left: 25%;
+    top: 36%;
+}
+.services_dot1 {
+  position: absolute;
+  left: 34%;
+  top: 38.4%;
+}
+
+.services_line2 {
+  position: absolute;
+  left: 26%;
+    top: 46%;
+    transform: rotate(-70deg);
+}
+.services_dot2 {
+  position: absolute;
+  left: 35%;
+  top: 49.4%;
+}
+
+.services_line3 {
+  position: absolute;
+  left: 66%;
+  top: 50%;
+  transform: rotate(-16deg);
+}
+.services_dot3 {
+  position: absolute;
+  left: 63%;
+  top: 38.3%;
+}
+.services_line4 {
+  position: absolute;
+  left: 51%;
+  top: 36%;
+  transform: rotate(106deg);
+}
+.services_dot4 {
+  position: absolute;
+  left: 62%;
+  top: 50.9%;
+}
+.services_line5 {
+  position: absolute;
+  left: 38%;
+  top: 61%;
+  transform: rotate(58deg);
+}
+.services_dot5 {
+  position: absolute;
+  left: 49%;
+  top: 57.5%;
+}
+
+.learnMore {
+  position: relative;
+  background: transparent;
+  width: 274px;
+  height: auto;
+  margin-left: 60px;
+  padding-bottom: 20px;
+}
+.circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+}
+.icon,
+.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #10131f;
+  left: 40%;
+  transform: translateX(-50%);
+  width: 1.125rem;
+  height: 0.125rem;
+}
+.icon {
+  background: none;
+}
+.icon::before,
+.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.294rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #10131f;
+  border-right: 0.125rem solid #10131f;
+  transform: rotate(45deg);
+}
+.buttonText {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+.learnMore:hover .circle {
+  width: 100%;
+}
+.learnMore:hover .arrow {
+  transform: translate(7rem, 0);
+}
+.learnMore:hover .buttonText {
+  color: #10131f;
 }
 
 @media (min-width: 1200px) {
-  .services_logo {
-    display: block;
-  }
   .services_container {
     height: 776px;
     background-color: #424b5a;
@@ -87,7 +260,7 @@
   .services_logo {
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 50%;
     transform: translate(-50%, -50%);
   }
 
