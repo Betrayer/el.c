@@ -156,10 +156,10 @@
 .learnMore {
   position: relative;
   background: transparent;
-  width: 274px;
+  width: 214px;
   height: auto;
-  margin-left: 60px;
-  padding-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 45px;
 }
 .circle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -171,6 +171,7 @@
   background: #ffffff;
   border-radius: 20px;
 }
+
 .icon,
 .arrow {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -203,7 +204,7 @@
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50px;
   right: 0;
   bottom: 0;
   padding: 0.75rem 0;
@@ -212,15 +213,7 @@
   line-height: 1.6;
   text-align: center;
   text-transform: uppercase;
-}
-.learnMore:hover .circle {
-  width: 100%;
-}
-.learnMore:hover .arrow {
-  transform: translate(7rem, 0);
-}
-.learnMore:hover .buttonText {
-  color: #10131f;
+  font-size: 13px;
 }
 
 @media (min-width: 1200px) {
