@@ -128,17 +128,28 @@
   width: 200px;
   justify-content: space-between;
 }
+.leftSide {
+  display: none;
+}
+/* для ежика */
 .menuSocialsLink {
   width: 36px;
   height: 36px;
   background-color: #fff;
   border-radius: 50%;
   position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
 .menuSocialsCircle {
   width: 36px;
   height: 36px;
   border-radius: 50%;
+}
+.menuSocialsLink,
+.menuSocialsLink:before {
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
 }
 .menuSocialsLink::after {
   position: absolute;
@@ -149,6 +160,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: all 0.2s;
 }
 .menuSocialsLink:nth-child(1)::after {
   background-image: url(../../assets/icons/socials/twitter.svg);
@@ -156,30 +168,69 @@
 .menuSocialsLink:nth-child(3)::after {
   background-image: url(../../assets/icons/socials/instagram.svg);
 }
-.leftSide {
-  display: none;
+.menuSocialsLink:before {
+  top: 90%;
+  left: -110%;
 }
+.menuSocialsLink:focus:before,
+.menuSocialsLink:hover:before {
+  top: -10%;
+  left: -10%;
+}
+.menuSocialsLink:before {
+  content: "";
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  transform: rotate(45deg);
+}
+.menuSocialsLink:before {
+  background-color: #3b5998;
+}
+.menuSocialsLink:nth-child(1)::before {
+  background-color: #3cf;
+}
+.menuSocialsLink:nth-child(3)::before {
+  background: linear-gradient(#4f5bd5, #962fbf, #d62976, #fa7e1e, #feda75);
+}
+.menuSocialsLink:focus,
+.menuSocialsLink:hover {
+  transform: scale(1.26);
+}
+.menuSocialsLink:focus::after,
+.menuSocialsLink:hover::after {
+  background-image: url(../../assets/icons/socials/facebookWh.svg);
+}
+ .menuSocialsLink:nth-child(1):focus::after,
+.menuSocialsLink:nth-child(1):hover::after {
+  background-image: url(../../assets/icons/socials/twitterWh.svg);
+}
+ .menuSocialsLink:nth-child(3):focus::after,
+ .menuSocialsLink:nth-child(3):hover::after  {
+  background-image: url(../../assets/icons/socials/instagramWh.svg);
+}
+/* усьо */
 @media (min-width: 768px) {
   .menuBgLayerActive,
   .menuBgLayer {
     display: flex;
   }
-  .menuBgLayerActive::before{
+  .menuBgLayerActive::before {
     width: 1px;
     height: 110vh;
     content: "";
     position: absolute;
     bottom: 0px;
     left: 34%;
-    background-color: rgba(255, 255, 255, 0.4);;
+    background-color: rgba(255, 255, 255, 0.4);
   }
-  .menuBgLayerActive::after{
-    width:100vw ;
+  .menuBgLayerActive::after {
+    width: 100vw;
     height: 1px;
     content: "";
     position: absolute;
     top: 346px;
-    background-color: rgba(255, 255, 255, 0.4);;
+    background-color: rgba(255, 255, 255, 0.4);
   }
   .rightSide {
     width: 33%;
@@ -187,7 +238,7 @@
     margin-top: 64px;
   }
   .rightSide::before {
-    width: 34% ;
+    width: 34%;
     height: 1px;
     content: "";
     position: absolute;
@@ -201,7 +252,7 @@
     line-height: 45px;
     margin-top: 14px;
   }
-  .menuSocialsTitle{
+  .menuSocialsTitle {
     font-size: 24px;
     padding-bottom: 28px;
   }
@@ -212,7 +263,7 @@
     padding-left: 14%;
     position: relative;
   }
-  .leftSide::after{
+  .leftSide::after {
     content: "";
     width: 360px;
     height: 360px;
@@ -222,12 +273,12 @@
     top: 306px;
     left: 1.6%;
   }
-  .someText{
+  .someText {
     max-width: 410px;
     width: 80%;
     font-size: 22px;
   }
-  .menuContacts{
+  .menuContacts {
     margin-top: 160px;
     font-size: 24px;
     display: flex;
@@ -242,12 +293,12 @@
     top: 0px;
     height: calc(100vh - 80px);
   }
-  .menuBgLayerActive::before{
+  .menuBgLayerActive::before {
     height: calc(100vh + 20px);
     bottom: 0px;
     left: 34%;
   }
-  .menuBgLayerActive::after{
+  .menuBgLayerActive::after {
     top: 366px;
   }
   .rightSide {
@@ -264,10 +315,10 @@
   .menuSocialsLinkActive {
     margin-top: 20px;
   }
-  .menuSocials{
+  .menuSocials {
     margin-top: 56px;
   }
-  .menuSocialsTitle{
+  .menuSocialsTitle {
     font-size: 30px;
     padding-bottom: 28px;
   }
@@ -283,15 +334,15 @@
     margin-top: 48px;
     padding-left: 12%;
   }
-  .leftSide::after{
+  .leftSide::after {
     width: 420px;
     height: 420px;
     top: 318px;
   }
-  .someText{
+  .someText {
     max-width: 508px;
   }
-  .menuContacts{
+  .menuContacts {
     font-size: 28px;
     margin-top: 290px;
   }
