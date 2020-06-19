@@ -180,6 +180,7 @@ const Blog = () => {
         </div>
       </div>
       <div className={styles.container}>
+       
         <h2 className={styles.blogTitle}>Блог</h2>
         <ul className={styles.postGrid}>
           {postsToShow.map((post) => (
