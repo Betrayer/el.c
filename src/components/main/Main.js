@@ -8,13 +8,16 @@ import Footer from "../footer/Footer";
 import Contacts from "../contacts/Contacts";
 import Form from "../form/Form.js";
 
+import { env } from "../../config";
+
+
 const Main = (props) => {
   return (
     <>
       <Header />
-      <Form env={props.env} />
-      <Services /> 
-       <MainBlog />
+      <Form env={env}  />
+      <Services />
+      <MainBlog />
       <Contacts />
       <Footer />
     </>
@@ -23,6 +26,5 @@ const Main = (props) => {
 Main.propTypes = {
   env: PropTypes.object.isRequired,
 };
-
 
 export default withRouter(Main);

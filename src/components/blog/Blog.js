@@ -180,7 +180,9 @@ const Blog = () => {
         </div>
       </div>
       <div className={styles.container}>
-       
+      {/* <svg className={styles.line} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <line x1="10" y1="0" x2="10" y2="200" stroke="#fff" />
+        </svg> */}
         <h2 className={styles.blogTitle}>Блог</h2>
         <ul className={styles.postGrid}>
           {postsToShow.map((post) => (
