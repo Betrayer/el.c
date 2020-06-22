@@ -28,7 +28,7 @@
 }
 
 .navWrapper {
-  width: 280px;
+  width: 80%;
   height: 100%;
   align-items: center;
 }
@@ -176,10 +176,6 @@
     width: auto;
   }
 
-  .navWrapper {
-    width: 700px;
-  }
-
   .menuWrapper {
     width: 400px;
     display: flex;
@@ -214,9 +210,5 @@
   .logo {
     height: 80px;
     width: auto;
-  }
-
-  .navWrapper {
-    width: 1100px;
   }
 }
