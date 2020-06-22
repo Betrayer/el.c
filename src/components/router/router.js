@@ -15,6 +15,12 @@ const lazy404 = lazy(
   () =>
     import("../pages/page404/PageNotFound.js") /* webpackChunkName = "404" */
 );
+const lazyAboutUs = lazy(
+  () =>
+    import(
+      "../pages/aboutUsPage/AboutUsPage.js"
+    ) /* webpackChunkName = "About" */
+);
 // const lazyPortfolio = lazy(
 //   () =>
 //     import(
@@ -41,6 +47,7 @@ export const useRouter = () => {
         <Route exact path="/" component={lazyMain} />
         <Route exact path="/blog" component={lazyBlog} />
         <Route exact path="/services" component={lazyServices} />
+        <Route exact path="/about" component={lazyAboutUs} />
         {/* <Route exact path="/portfolio" component={lazyPortfolio} /> */}
         <Route path="*" component={lazy404} />
       </Switch>

@@ -30,6 +30,10 @@
   bottom: 30px;
 }
 
+.linkContent {
+  display: none;
+}
+
 .socialIconWrapperTwitter {
   background-image: url(../../assets/icons/socials/twitter.svg);
 }
