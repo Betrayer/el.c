@@ -339,8 +339,8 @@
     height: 90px;
   }
   .learnMoreWhite{
-    margin: 46px 0;
-    transform: scale(1.2) translate(10%);
+    margin: 49px 0;
+    transform: scale(1.2) translateX(10%);
   }
   .formDiv{
     margin-top: 4px;
@@ -367,5 +367,8 @@
   }
   .formTitleForm{
     font-size: 45px;
+  }
+  .learnMoreWhite{
+    margin: 43px 0;
   }
 }
