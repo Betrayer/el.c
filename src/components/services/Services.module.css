@@ -5,8 +5,9 @@
 }
 
 .services_wrapper {
+  min-height: 450px;
   position: relative;
-  width: 280px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -30,7 +31,6 @@
   line-height: 21px;
   letter-spacing: 0.02em;
   color: white;
-  padding-bottom: 20px;
 }
 
 .services_text {
@@ -51,22 +51,48 @@
   height: 200px;
   position: absolute;
   left: 53%;
-  top: 153%;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
 .services_cirlce1{
   width: 100px;
     position: absolute;
     left: 56%;
-    top: 152%;
+    top: 50%;
   transform: translate(-50%, -50%);
 }
 .services_cirlce2{
   width: 170px;
     position: absolute;
     left: 56%;
-    top: 151%;
+    top: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+.services_list li{
+  position: absolute;
+}
+
+.service_item1{
+  left: 30%;
+  top: 32%;
+}
+.service_item2{
+  left: 75%;
+  top: 35%;
+}
+.service_item3{
+  left: 15%;
+    top: 51%;
+}
+.service_item4{
+  left: 77%;
+  top: 60%;
+}
+.service_item5{
+  left: 35%;
+  top: 64%;
 }
 
 .learnMore {

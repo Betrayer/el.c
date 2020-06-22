@@ -30,17 +30,20 @@ const Services = () => {
             springConfig={presets.wobbly}
           />
         </h2>
+<<<<<<< HEAD
+=======
         {/* <img
           className={css.services_logo}
           src={require("../../assets/photos/services_bird.png")}
           alt="services_logo"
         /> */}
+>>>>>>> 6d624228f29bc2c33e08d763ac0f400d7dc31cc2
         <img
           className={css.services_cirlce1}
           src={require("../../assets/photos/services_circle.png")}
           alt="services_circle"
         />
-         <img
+        <img
           className={css.services_cirlce2}
           src={require("../../assets/photos/services_circle2.png")}
           alt="services_circle"
@@ -50,6 +53,17 @@ const Services = () => {
           src={require("../../assets/photos/completepic.png")}
           alt="services_pic"
         />
+<<<<<<< HEAD
+        <ul className={css.services_list}>
+          <li className={css.service_item1}>
+            <h3 className={css.services_item_title}>Lorem</h3>
+          </li>
+          <li className={css.service_item2}>
+            <h3 className={css.services_item_title}>Lorem</h3>
+          </li>
+          <li className={css.service_item3}>
+            <h3 className={css.services_item_title}>Lorem</h3>
+=======
         {/* <img
           className={css.services_dot1}
           src={require("../../assets/photos/services_dot.png")}
@@ -122,29 +136,16 @@ const Services = () => {
                 </p>
               </li>
             </ul>
+>>>>>>> 6d624228f29bc2c33e08d763ac0f400d7dc31cc2
           </li>
-          <li className={css.services_box2}>
-            <ul className={css.services_box2_list}>
-              <li className={css.services_box2_item}>
-                <h3 className={css.services_item_title}>Title3</h3>
-                <p className={css.services_text}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </li>
-              <li className={css.services_box2_item}>
-                <h3 className={css.services_item_title}>Title4</h3>
-                <p className={css.services_text}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </li>
-            </ul>
+          <li className={css.service_item4}>
+            <h3 className={css.services_item_title}>Lorem</h3>
           </li>
+<<<<<<< HEAD
+          <li className={css.service_item5}>
+            <h3 className={css.services_item_title}>Lorem</h3>
+          </li>
+=======
           <li className={css.services_box3}>
             <h3 className={css.services_item_title}>Title5</h3>
             <p className={css.services_text}>
@@ -154,6 +155,7 @@ const Services = () => {
               nisi ut aliquip ex ea commodo consequat.
             </p>
           </li> */}
+>>>>>>> 6d624228f29bc2c33e08d763ac0f400d7dc31cc2
         </ul>
         <button
           onMouseOver={() => setArrow(true)}
