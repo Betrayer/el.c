@@ -30,11 +30,11 @@ const Services = () => {
             springConfig={presets.wobbly}
           />
         </h2>
-        <img
+        {/* <img
           className={css.services_logo}
           src={require("../../assets/photos/services_bird.png")}
           alt="services_logo"
-        />
+        /> */}
         <img
           className={css.services_cirlce1}
           src={require("../../assets/photos/services_circle.png")}
@@ -46,6 +46,11 @@ const Services = () => {
           alt="services_circle"
         />
         <img
+          className={css.services_completepic}
+          src={require("../../assets/photos/completepic.png")}
+          alt="services_pic"
+        />
+        {/* <img
           className={css.services_dot1}
           src={require("../../assets/photos/services_dot.png")}
           alt="services_line"
@@ -94,9 +99,9 @@ const Services = () => {
           className={css.services_dot5}
           src={require("../../assets/photos/services_dot.png")}
           alt="services_line"
-        />
+        /> */}
         <ul className={css.services_list}>
-          <li className={css.services_box1}>
+          {/* <li className={css.services_box1}>
             <ul className={css.services_box1_list}>
               <li className={css.services_box1_item}>
                 <h3 className={css.services_item_title}>Title1</h3>
@@ -148,7 +153,7 @@ const Services = () => {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-          </li>
+          </li> */}
         </ul>
         <button
           onMouseOver={() => setArrow(true)}
