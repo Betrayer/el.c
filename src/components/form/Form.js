@@ -120,7 +120,7 @@ const Form = (props) => {
             <div id="close" className={css.formContainer} onClick={(e) => closeForm(e)}>
               <form className={css.form} onSubmit={(e) => handleSubmit(e)}>
                 <div id="close1" className={css.formX} onClick={(e) => closeForm(e)}>
-                  X
+                  
                 </div>
                 <h3 className={css.formTitleForm}>Есть крутая задумка?</h3>
                 <h3 className={css.formTitleForm}>Пишите нам</h3>
