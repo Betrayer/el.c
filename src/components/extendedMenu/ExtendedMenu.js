@@ -1,9 +1,21 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import { NavLink } from "react-router-dom";
 import styles from "./extendedMenu.module.css";
 
 const ExtendedMenu = ({ activeMenu }) => {
-  const menuLinks = ["Портфолио", "Услуги", "О нас", "Блог"];
+  const menuLinks = [{name: "Портфолио", redirect: '/portfolio'}, {name: "Услуги", redirect: '/services'}, {name: "О нас", redirect: '/about'}, {name: "Блог", redirect: '/blog'}];
+  const [opacity, setOpacity] = useState(false);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setOpacity(true);
+    }, 1100);
+    if(!activeMenu){
+      setOpacity(false);
+    }
+    return () => clearTimeout(timer);
+  }, [activeMenu]);
+ 
   return (
     <>
       <div className={styles.menuWrapper}>
@@ -17,17 +29,18 @@ const ExtendedMenu = ({ activeMenu }) => {
             <nav className={styles.menuNav}>
               <ul className={styles.menuNavList}>
                 {menuLinks.map((link, ind) => (
-                  <li
+                  <NavLink
+                   to={link.redirect} 
                     key={ind}
-                    style={{ transitionDelay: `${ind * 0.1 + 0.4}s` }}
+                    style={{ animationDelay: `${ind * 0.1 + 0.4}s` , opacity: opacity ? 1 : 0,}}
                     className={
                         activeMenu
                         ? styles.menuSocialsLinkActive
                         : styles.menuPageLink
                     }
                   >
-                    <span className={styles.menuPageLinkText}>{link}</span>
-                  </li>
+                    <span className={styles.menuPageLinkText}>{link.name}</span>
+                  </NavLink>
                 ))}
               </ul>
             </nav>
