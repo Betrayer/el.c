@@ -14,7 +14,10 @@ const Contacts = () => {
             width="auto"
             alt="mail_icon"
           />
-          <a className={css.contactsListLink} href="#">
+          <a
+            className={css.contactsListLink}
+            href="mailto:StarDestroyer@ukr.net"
+          >
             test@test.com
           </a>
         </li>
@@ -25,9 +28,14 @@ const Contacts = () => {
             width="auto"
             alt="phone_icon"
           />
-          <a className={css.contactsListLink} href="#">
-            88005553535
-          </a>
+          <div className={css.telWrapper}>
+            <a className={css.contactsListLink} href="tel:+380663862689">
+              0663862689
+            </a>
+            <a className={css.contactsListLink} href="tel:+380678095578">
+              0678095578
+            </a>
+          </div>
         </li>
         <li className={css.contactsListItem}>
           <img
@@ -36,8 +44,12 @@ const Contacts = () => {
             width="auto"
             alt="mapPointer_icon"
           />
-          <a className={css.contactsListLink} href="#">
-            пр-т. Найс, дом 69
+          <a
+            className={css.contactsListLink}
+            href="https://2gis.ua/kiev/geo/15059546909457325/30.504812%2C50.512866?m=30.504909%2C50.512631%2F18.47"
+          >
+            <span className={css.contactsSpan}>ул. Маршала Тимошенка</span>
+            <span className={css.contactsSpan}>29Б, литера А</span>
           </a>
         </li>
       </ul>

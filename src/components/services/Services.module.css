@@ -12,7 +12,6 @@
 }
 
 .services_title {
-  font-family: "MPLUS1p";
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
@@ -22,30 +21,22 @@
 }
 
 .services_item_title {
-  font-family: "MPLUS1p";
   font-style: normal;
   font-weight: 800;
   font-size: 12px;
-    line-height: 15px;
+  line-height: 15px;
   letter-spacing: 0.02em;
   color: white;
 }
-
-.services_text {
+.services_item_text {
   display: none;
-  text-align: center;
-  font-family: "MPLUS1p";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0.02em;
-  color: white;
-  padding-bottom: 20px;
 }
 
 .services_box {
   position: relative;
+  background-image: url("../../assets/photos/complete_pic2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   width: 250px;
   height: 446px;
   margin: 0 auto;
@@ -63,7 +54,7 @@
   width: 40%;
   height: auto;
   position: absolute;
-  left: 56%;
+  left: 55%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
@@ -71,7 +62,7 @@
   width: 70%;
   height: auto;
   position: absolute;
-  left: 56%;
+  left: 55%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
@@ -81,9 +72,10 @@
 }
 
 .service_item1 {
-  left: 25%;
+  left: 22%;
   top: 21%;
 }
+
 .service_item1::before {
   content: "";
   position: absolute;
@@ -93,10 +85,12 @@
   top: 98%;
   background-image: url("../../assets/photos/servicesicon1.svg");
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .service_item2 {
-  left: 71%;
-    top: 25%;
+  left: 68%;
+  top: 26%;
 }
 .service_item2::before {
   content: "";
@@ -107,38 +101,45 @@
   top: 103%;
   background-image: url("../../assets/photos/servicesicon2.svg");
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .service_item3 {
-  left: 6%;
-    top: 56%;
+  left: 3%;
+  top: 56%;
 }
+
 .service_item3::before {
   content: "";
   position: absolute;
   width: 36px;
-height: 32px;
-left: 26%;
-    top: -111%;
+  height: 32px;
+  left: 26%;
+  top: -111%;
   background-image: url("../../assets/photos/servicesicon3.svg");
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .service_item4 {
-  left: 79%;
-  top: 70%;
+  left: 76%;
+  top: 69%;
 }
 .service_item4::before {
   content: "";
   position: absolute;
   width: 34px;
-height: 35px;
-left: 12%;
-    top: -132%;
+  height: 35px;
+  left: 12%;
+  top: -132%;
   background-image: url("../../assets/photos/servicesicon4.svg");
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .service_item5 {
-  left: 21%;
-  top: 75%;
+  left: 19%;
+  top: 74%;
 }
 .service_item5::before {
   content: "";
@@ -149,6 +150,8 @@ left: 12%;
   top: -218%;
   background-image: url("../../assets/photos/servicesicon5.svg");
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .learnMore {
@@ -214,48 +217,171 @@ left: 12%;
   font-size: 13px;
 }
 
-@media (min-width: 1200px) {
-  .services_container {
-    background-color: #424b5a;
+@media (min-width: 768px) {
+  .services_box {
+    background-image: url("../../assets/photos/completepic_tablet.svg");
+    width: 614px;
   }
-
+  .services_cirlce1 {
+    width: 42%;
+    left: 50%;
+  }
+  .services_cirlce2 {
+    width: 72%;
+    left: 50%;
+  }
   .services_title {
-    font-family: Mplus 1p;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 45px;
-    line-height: 75px;
+    padding-left: 9%;
+    padding-top: 30px;
+    font-size: 30px;
+    line-height: 40px;
     letter-spacing: 0.02em;
-    color: #ffffff;
   }
-
   .services_item_title {
-    font-family: Mplus 1p;
-    font-style: normal;
     font-weight: 800;
-    font-size: 16px;
-    line-height: 21px;
+    font-size: 14px;
+    line-height: 12px;
     letter-spacing: 0.02em;
   }
-
-  .services_text {
-    font-family: Mplus 1p;
+  .services_item_text {
+    display: block;
+    width: 78px;
     font-style: normal;
     font-weight: 300;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 10px;
+    line-height: 10px;
     letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-top: 5px;
   }
+  .learnMore {
+    left: 68%;
+  }
+  .service_item1 {
+    left: 8%;
+    top: 6%;
+  }
+  .service_item1::before {
+    width: 56px;
+    height: 47px;
+    left: 108%;
+    top: 22%;
+  }
+  .service_item2 {
+    left: 74%;
+    top: 15%;
+  }
+  .service_item2::before {
+    width: 50px;
+    height: 44px;
+    left: -36%;
+    top: 19%;
+  }
+  .service_item3 {
+    left: 0%;
+    top: 56%;
+  }
+  .service_item3::before {
+    width: 52px;
+    height: 46px;
+    left: 108%;
+    top: -15%;
+  }
+  .service_item4 {
+    left: 73%;
+    top: 61%;
+  }
+  .service_item4::before {
+    width: 49px;
+    height: 50px;
+    left: 3%;
+    top: -89%;
+  }
+  .service_item5 {
+    left: 39%;
+    top: 90%;
+  }
+  .service_item5::before {
+    width: 50px;
+    height: 44px;
+    left: -35%;
+    top: -73%;
+  }
+}
 
-  .services_logo {
-    position: absolute;
+@media (min-width: 1200px) {
+  .services_box {
+    background-image: url("../../assets/photos/completepic_desctop.svg");
+    width: 960px;
+    height: 900px;
+  }
+  .services_title{
+    font-size: 50px;
+  }
+  .services_item_title {
+    line-height: 24px;
+    font-size: 21px;
+  }
+  .services_item_text {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .services_cirlce1 {
+    width: 35%;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
   }
-
-  .services_wrapper {
-    width: 1100px;
-    margin: 0 auto;
+  .services_cirlce2 {
+    width: 65%;
+    left: 50%;
+  }
+  .service_item1 {
+    left: 7%;
+    top: 11%;
+  }
+  .service_item1::before {
+    width: 93.43px;
+    height: 78px;
+    left: 108%;
+    top: 22%;
+  }
+  .service_item2 {
+    left: 80%;
+    top: 18%;
+  }
+  .service_item2::before {
+    width: 89px;
+    height: 78px;
+    left: -53%;
+    top: 19%;
+  }
+  .service_item3 {
+    left: 10%;
+    top: 61%;
+  }
+  .service_item3::before {
+    width: 87px;
+    height: 78px;
+    left: 9%;
+    top: -66%;
+  }
+  .service_item4 {
+    left: 79%;
+    top: 60%;
+  }
+  .service_item4::before {
+    width: 78px;
+    height: 80px;
+    left: 3%;
+    top: -64%;
+  }
+  .service_item5 {
+    left: 43%;
+    top: 79%;
+  }
+  .service_item5::before {
+    width: 85.5px;
+    height: 75px;
+    left: -54%;
+    top: -12%;
   }
 }
