@@ -49,8 +49,8 @@ const MainBlog = () => {
     <section className={styles.bg}>
       <div className={styles.container}>
         <h2 className={styles.blogTitle}>Блог</h2>
-        {/* <ul className={styles.postGrid}>
-          {posts.map((post) => (
+        <ul className={styles.postGrid}>
+          {content.map((post) => (
             <li key={post.id} className={styles.post}>
               <img
                 className={styles.postImg}
@@ -61,7 +61,7 @@ const MainBlog = () => {
               <p className={styles.postMessage}>{post.message}</p>
             </li>
           ))}
-        </ul> */}
+        </ul>
         <div className={styles.btnWrapper}>
         <button
           onMouseOver={() => setArrow(true)}
