@@ -5,9 +5,7 @@ import "./app.module.css";
 
 function App(props) {
   const routing = useRouter(props);
-  return (
-    <Router>{routing}</Router>
-  );
+  return <Router>{routing}</Router>;
 }
 
 export default App;
