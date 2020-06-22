@@ -31,38 +31,54 @@ const Services = () => {
           />
         </h2>
         <div className={css.services_box}>
-        <img
-          className={css.services_cirlce1}
-          src={require("../../assets/photos/services_circle1.svg")}
-          alt="services_circle"
-        />
-        <img
-          className={css.services_cirlce2}
-          src={require("../../assets/photos/services_circle2.svg")}
-          alt="services_circle"
-        />
-        <img
-          className={css.services_completepic}
-          src={require("../../assets/photos/complete_pic2.svg")}
-          alt="services_pic"
-        />
-        <ul className={css.services_list}>
-          <li className={css.service_item1}>
-            <h3 className={css.services_item_title}>Сопровожение <br/> и обслуживание</h3>
-          </li>
-          <li className={css.service_item2}>
-            <h3 className={css.services_item_title}>Мобильные приложения</h3>
-          </li>
-          <li className={css.service_item3}>
-            <h3 className={css.services_item_title}>SMM/SEO<br/>Продвижение</h3>
-          </li>
-          <li className={css.service_item4}>
-            <h3 className={css.services_item_title}>Проработка макета</h3>
-          </li>
-          <li className={css.service_item5}>
-            <h3 className={css.services_item_title}>Разработка сайта</h3>
-          </li>
-        </ul>
+          <img
+            className={css.services_cirlce1}
+            src={require("../../assets/photos/services_circle1.svg")}
+            alt="services_circle"
+          />
+          <img
+            className={css.services_cirlce2}
+            src={require("../../assets/photos/services_circle2.svg")}
+            alt="services_circle"
+          />
+          <ul className={css.services_list}>
+            <li className={css.service_item1}>
+              <h3 className={css.services_item_title}>
+                Сопровождение <br /> и обслуживание
+              </h3>
+              <p className={css.services_item_text}>
+                Хостинг, техническое сопровождение, контроль работоспособности
+              </p>
+            </li>
+            <li className={css.service_item2}>
+              <h3 className={css.services_item_title}>Мобильные приложения</h3>
+              <p className={css.services_item_text}>
+                Хостинг, техническое сопровождение, контроль работоспособности
+              </p>
+            </li>
+            <li className={css.service_item3}>
+              <h3 className={css.services_item_title}>
+                SMM/SEO
+                <br />
+                Продвижение
+              </h3>
+              <p className={css.services_item_text}>
+                Хостинг, техническое сопровождение, контроль работоспособности
+              </p>
+            </li>
+            <li className={css.service_item4}>
+              <h3 className={css.services_item_title}>Проработка макета</h3>
+              <p className={css.services_item_text}>
+                Хостинг, техническое сопровождение, контроль работоспособности
+              </p>
+            </li>
+            <li className={css.service_item5}>
+              <h3 className={css.services_item_title}>Разработка сайта</h3>
+              <p className={css.services_item_text}>
+                Хостинг, техническое сопровождение, контроль работоспособности
+              </p>
+            </li>
+          </ul>
         </div>
         <button
           onMouseOver={() => setArrow(true)}
