@@ -30,133 +30,40 @@ const Services = () => {
             springConfig={presets.wobbly}
           />
         </h2>
-<<<<<<< HEAD
-=======
-        {/* <img
-          className={css.services_logo}
-          src={require("../../assets/photos/services_bird.png")}
-          alt="services_logo"
-        /> */}
->>>>>>> 6d624228f29bc2c33e08d763ac0f400d7dc31cc2
+        <div className={css.services_box}>
         <img
           className={css.services_cirlce1}
-          src={require("../../assets/photos/services_circle.png")}
+          src={require("../../assets/photos/services_circle1.svg")}
           alt="services_circle"
         />
         <img
           className={css.services_cirlce2}
-          src={require("../../assets/photos/services_circle2.png")}
+          src={require("../../assets/photos/services_circle2.svg")}
           alt="services_circle"
         />
         <img
           className={css.services_completepic}
-          src={require("../../assets/photos/completepic.png")}
+          src={require("../../assets/photos/complete_pic2.svg")}
           alt="services_pic"
         />
-<<<<<<< HEAD
         <ul className={css.services_list}>
           <li className={css.service_item1}>
-            <h3 className={css.services_item_title}>Lorem</h3>
+            <h3 className={css.services_item_title}>Сопровожение <br/> и обслуживание</h3>
           </li>
           <li className={css.service_item2}>
-            <h3 className={css.services_item_title}>Lorem</h3>
+            <h3 className={css.services_item_title}>Мобильные приложения</h3>
           </li>
           <li className={css.service_item3}>
-            <h3 className={css.services_item_title}>Lorem</h3>
-=======
-        {/* <img
-          className={css.services_dot1}
-          src={require("../../assets/photos/services_dot.png")}
-          alt="services_line"
-        />
-        <img
-          className={css.services_dot2}
-          src={require("../../assets/photos/services_dot.png")}
-          alt="services_line"
-        />
-        <img
-          className={css.services_line1}
-          src={require("../../assets/photos/services_line.png")}
-          alt="services_line"
-        />
-        <img
-          className={css.services_line2}
-          src={require("../../assets/photos/services_line.png")}
-          alt="services_line"
-        />
-        <img
-          className={css.services_dot3}
-          src={require("../../assets/photos/services_dot.png")}
-          alt="services_line"
-        />
-        <img
-          className={css.services_dot4}
-          src={require("../../assets/photos/services_dot.png")}
-          alt="services_line"
-        />
-        <img
-          className={css.services_line3}
-          src={require("../../assets/photos/services_line.png")}
-          alt="services_line"
-        />
-        <img
-          className={css.services_line4}
-          src={require("../../assets/photos/services_line.png")}
-          alt="services_line"
-        />
-        <img
-          className={css.services_line5}
-          src={require("../../assets/photos/services_line.png")}
-          alt="services_line"
-        />
-        <img
-          className={css.services_dot5}
-          src={require("../../assets/photos/services_dot.png")}
-          alt="services_line"
-        /> */}
-        <ul className={css.services_list}>
-          {/* <li className={css.services_box1}>
-            <ul className={css.services_box1_list}>
-              <li className={css.services_box1_item}>
-                <h3 className={css.services_item_title}>Title1</h3>
-                <p className={css.services_text}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </li>
-              <li className={css.services_box1_item}>
-                <h3 className={css.services_item_title}>Title2</h3>
-                <p className={css.services_text}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </li>
-            </ul>
->>>>>>> 6d624228f29bc2c33e08d763ac0f400d7dc31cc2
+            <h3 className={css.services_item_title}>SMM/SEO<br/>Продвижение</h3>
           </li>
           <li className={css.service_item4}>
-            <h3 className={css.services_item_title}>Lorem</h3>
+            <h3 className={css.services_item_title}>Проработка макета</h3>
           </li>
-<<<<<<< HEAD
           <li className={css.service_item5}>
-            <h3 className={css.services_item_title}>Lorem</h3>
+            <h3 className={css.services_item_title}>Разработка сайта</h3>
           </li>
-=======
-          <li className={css.services_box3}>
-            <h3 className={css.services_item_title}>Title5</h3>
-            <p className={css.services_text}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </li> */}
->>>>>>> 6d624228f29bc2c33e08d763ac0f400d7dc31cc2
         </ul>
+        </div>
         <button
           onMouseOver={() => setArrow(true)}
           onMouseLeave={() => setArrow(false)}
