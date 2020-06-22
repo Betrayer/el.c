@@ -19,7 +19,6 @@ const Form = (props) => {
     setFormSubmitted(true);
   };
   const closeForm = (e) => {
-    console.log(e.target.id);
     if (e.target.id === "close" || e.target.id === "close1") {
       setFormSubmitted(false);
     }
@@ -40,7 +39,7 @@ const Form = (props) => {
       REACT_APP_EMAILJS_USERID: user,
     } = props.env;
     e.preventDefault();
-
+    console.log(template, email, receiverEmail, feedback, user)
     sendFeedback(template, email, receiverEmail, feedback, user);
   };
 
@@ -129,10 +128,8 @@ const Form = (props) => {
                   <input
                     className={css.formInput}
                     type="text"
-                    // value={email}
                     placeholder="Ваше имя"
                     required
-                    // onChange={(e) => handleChangeMail(e)}
                   />
                 </div>
                 <p className={css.formText}>E-mail</p>
