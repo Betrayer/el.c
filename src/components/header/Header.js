@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import ExtendedMenu from "../extendedMenu/ExtendedMenu";
 import css from "./header.module.css";
 
@@ -13,6 +13,12 @@ const Header = () => {
   useEffect(() => {
     setRussian(true);
   }, []);
+
+  const history = useHistory();
+
+  const refreshTroughLogo = () => {
+    history.go();
+  };
 
   const langSwitch = () => {
     setLangSwitcher(!langSwitcher);
@@ -41,10 +47,11 @@ const Header = () => {
 
   return (
     <>
-      <section className={css.header}>
+      <header className={css.header}>
         <div className={css.navWrapper}>
           <div className={css.logoWrapper}>
             <img
+              onClick={refreshTroughLogo}
               className={css.logo}
               src={require("../../assets/logo/logo_4.png")}
               width="90"
@@ -65,7 +72,7 @@ const Header = () => {
                 </NavLink>
               </li>
               <li className={css.menuListItem}>
-                <NavLink to="/shit" className={css.menuItem}>
+                <NavLink to="/about" className={css.menuItem}>
                   О нас
                 </NavLink>
               </li>
@@ -120,7 +127,7 @@ const Header = () => {
             </button>
           </div>
         </div>
-      </section>
+      </header>
       <ExtendedMenu activeMenu={active} />
     </>
   );
