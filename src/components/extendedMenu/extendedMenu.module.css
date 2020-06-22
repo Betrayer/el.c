@@ -103,7 +103,7 @@
   padding-top: 20px;
   width: 100%;
 }
-.menuPageLink,
+/* .menuPageLink,
 .menuSocialsLinkActive {
   cursor: pointer;
   font-size: 38px;
@@ -112,11 +112,47 @@
   transition-delay: 0.5s;
   opacity: 0;
   position: relative;
+  display: block;
 }
 .menuSocialsLinkActive {
   transform: translateX(0%);
   opacity: 1;
+} */
+
+.menuPageLink,
+.menuSocialsLinkActive {
+  cursor: pointer;
+  font-size: 38px;
+  transform: translateX(-100%);
+  /* transition: all 0.2s ease-in-out; */
+  opacity: 0;
+  position: relative;
+  display: block;
 }
+@keyframes slideIn {
+  0% {
+    transform: translateX(-82%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.menuSocialsLinkActive {
+  transform: translateX(0%);
+  opacity: 0;
+  animation-name: slideIn;
+  animation-duration: 0.7s;
+  animation-timing-function: forwards;
+  transition: all 0.3s;
+  width: 200px;
+}
+.menuSocialsLinkActive:hover {
+  transform: translateX(3%);
+  color: tomato;
+}
+
 .menuSocials {
   margin-top: 70px;
 }
@@ -209,12 +245,12 @@
 .menuSocialsLink:hover::after {
   background-image: url(../../assets/icons/socials/facebookWh.svg);
 }
- .menuSocialsLink:nth-child(1):focus::after,
+.menuSocialsLink:nth-child(1):focus::after,
 .menuSocialsLink:nth-child(1):hover::after {
   background-image: url(../../assets/icons/socials/twitterWh.svg);
 }
- .menuSocialsLink:nth-child(3):focus::after,
- .menuSocialsLink:nth-child(3):hover::after  {
+.menuSocialsLink:nth-child(3):focus::after,
+.menuSocialsLink:nth-child(3):hover::after {
   background-image: url(../../assets/icons/socials/instagramWh.svg);
 }
 /* усьо */
