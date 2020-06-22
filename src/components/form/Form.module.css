@@ -244,13 +244,21 @@
     width: 768px;
     margin: 0 auto;
   }
-  .formImgDiv {
+  .containerMain {
+    background-image: url("../../assets/photo/photo_2020-06-19_13-49-26.jpg");
+    width: 50%;
+    /* display: flex; */
+    height: auto;
+    /* background-size: cover; */
+    background-position: right;
+  }
+  /* .formImgDiv {
     background-image: url("../../assets/photo/photo_2020-06-19_13-49-26.jpg");
     width: 384px;
     display: flex;
     height: 432px;
     background-size: cover;
-  }
+  } */
   .containerForm {
     width: 384px;
   }

@@ -2,119 +2,15 @@ import React, { useState, useEffect } from "react";
 // import { withRouter, useHistory } from "react-router-dom";
 // import FB from 'fb'
 import Header from "../header/Header";
-import styles from "./blog.module.css";
 import Footer from "../footer/Footer";
+import content from '../../posts.json'
+import styles from "./blog.module.css";
 
 const Blog = () => {
   const [isFetching, setIsFetching] = useState(false);
   const [postsToShow, setPostsToShow] = useState([]);
-  const [posts, setPosts] = useState([
-    {
-      message: "coffee",
-      img: "https://source.unsplash.com/XtUd5SiX464",
-      id: 2,
-    },
-    {
-      message: "first post",
-      img: "https://source.unsplash.com/5VXH4RG88gc",
-      id: 1,
-    },
-    {
-      message:
-        "watch hjjewflnjiokj;v m8umd9e9iwm9iimiqwim09 ni90sid9mu98fcyw y78ynd8nuonmaxl hiuqaosdhmocosix v jefmpiwoP,korpw",
-      img: "https://source.unsplash.com/8b1cWDyvT7Y",
-      id: 3,
-    },
-    {
-      message: "smth",
-      img:
-        "https://images.unsplash.com/photo-1460574283810-2aab119d8511?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000",
-      id: 4,
-    },
-    {
-      message:
-        "ghjfjk hwjqfjklmewlqbk huiwf    jio;kreql; ihjw;iovkq,eptgh hpifdew,qpgkprkehgiuefv kjjdhnfieorq,pofre",
-      img:
-        "https://images.unsplash.com/photo-1483366774565-c783b9f70e2c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000",
-      id: 5,
-    },
-    {
-      message:
-        "coffee hjkdcn wjke cfioej,qo oijwdofie jwheuifhi jkwnfdilie iij oiejfoi",
-      img: "https://source.unsplash.com/XtUd5SiX464",
-      id: 6,
-    },
-    {
-      message: "first post",
-      img: "https://source.unsplash.com/5VXH4RG88gc",
-      id: 11,
-    },
-    {
-      message: "coffee",
-      img: "https://source.unsplash.com/XtUd5SiX464",
-      id: 12,
-    },
-    {
-      message:
-        "watch hjjewflnjiokj;v m8umd9e9iwm9iimiqwim09 ni90sid9mu98fcyw y78ynd8nuonmaxl hiuqaosdhmocosix v jefmpiwoP,korpw",
-      img: "https://source.unsplash.com/8b1cWDyvT7Y",
-      id: 13,
-    },
-    {
-      message: "smth",
-      img:
-        "https://images.unsplash.com/photo-1460574283810-2aab119d8511?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000",
-      id: 14,
-    },
-    {
-      message:
-        "ghjfjk hwjqfjklmewlqbk huiwf    jio;kreql; ihjw;iovkq,eptgh hpifdew,qpgkprkehgiuefv kjjdhnfieorq,pofre",
-      img:
-        "https://images.unsplash.com/photo-1483366774565-c783b9f70e2c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000",
-      id: 15,
-    },
-    {
-      message:
-        "coffee hjkdcn wjke cfioej,qo oijwdofie jwheuifhi jkwnfdilie iij oiejfoi",
-      img: "https://source.unsplash.com/XtUd5SiX464",
-      id: 16,
-    },
-    {
-      message: "first post",
-      img: "https://source.unsplash.com/5VXH4RG88gc",
-      id: 21,
-    },
-    {
-      message: "coffee",
-      img: "https://source.unsplash.com/XtUd5SiX464",
-      id: 22,
-    },
-    {
-      message:
-        "watch hjjewflnjiokj;v m8umd9e9iwm9iimiqwim09 ni90sid9mu98fcyw y78ynd8nuonmaxl hiuqaosdhmocosix v jefmpiwoP,korpw",
-      img: "https://source.unsplash.com/8b1cWDyvT7Y",
-      id: 23,
-    },
-    {
-      message: "smth",
-      img:
-        "https://images.unsplash.com/photo-1460574283810-2aab119d8511?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000",
-      id: 24,
-    },
-    {
-      message:
-        "ghjfjk hwjqfjklmewlqbk huiwf    jio;kreql; ihjw;iovkq,eptgh hpifdew,qpgkprkehgiuefv kjjdhnfieorq,pofre",
-      img:
-        "https://images.unsplash.com/photo-1483366774565-c783b9f70e2c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000",
-      id: 25,
-    },
-    {
-      message:
-        "coffee hjkdcn wjke cfioej,qo oijwdofie jwheuifhi jkwnfdilie iij oiejfoi",
-      img: "https://source.unsplash.com/XtUd5SiX464",
-      id: 26,
-    },
-  ]);
+  const posts = JSON.parse(content)
+  // const [posts, setPosts] = useState();
 
   // useEffect(() => {
   //     FB.api(
@@ -137,6 +33,7 @@ const Blog = () => {
     if (!isFetching) return;
     fetchMoreListItems();
   }, [isFetching]);
+  
   useEffect(() => {
     fetchMoreListItems();
   }, []);
