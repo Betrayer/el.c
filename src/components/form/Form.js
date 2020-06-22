@@ -68,102 +68,126 @@ const Form = (props) => {
 
   return (
     <>
-    <div className={css.container}>
-      <div className={css.containerForm}>
-        <h3 className={css.formTitle}>
-          Креативный дизайн и современные технологии разработки
-        </h3>
-        <div className={css.buttonFlex}>
-          <button
-            onMouseOver={() => setArrow(true)}
-            onMouseLeave={() => setArrow(false)}
-            className={css.learnMore}
-            onClick={() => openForm()}
-          >
-            <span className={css.circle} aria-hidden="true">
-              {arrow ? (
-                <span className={css.arrow}></span>
-              ) : (
-                <span className={css.icon}></span>
-              )}
-            </span>
-            <span className={css.buttonText}>Оставьте заявку</span>
-          </button>
-        </div>
-      </div>
-      {formSubmitted ? (
-        <div className={css.formContainer}>
-          <form className={css.form} onSubmit={(e) => handleSubmit(e)}>
-            <div className={css.formX} onClick={() => closeForm()}>
-              X
-            </div>
-            <h3 className={css.formTitleForm}>Есть крутая задумка?</h3>
-            <h3 className={css.formTitleForm}>Пишите нам</h3>
-            <p className={css.formText}>Как к вам обращаться?</p>
-            <div className={css.formDiv}>
-              <input
-                className={css.formInput}
-                type="text"
-                // value={email}
-                placeholder="Ваше имя"
-                required
-                // onChange={(e) => handleChangeMail(e)}
-              />
-            </div>
-            <p className={css.formText}>E-mail</p>
-            <div className={css.formDiv}>
-              <input
-                className={css.formInput}
-                type="email"
-                value={email}
-                placeholder="Enter your email"
-                required
-                onChange={(e) => handleChangeMail(e)}
-              />
-            </div>
-            <p className={css.formText}>Опишите вашу задумку</p>
-            <div className={css.formDiv}>
-              <input
-                className={css.formInput}
-                id="feedback-entry"
-                name="feedback-entry"
-                onChange={(e) => handleChange(e)}
-                // placeholder="Enter your feedback here"
-                required
-                value={feedback}
-              />
-            </div>
-
-            <div className={css.buttonFlexWhite}>
+      <section className={css.containerMain}>
+        <div className={css.container}>
+          <div className={css.containerForm}>
+            <h3 className={css.formTitle}>
+              Креативный дизайн и современные технологии разработки
+            </h3>
+            <div className={css.buttonFlex}>
               <button
                 onMouseOver={() => setArrow(true)}
                 onMouseLeave={() => setArrow(false)}
-                className={css.learnMoreWhite}
-                // onClick={() => openForm()}
+                className={css.learnMore}
+                onClick={() => openForm()}
               >
-                <span className={css.circleWhite} aria-hidden="true">
+                <span className={css.circle} aria-hidden="true">
                   {arrow ? (
-                    <span className={css.arrowWhite}></span>
+                    <span className={css.arrow}></span>
                   ) : (
-                    <span className={css.iconWhite}></span>
+                    <span className={css.icon}></span>
                   )}
                 </span>
-                <span className={css.buttonTextWhite}>Отправить заявку</span>
+                <span className={css.buttonText}>Оставьте заявку</span>
               </button>
             </div>
-    
-            <p className={css.formContactText}>+380 50 500 50 50</p>
-            <p className={css.formContactText}>
-              hgc weuhwe ch wechuewouwec weiu 28
-            </p>
-            <p className={css.formContactText}>email@hpl.com</p>
-          </form>
+            {/* <div
+              class="fb-page"
+              data-href="https://www.facebook.com/Penguins.Brewery/"
+              data-tabs="timeline"
+              data-width=""
+              data-height=""
+              data-small-header="false"
+              data-adapt-container-width="true"
+              data-hide-cover="false"
+              data-show-facepile="true"
+            >
+              <blockquote
+                cite="https://www.facebook.com/Penguins.Brewery/"
+                class="fb-xfbml-parse-ignore"
+              >
+                <a href="https://www.facebook.com/Penguins.Brewery/">
+                  Penguin&#039;s Brewery
+                </a>
+              </blockquote>
+            </div> */}
+          </div>
+          {formSubmitted ? (
+            <div className={css.formContainer}>
+              <form className={css.form} onSubmit={(e) => handleSubmit(e)}>
+                <div className={css.formX} onClick={() => closeForm()}>
+                  X
+                </div>
+                <h3 className={css.formTitleForm}>Есть крутая задумка?</h3>
+                <h3 className={css.formTitleForm}>Пишите нам</h3>
+                <p className={css.formText}>Как к вам обращаться?</p>
+                <div className={css.formDiv}>
+                  <input
+                    className={css.formInput}
+                    type="text"
+                    // value={email}
+                    placeholder="Ваше имя"
+                    required
+                    // onChange={(e) => handleChangeMail(e)}
+                  />
+                </div>
+                <p className={css.formText}>E-mail</p>
+                <div className={css.formDiv}>
+                  <input
+                    className={css.formInput}
+                    type="email"
+                    value={email}
+                    placeholder="Enter your email"
+                    required
+                    onChange={(e) => handleChangeMail(e)}
+                  />
+                </div>
+                <p className={css.formText}>Опишите вашу задумку</p>
+                <div className={css.formDiv}>
+                  <input
+                    className={css.formInput}
+                    id="feedback-entry"
+                    name="feedback-entry"
+                    onChange={(e) => handleChange(e)}
+                    // placeholder="Enter your feedback here"
+                    required
+                    value={feedback}
+                  />
+                </div>
+
+                <div className={css.buttonFlexWhite}>
+                  <button
+                    onMouseOver={() => setArrow(true)}
+                    onMouseLeave={() => setArrow(false)}
+                    className={css.learnMoreWhite}
+                    // onClick={() => openForm()}
+                  >
+                    <span className={css.circleWhite} aria-hidden="true">
+                      {arrow ? (
+                        <span className={css.arrowWhite}></span>
+                      ) : (
+                        <span className={css.iconWhite}></span>
+                      )}
+                    </span>
+                    <span className={css.buttonTextWhite}>
+                      Отправить заявку
+                    </span>
+                  </button>
+                </div>
+
+                <p className={css.formContactText}>+380 50 500 50 50</p>
+                <p className={css.formContactText}>
+                  hgc weuhwe ch wechuewouwec weiu 28
+                </p>
+                <p className={css.formContactText}>email@hpl.com</p>
+              </form>
+            </div>
+          ) : (
+            <></>
+          )}
+          <div className={css.formImgDiv}></div>
         </div>
-      ) : (
-        <></>
-      )}
-      <div className={css.formImgDiv}></div>
-      </div>
+      </section>
     </>
   );
 };
@@ -172,7 +196,4 @@ Form.propTypes = {
   env: PropTypes.object.isRequired,
 };
 
-Form.propTypes = {
-  env: PropTypes.object.isRequired,
-};
 export default Form;
