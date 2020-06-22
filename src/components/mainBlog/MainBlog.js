@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import content from '../../posts.json'
 import styles from "./mainBlog.module.css";
 
 const MainBlog = () => {
   const [arrow, setArrow] = useState(false);
+  const post = JSON.parse(content)
+  console.log('post', post)
   const [posts, setPosts] = useState([
     {
       message: "first post",
