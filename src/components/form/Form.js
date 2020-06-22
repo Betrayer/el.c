@@ -18,8 +18,11 @@ const Form = (props) => {
   const openForm = () => {
     setFormSubmitted(true);
   };
-  const closeForm = () => {
-    setFormSubmitted(false);
+  const closeForm = (e) => {
+    console.log(e.target.id);
+    if (e.target.id === "close" || e.target.id === "close1") {
+      setFormSubmitted(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -69,6 +72,7 @@ const Form = (props) => {
   return (
     <>
       <section className={css.containerMain}>
+      {/* <div className={css.formImgDiv}></div> */}
         <div className={css.container}>
           <div className={css.containerForm}>
             <h3 className={css.formTitle}>
@@ -113,9 +117,9 @@ const Form = (props) => {
             </div> */}
           </div>
           {formSubmitted ? (
-            <div className={css.formContainer}>
+            <div id="close" className={css.formContainer} onClick={(e) => closeForm(e)}>
               <form className={css.form} onSubmit={(e) => handleSubmit(e)}>
-                <div className={css.formX} onClick={() => closeForm()}>
+                <div id="close1" className={css.formX} onClick={(e) => closeForm(e)}>
                   X
                 </div>
                 <h3 className={css.formTitleForm}>Есть крутая задумка?</h3>
@@ -185,7 +189,7 @@ const Form = (props) => {
           ) : (
             <></>
           )}
-          <div className={css.formImgDiv}></div>
+          
         </div>
       </section>
     </>
