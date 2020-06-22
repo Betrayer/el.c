@@ -3,7 +3,7 @@ import css from "./footer.module.css";
 
 const Footer = () => {
   return (
-    <section className={css.footer}>
+    <footer className={css.footer}>
       <span className={css.socialsHeader}>Мы в соцсетях</span>
       <ul className={css.socialsList}>
         <li className={css.menuSocialsLink}>
@@ -12,7 +12,9 @@ const Footer = () => {
             rel="noopener noreferrer"
             target="_blank"
             href="https://twitter.com/AnteBadzim"
-          ></a>
+          >
+            <span className={css.linkContent}>twitter link</span>
+          </a>
         </li>
         <li className={css.menuSocialsLink}>
           <a
@@ -20,7 +22,9 @@ const Footer = () => {
             className={css.menuSocialsCircle}
             target="_blank"
             href="https://www.facebook.com/favouriteprimark/"
-          ></a>
+          >
+            <span className={css.linkContent}>facebook link</span>
+          </a>
         </li>
         <li className={css.menuSocialsLink}>
           <a
@@ -28,13 +32,15 @@ const Footer = () => {
             className={css.menuSocialsCircle}
             target="_blank"
             href="http://instagram.com/ante"
-          ></a>
+          >
+            <span className={css.linkContent}>instagram link</span>
+          </a>
         </li>
       </ul>
       <span className={css.socialsCopyright}>
         © 2020 ELC | All rights reserved
       </span>
-    </section>
+    </footer>
   );
 };
 
