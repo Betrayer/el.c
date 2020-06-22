@@ -308,3 +308,80 @@
     top: -73%;
   }
 }
+
+@media (min-width: 1200px) {
+  .services_box {
+    background-image: url("../../assets/photos/completepic_desctop.svg");
+    width: 960px;
+    height: 900px;
+  }
+  .services_title{
+    font-size: 50px;
+  }
+  .services_item_title {
+    line-height: 24px;
+    font-size: 21px;
+  }
+  .services_item_text {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .services_cirlce1 {
+    width: 35%;
+    left: 50%;
+  }
+  .services_cirlce2 {
+    width: 65%;
+    left: 50%;
+  }
+  .service_item1 {
+    left: 7%;
+    top: 11%;
+  }
+  .service_item1::before {
+    width: 93.43px;
+    height: 78px;
+    left: 108%;
+    top: 22%;
+  }
+  .service_item2 {
+    left: 80%;
+    top: 18%;
+  }
+  .service_item2::before {
+    width: 89px;
+    height: 78px;
+    left: -53%;
+    top: 19%;
+  }
+  .service_item3 {
+    left: 10%;
+    top: 61%;
+  }
+  .service_item3::before {
+    width: 87px;
+    height: 78px;
+    left: 9%;
+    top: -66%;
+  }
+  .service_item4 {
+    left: 79%;
+    top: 60%;
+  }
+  .service_item4::before {
+    width: 78px;
+    height: 80px;
+    left: 3%;
+    top: -64%;
+  }
+  .service_item5 {
+    left: 43%;
+    top: 79%;
+  }
+  .service_item5::before {
+    width: 85.5px;
+    height: 75px;
+    left: -54%;
+    top: -12%;
+  }
+}
