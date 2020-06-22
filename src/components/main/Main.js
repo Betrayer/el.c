@@ -1,12 +1,15 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
 import Header from "../header/Header";
 import Services from "../services/Services";
 import MainBlog from "../mainBlog/MainBlog";
 import Footer from "../footer/Footer";
 import Contacts from "../contacts/Contacts";
 import Form from "../form/Form.js";
+
 import { env } from "../../config";
+
 
 const Main = (props) => {
   return (
@@ -19,6 +22,9 @@ const Main = (props) => {
       <Footer />
     </>
   );
+};
+Main.propTypes = {
+  env: PropTypes.object.isRequired,
 };
 
 
