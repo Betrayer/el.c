@@ -19,16 +19,14 @@
   line-height: 75px;
   letter-spacing: 0.02em;
   color: #ffffff;
-  padding-bottom: 20px;
 }
 
 .services_item_title {
-  text-align: center;
   font-family: "MPLUS1p";
   font-style: normal;
   font-weight: 800;
-  font-size: 16px;
-  line-height: 21px;
+  font-size: 12px;
+    line-height: 15px;
   letter-spacing: 0.02em;
   color: white;
 }
@@ -46,53 +44,111 @@
   padding-bottom: 20px;
 }
 
-.services_completepic{
-  width: 200px;
-  height: 200px;
+.services_box {
+  position: relative;
+  width: 250px;
+  height: 446px;
+  margin: 0 auto;
+}
+
+.services_completepic {
+  width: 100%;
+  height: auto;
   position: absolute;
   left: 53%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.services_cirlce1{
-  width: 100px;
-    position: absolute;
-    left: 56%;
-    top: 50%;
+.services_cirlce1 {
+  width: 40%;
+  height: auto;
+  position: absolute;
+  left: 56%;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
-.services_cirlce2{
-  width: 170px;
-    position: absolute;
-    left: 56%;
-    top: 50%;
+.services_cirlce2 {
+  width: 70%;
+  height: auto;
+  position: absolute;
+  left: 56%;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
 
-
-.services_list li{
+.services_list li {
   position: absolute;
 }
 
-.service_item1{
+.service_item1 {
+  left: 25%;
+  top: 21%;
+}
+.service_item1::before {
+  content: "";
+  position: absolute;
+  width: 37px;
+  height: 31px;
   left: 30%;
-  top: 32%;
+  top: 98%;
+  background-image: url("../../assets/photos/servicesicon1.svg");
+  background-position: center;
 }
-.service_item2{
-  left: 75%;
-  top: 35%;
+.service_item2 {
+  left: 71%;
+    top: 25%;
 }
-.service_item3{
-  left: 15%;
-    top: 51%;
+.service_item2::before {
+  content: "";
+  position: absolute;
+  width: 34px;
+  height: 30px;
+  left: 19%;
+  top: 103%;
+  background-image: url("../../assets/photos/servicesicon2.svg");
+  background-position: center;
 }
-.service_item4{
-  left: 77%;
-  top: 60%;
+.service_item3 {
+  left: 6%;
+    top: 56%;
 }
-.service_item5{
-  left: 35%;
-  top: 64%;
+.service_item3::before {
+  content: "";
+  position: absolute;
+  width: 36px;
+height: 32px;
+left: 26%;
+    top: -111%;
+  background-image: url("../../assets/photos/servicesicon3.svg");
+  background-position: center;
+}
+.service_item4 {
+  left: 79%;
+  top: 70%;
+}
+.service_item4::before {
+  content: "";
+  position: absolute;
+  width: 34px;
+height: 35px;
+left: 12%;
+    top: -132%;
+  background-image: url("../../assets/photos/servicesicon4.svg");
+  background-position: center;
+}
+.service_item5 {
+  left: 21%;
+  top: 75%;
+}
+.service_item5::before {
+  content: "";
+  position: absolute;
+  width: 33px;
+  height: 29px;
+  left: 30%;
+  top: -218%;
+  background-image: url("../../assets/photos/servicesicon5.svg");
+  background-position: center;
 }
 
 .learnMore {
@@ -100,7 +156,8 @@
   background: transparent;
   width: 214px;
   height: auto;
-  top: 290px;
+  left: 20%;
+  padding-bottom: 20px;
 }
 .circle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
