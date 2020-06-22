@@ -30,7 +30,10 @@ const Services = () => {
             springConfig={presets.wobbly}
           />
         </h2>
+<<<<<<< HEAD
         <div className={css.services_box}>
+=======
+>>>>>>> ad95f0bd467c34a601c6451dda3abb1fd7de729d
         <img
           className={css.services_cirlce1}
           src={require("../../assets/photos/services_circle1.svg")}
@@ -48,6 +51,7 @@ const Services = () => {
         />
         <ul className={css.services_list}>
           <li className={css.service_item1}>
+<<<<<<< HEAD
             <h3 className={css.services_item_title}>Сопровожение <br/> и обслуживание</h3>
           </li>
           <li className={css.service_item2}>
@@ -61,6 +65,21 @@ const Services = () => {
           </li>
           <li className={css.service_item5}>
             <h3 className={css.services_item_title}>Разработка сайта</h3>
+=======
+            <h3 className={css.services_item_title}>Lorem</h3>
+          </li>
+          <li className={css.service_item2}>
+            <h3 className={css.services_item_title}>Lorem</h3>
+          </li>
+          <li className={css.service_item3}>
+            <h3 className={css.services_item_title}>Lorem</h3>
+          </li>
+          <li className={css.service_item4}>
+            <h3 className={css.services_item_title}>Lorem</h3>
+          </li>
+          <li className={css.service_item5}>
+            <h3 className={css.services_item_title}>Lorem</h3>
+>>>>>>> ad95f0bd467c34a601c6451dda3abb1fd7de729d
           </li>
         </ul>
         </div>
