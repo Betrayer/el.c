@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
-import Slide from 'react-reveal/Slide';
+import Slide from "react-reveal/Slide";
 import css from "./Form.module.css";
 
 const Form = (props) => {
@@ -10,7 +10,6 @@ const Form = (props) => {
   const [arrow, setArrow] = useState(false);
   const [defLangState] = useState(localStorage.getItem("lang"));
   const [blackArrow, setBlackArrow] = useState(false);
-  const [formEnter, setFormEnter] = useState(false)
 
   useEffect(() => {}, [email, feedback, formSubmitted, defLangState]);
 
@@ -21,12 +20,10 @@ const Form = (props) => {
 
   const openForm = () => {
     setFormSubmitted(true);
-    setFormEnter(true)
   };
   const closeForm = (e) => {
     if (e.target.id === "close" || e.target.id === "close1") {
       setFormSubmitted(false);
-      setFormEnter(false)
     }
   };
 
@@ -122,14 +119,12 @@ const Form = (props) => {
               </button>
             </div>
           </div>
-          {formSubmitted ? (
-            <div
-              id="close"
-              className={css.formContainer}
-              onClick={(e) => closeForm(e)}
-            >
-              <Slide right when={formEnter}>
-
+          <div
+            id="close"
+            className={css.formContainer}
+            onClick={(e) => closeForm(e)}
+          >
+            <Slide right when={formSubmitted}>
               <form className={css.form} onSubmit={(e) => handleSubmit(e)}>
                 <div
                   id="close1"
@@ -276,11 +271,8 @@ const Form = (props) => {
                   Ellie.Yelizarieva@el-c.com.ua
                 </p>
               </form>
-              </Slide>
-            </div>
-          ) : (
-            <></>
-          )}
+            </Slide>
+          </div>
         </div>
       </section>
     </>
