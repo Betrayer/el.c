@@ -17,7 +17,11 @@ const Header = () => {
   const history = useHistory();
 
   const refreshTroughLogo = () => {
-    history.go();
+    if (history.location.pathname === "/") {
+      history.go();
+    } else {
+      history.push("/");
+    }
   };
 
   const langSwitch = () => {
