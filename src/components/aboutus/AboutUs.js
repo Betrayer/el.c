@@ -1,18 +1,24 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import css from "./AboutUs.module.css";
 
 const AboutUs = () => {
+  const [arrow, setArrow] = useState(false);
 
-const [arrow, setArrow] = useState(false);
+  const history = useHistory();
+
+  const toAbout = () => {
+    history.push("/about");
+  };
 
   return (
     <section className={css.aboutus_container}>
       <div className={css.aboutus_box}>
-      <img
-            className={css.aboutus_cirlce}
-            src={require("../../assets/photos/aboutus_circle.svg")}
-            alt="aboutus_circle"
-          />
+        <img
+          className={css.aboutus_cirlce}
+          src={require("../../assets/photos/aboutus_circle.svg")}
+          alt="aboutus_circle"
+        />
         <h2 className={css.aboutus_title}>О нас</h2>
         <p className={css.aboutus_text}>
           Команда разработчиков EL.C состоит из исключительно квалифицированных
@@ -22,6 +28,7 @@ const [arrow, setArrow] = useState(false);
         <button
           onMouseOver={() => setArrow(true)}
           onMouseLeave={() => setArrow(false)}
+          onClick={toAbout}
           className={css.learnMore}
         >
           <span className={css.circle} aria-hidden="true">

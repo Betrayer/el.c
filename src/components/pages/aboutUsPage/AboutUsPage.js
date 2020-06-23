@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import css from "./aboutUsPage.module.css";
 
 const AboutUsPage = () => {
@@ -9,4 +10,4 @@ const AboutUsPage = () => {
   );
 };
 
-export default AboutUsPage;
+export default withRouter(AboutUsPage);
