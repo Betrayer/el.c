@@ -252,7 +252,6 @@
 
 @media (min-width: 768px) {
   .containerMain {
-    width: 100vw;
     position: relative;
     height: 410px;
   }
