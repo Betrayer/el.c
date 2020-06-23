@@ -7,9 +7,7 @@ const Form = (props) => {
   const [feedback, setFeedback] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [arrow, setArrow] = useState(false);
-  const [defLangState, setDefLangState] = useState(
-    localStorage.getItem("lang")
-  );
+  const [defLangState] = useState(localStorage.getItem("lang"));
   const [blackArrow, setBlackArrow] = useState(false);
 
   useEffect(() => {}, [email, feedback, formSubmitted, defLangState]);
@@ -74,9 +72,7 @@ const Form = (props) => {
 
   return (
     <>
-    {console.log(defLangState)}
       <section className={css.containerMain}>
-        {/* <div className={css.formImgDiv}></div> */}
         <div className={css.container}>
           <div className={css.containerForm}>
             {defLangState === "rus" ? (
@@ -114,29 +110,13 @@ const Form = (props) => {
                     <span className={css.icon}></span>
                   )}
                 </span>
-                <span className={css.buttonText}>Оставьте заявку</span>
+                <span className={css.buttonText}>
+                  {defLangState === "rus" ? "Оставьте заявку" : ""}
+                  {defLangState === "ukr" ? "Залишити заявку" : ""}
+                  {defLangState === "en" ? "Leave a request" : ""}
+                </span>
               </button>
             </div>
-            {/* <div
-              class="fb-page"
-              data-href="https://www.facebook.com/Penguins.Brewery/"
-              data-tabs="timeline"
-              data-width=""
-              data-height=""
-              data-small-header="false"
-              data-adapt-container-width="true"
-              data-hide-cover="false"
-              data-show-facepile="true"
-            >
-              <blockquote
-                cite="https://www.facebook.com/Penguins.Brewery/"
-                class="fb-xfbml-parse-ignore"
-              >
-                <a href="https://www.facebook.com/Penguins.Brewery/">
-                  Penguin&#039;s Brewery
-                </a>
-              </blockquote>
-            </div> */}
           </div>
           {formSubmitted ? (
             <div
@@ -145,39 +125,108 @@ const Form = (props) => {
               onClick={(e) => closeForm(e)}
             >
               <form className={css.form} onSubmit={(e) => handleSubmit(e)}>
-                <div id="close1" className={css.formX} onClick={(e) => closeForm(e)}>
-                  
-                </div>
-                <h3 className={css.formTitleForm}>Есть крутая задумка?</h3>
-                <h3 className={css.formTitleForm}>Пишите нам</h3>
-                <p className={css.formText}>Как к вам обращаться?</p>
+                <div
+                  id="close1"
+                  className={css.formX}
+                  onClick={(e) => closeForm(e)}
+                ></div>
+                <h3 className={css.formTitleForm}>
+                  {defLangState === "rus" ? "Есть крутая задумка?" : ""}
+                  {defLangState === "ukr" ? "Є крута задумка?" : ""}
+                  {defLangState === "en" ? "Have a cool idea?" : ""}
+                </h3>
+                <h3 className={css.formTitleForm}>
+                  {defLangState === "rus" ? "Пишите нам" : ""}
+                  {defLangState === "ukr" ? "Пишіть нам" : ""}
+                  {defLangState === "en" ? "Write to us" : ""}
+                </h3>
+                <p className={css.formText}>
+                  {defLangState === "rus" ? "Как к вам обращаться?" : ""}
+                  {defLangState === "ukr" ? "Як до вас звертатись?" : ""}
+                  {defLangState === "en" ? "How can I call you?" : ""}
+                </p>
                 <div className={css.formDiv}>
-                  <input
-                    className={css.formInput}
-                    type="text"
-                    placeholder="Ваше имя"
-                    required
-                  />
+                  {defLangState === "rus" ? (
+                    <input
+                      className={css.formInput}
+                      type="text"
+                      placeholder="Ваше имя"
+                      required
+                    />
+                  ) : (
+                    <></>
+                  )}
+                  {defLangState === "en" ? (
+                    <input
+                      className={css.formInput}
+                      type="text"
+                      placeholder="Your name"
+                      required
+                    />
+                  ) : (
+                    <></>
+                  )}
+                  {defLangState === "ukr" ? (
+                    <input
+                      className={css.formInput}
+                      type="text"
+                      placeholder="Ваше ім'я"
+                      required
+                    />
+                  ) : (
+                    <></>
+                  )}
                 </div>
                 <p className={css.formText}>E-mail</p>
                 <div className={css.formDiv}>
-                  <input
-                    className={css.formInput}
-                    type="email"
-                    value={email}
-                    placeholder="Enter your email"
-                    required
-                    onChange={(e) => handleChangeMail(e)}
-                  />
+                  {defLangState === "en" ? (
+                    <input
+                      className={css.formInput}
+                      type="email"
+                      value={email}
+                      placeholder="Enter your email"
+                      required
+                      onChange={(e) => handleChangeMail(e)}
+                    />
+                  ) : (
+                    <></>
+                  )}
+                  {defLangState === "rus" ? (
+                    <input
+                      className={css.formInput}
+                      type="email"
+                      value={email}
+                      placeholder="Введите ваш email"
+                      required
+                      onChange={(e) => handleChangeMail(e)}
+                    />
+                  ) : (
+                    <></>
+                  )}
+                  {defLangState === "ukr" ? (
+                    <input
+                      className={css.formInput}
+                      type="email"
+                      value={email}
+                      placeholder="Введіть ваш email"
+                      required
+                      onChange={(e) => handleChangeMail(e)}
+                    />
+                  ) : (
+                    <></>
+                  )}
                 </div>
-                <p className={css.formText}>Опишите вашу задумку</p>
+                <p className={css.formText}>
+                  {defLangState === "rus" ? "Опишите вашу задумку" : ""}
+                  {defLangState === "ukr" ? "Опишіть вашу задумку" : ""}
+                  {defLangState === "en" ? "Describe your idea" : ""}
+                </p>
                 <div className={css.formDiv}>
                   <input
                     className={css.formInput}
                     id="feedback-entry"
                     name="feedback-entry"
                     onChange={(e) => handleChange(e)}
-                    // placeholder="Enter your feedback here"
                     required
                     value={feedback}
                   />
@@ -198,14 +247,24 @@ const Form = (props) => {
                       )}
                     </span>
                     <span className={css.buttonTextWhite}>
-                      Отправить заявку
+                      {defLangState === "rus" ? "Отправить заявку" : ""}
+                      {defLangState === "ukr" ? "Відправити заявку" : ""}
+                      {defLangState === "en" ? "Send request" : ""}
                     </span>
                   </button>
                 </div>
 
-                <p className={css.formContactText}>+380 50 500 50 50</p>
+                <p className={css.formContactText}>+380 067 809 55 78</p>
                 <p className={css.formContactText}>
-                  hgc weuhwe ch wechuewouwec weiu 28
+                  {defLangState === "rus"
+                    ? "ул. Маршала Тимошенка 29Б, литера А"
+                    : ""}
+                  {defLangState === "ukr"
+                    ? "вул. Маршала Тимошенка 29Б, літера А"
+                    : ""}
+                  {defLangState === "en"
+                    ? "st. Marshal Timoshenko 29B, letter A"
+                    : ""}
                 </p>
                 <p className={css.formContactText}>
                   Ellie.Yelizarieva@el-c.com.ua

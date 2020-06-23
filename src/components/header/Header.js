@@ -29,6 +29,7 @@ const Header = () => {
     if (!lang) {
       localStorage.setItem("lang", "ukr");
       setDefLangState("ukr");
+      refresh()
     }
   };
 
