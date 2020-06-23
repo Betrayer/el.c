@@ -12,9 +12,9 @@
 .container:after,  .container::before{
   position: absolute;
   content: "";
-  height: calc(100% + 20px);
+  height: calc(100% + 140px);
   width: 1px;
-  bottom: 8px;
+  top: -48px;
   left: 4%;
   background-color: #fff;
 }

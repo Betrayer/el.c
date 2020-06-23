@@ -32,9 +32,9 @@
 .container:after,  .container::before{
   position: absolute;
   content: "";
-  height: calc(100% + 20px);
+  height: calc(100% + 28px);
   width: 1px;
-  bottom: 8px;
+  bottom: 0px;
   left: 18%;
   background-color: #fff;
 }
