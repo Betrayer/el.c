@@ -16,9 +16,9 @@ const Contacts = () => {
           />
           <a
             className={css.contactsListLink}
-            href="mailto:StarDestroyer@ukr.net"
+            href="mailto:Ellie.Yelizarieva@el-c.com.ua"
           >
-            test@test.com
+            el-c@com.ua
           </a>
         </li>
         <li className={css.contactsListItem}>

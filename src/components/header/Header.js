@@ -5,43 +5,58 @@ import css from "./header.module.css";
 
 const Header = () => {
   const [active, setActive] = useState(false);
-  const [russian, setRussian] = useState(false);
-  const [ukrainian, setUkrainian] = useState(false);
-  const [english, setEnglish] = useState(false);
+  const [defLangState, setDefLangState] = useState(
+    localStorage.getItem("lang")
+  );
   const [langSwitcher, setLangSwitcher] = useState(false);
-
-  useEffect(() => {
-    setRussian(true);
-  }, []);
-
   const history = useHistory();
 
+
+  useEffect(() => {
+    defLang();
+  }, []);
+
+  const refresh =() => {
+    history.go()
+  }
+
   const refreshTroughLogo = () => {
-    history.go();
+    if (history.location.pathname === "/") {
+      history.go();
+    } else {
+      history.push("/");
+    }
+  };
+
+  const defLang = () => {
+    let lang = localStorage.getItem("lang");
+    if (!lang) {
+      localStorage.setItem("lang", "ukr");
+      setDefLangState("ukr");
+    }
   };
 
   const langSwitch = () => {
     setLangSwitcher(!langSwitcher);
   };
 
-  const changeToRussian = () => {
-    setRussian(true);
-    setUkrainian(false);
-    setEnglish(false);
-    setLangSwitcher(!langSwitcher);
-  };
+  const changeLang = (e) => {
+    if (e.target.id === "rus") {
+      setDefLangState("rus");
+      localStorage.setItem("lang", "rus")
+      refresh();
 
-  const changeToUkrainian = () => {
-    setUkrainian(true);
-    setRussian(false);
-    setEnglish(false);
-    setLangSwitcher(!langSwitcher);
-  };
+    } else if (e.target.id === "en") {
+      setDefLangState("en");
+      localStorage.setItem("lang", "en")
+      refresh();
 
-  const changeToEnglish = () => {
-    setEnglish(true);
-    setRussian(false);
-    setUkrainian(false);
+    } else {
+      setDefLangState("ukr");
+      localStorage.setItem("lang", "ukr")
+      refresh();
+
+    }
     setLangSwitcher(!langSwitcher);
   };
 
@@ -78,21 +93,21 @@ const Header = () => {
               </li>
             </ul>
             <div className={css.langWrapper}>
-              {russian ? (
+              {defLangState === "rus" ? (
                 <p className={css.lang} onClick={langSwitch}>
                   RU
                 </p>
               ) : (
                 <></>
               )}
-              {ukrainian ? (
+              {defLangState === "ukr" ? (
                 <p className={css.lang} onClick={langSwitch}>
                   UKR
                 </p>
               ) : (
                 <></>
               )}
-              {english ? (
+              {defLangState === "en" ? (
                 <p className={css.lang} onClick={langSwitch}>
                   EN
                 </p>
@@ -101,13 +116,25 @@ const Header = () => {
               )}
               {langSwitcher ? (
                 <div className={css.langs}>
-                  <span className={css.langSpan} onClick={changeToRussian}>
+                  <span
+                    className={css.langSpan}
+                    id="rus"
+                    onClick={(e) => changeLang(e)}
+                  >
                     RU
                   </span>
-                  <span className={css.langSpan} onClick={changeToUkrainian}>
+                  <span
+                    className={css.langSpan}
+                    id="ukr"
+                    onClick={(e) => changeLang(e)}
+                  >
                     UKR
                   </span>
-                  <span className={css.langSpan} onClick={changeToEnglish}>
+                  <span
+                    className={css.langSpan}
+                    id="en"
+                    onClick={(e) => changeLang(e)}
+                  >
                     EN
                   </span>
                 </div>
