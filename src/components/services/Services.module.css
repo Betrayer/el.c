@@ -246,7 +246,7 @@
   }
   .services_item_text {
     display: block;
-    width: 78px;
+    width: 140px;
     font-style: normal;
     font-weight: 300;
     font-size: 10px;
@@ -274,14 +274,14 @@
   font-size: 14px;
 }
   .service_item1 {
-    left: 8%;
-    top: 6%;
+    left: 6%;
+    top: 9%;
   }
   .service_item1::before {
     width: 56px;
     height: 47px;
-    left: 108%;
-    top: 22%;
+    left: 97%;
+    top: 7%;
   }
   .service_item2 {
     left: 74%;
@@ -294,14 +294,14 @@
     top: 19%;
   }
   .service_item3 {
-    left: 0%;
-    top: 56%;
+    left: 6%;
+    top: 63%;
   }
   .service_item3::before {
     width: 52px;
     height: 46px;
-    left: 108%;
-    top: -15%;
+    left: 50%;
+    top: -56%;
   }
   .service_item4 {
     left: 73%;
@@ -314,14 +314,14 @@
     top: -89%;
   }
   .service_item5 {
-    left: 39%;
-    top: 90%;
+    left: 41%;
+    top: 85%;
   }
   .service_item5::before {
     width: 50px;
     height: 44px;
-    left: -35%;
-    top: -73%;
+    left: -43%;
+    top: -48%;
   }
 }
 
@@ -339,6 +339,7 @@
     font-size: 21px;
   }
   .services_item_text {
+    width: 235px;
     font-size: 18px;
     line-height: 18px;
   }
@@ -351,14 +352,14 @@
     left: 50%;
   }
   .service_item1 {
-    left: 7%;
-    top: 11%;
+    left: 2%;
+    top: 14%;
   }
   .service_item1::before {
     width: 93.43px;
     height: 78px;
-    left: 108%;
-    top: 22%;
+    left: 101%;
+    top: 6%;
   }
   .service_item2 {
     left: 80%;
@@ -367,7 +368,7 @@
   .service_item2::before {
     width: 89px;
     height: 78px;
-    left: -53%;
+    left: -44%;
     top: 19%;
   }
   .service_item3 {
@@ -377,7 +378,7 @@
   .service_item3::before {
     width: 87px;
     height: 78px;
-    left: 9%;
+    left: 6%;
     top: -66%;
   }
   .service_item4 {
@@ -397,7 +398,7 @@
   .service_item5::before {
     width: 85.5px;
     height: 75px;
-    left: -54%;
+    left: -45%;
     top: -12%;
   }
 }
