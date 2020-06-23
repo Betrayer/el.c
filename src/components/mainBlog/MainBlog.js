@@ -4,7 +4,7 @@ import styles from "./mainBlog.module.css";
 
 const MainBlog = () => {
   const [arrow, setArrow] = useState(false);
-  console.log(content[0].id)
+  // console.log(content[0].id)
   // const post = JSON.parse(content)
   // console.log('post', post)
   // const [posts, setPosts] = useState([

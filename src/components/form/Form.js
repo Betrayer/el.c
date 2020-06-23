@@ -7,8 +7,11 @@ const Form = (props) => {
   const [feedback, setFeedback] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [arrow, setArrow] = useState(false);
+  const [defLangState, setDefLangState] = useState(
+    localStorage.getItem("lang")
+  );
 
-  useEffect(() => {}, [email, feedback, formSubmitted]);
+  useEffect(() => {}, [email, feedback, formSubmitted, defLangState]);
 
   const handleCancel = () => {
     setFeedback("");
@@ -39,7 +42,7 @@ const Form = (props) => {
       REACT_APP_EMAILJS_USERID: user,
     } = props.env;
     e.preventDefault();
-    console.log(template, email, receiverEmail, feedback, user)
+    console.log(template, email, receiverEmail, feedback, user);
     sendFeedback(template, email, receiverEmail, feedback, user);
   };
 
@@ -70,13 +73,32 @@ const Form = (props) => {
 
   return (
     <>
+    {console.log(defLangState)}
       <section className={css.containerMain}>
-      {/* <div className={css.formImgDiv}></div> */}
+        {/* <div className={css.formImgDiv}></div> */}
         <div className={css.container}>
           <div className={css.containerForm}>
-            <h3 className={css.formTitle}>
-              Креативный дизайн и современные технологии разработки
-            </h3>
+            {defLangState === "rus" ? (
+              <h3 className={css.formTitle}>
+                Креативный дизайн и современные технологии разработки
+              </h3>
+            ) : (
+              <></>
+            )}
+            {defLangState === "ukr" ? (
+              <h3 className={css.formTitle}>
+                Креативний дизайн і сучасні технології розробки
+              </h3>
+            ) : (
+              <></>
+            )}
+            {defLangState === "en" ? (
+              <h3 className={css.formTitle}>
+                Creative design and modern development technologies
+              </h3>
+            ) : (
+              <></>
+            )}
             <div className={css.buttonFlex}>
               <button
                 onMouseOver={() => setArrow(true)}
@@ -116,9 +138,17 @@ const Form = (props) => {
             </div> */}
           </div>
           {formSubmitted ? (
-            <div id="close" className={css.formContainer} onClick={(e) => closeForm(e)}>
+            <div
+              id="close"
+              className={css.formContainer}
+              onClick={(e) => closeForm(e)}
+            >
               <form className={css.form} onSubmit={(e) => handleSubmit(e)}>
-                <div id="close1" className={css.formX} onClick={(e) => closeForm(e)}>
+                <div
+                  id="close1"
+                  className={css.formX}
+                  onClick={(e) => closeForm(e)}
+                >
                   X
                 </div>
                 <h3 className={css.formTitleForm}>Есть крутая задумка?</h3>
@@ -180,13 +210,14 @@ const Form = (props) => {
                 <p className={css.formContactText}>
                   hgc weuhwe ch wechuewouwec weiu 28
                 </p>
-                <p className={css.formContactText}>email@hpl.com</p>
+                <p className={css.formContactText}>
+                  Ellie.Yelizarieva@el-c.com.ua
+                </p>
               </form>
             </div>
           ) : (
             <></>
           )}
-          
         </div>
       </section>
     </>
