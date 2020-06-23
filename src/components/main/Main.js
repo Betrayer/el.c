@@ -8,6 +8,7 @@ import Footer from "../footer/Footer";
 import Contacts from "../contacts/Contacts";
 import Form from "../form/Form.js";
 import { env } from "../../config";
+import AboutUs from "../aboutus/AboutUs";
 
 
 const Main = (props) => {
@@ -16,6 +17,7 @@ const Main = (props) => {
       <Header />
       <Form env={env}  />
       <Services />
+      <AboutUs />
       <MainBlog />
       <Contacts />
       <Footer />
