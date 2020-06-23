@@ -30,10 +30,6 @@
   bottom: 30px;
 }
 
-.linkContent {
-  display: none;
-}
-
 .socialIconWrapperTwitter {
   background-image: url(../../assets/icons/socials/twitter.svg);
 }
@@ -171,6 +167,10 @@
 .menuSocialsLink:nth-child(3):focus::after,
 .menuSocialsLink:nth-child(3):hover::after {
   background-image: url(../../assets/icons/socials/instagramWh.svg);
+}
+
+.linkContent {
+  display: none;
 }
 
 @media (min-width: 768px) {

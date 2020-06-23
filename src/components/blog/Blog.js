@@ -1,28 +1,12 @@
 import React, { useState, useEffect } from "react";
-// import { withRouter, useHistory } from "react-router-dom";
-// import FB from 'fb'
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import content from '../../posts.json'
+import posts from '../../posts.json'
 import styles from "./blog.module.css";
 
 const Blog = () => {
   const [isFetching, setIsFetching] = useState(false);
   const [postsToShow, setPostsToShow] = useState([]);
-  const posts = JSON.parse(content)
-  // const [posts, setPosts] = useState();
-
-  // useEffect(() => {
-  //     FB.api(
-  //         "/100052352779221/feed",
-  //         function (response) {
-  //             console.log('response', response)
-  //           if (response && !response.error) {
-  //             setPosts(response)
-  //           }
-  //         }
-  //     );
-  //   }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -33,7 +17,7 @@ const Blog = () => {
     if (!isFetching) return;
     fetchMoreListItems();
   }, [isFetching]);
-  
+
   useEffect(() => {
     fetchMoreListItems();
   }, []);
@@ -84,12 +68,13 @@ const Blog = () => {
         <ul className={styles.postGrid}>
           {postsToShow.map((post) => (
             <li key={post.id} className={styles.post}>
-              <img
+              {post.img ? <img
                 className={styles.postImg}
                 height="auto"
                 alt=""
-                src={post.img}
-              />
+                // src={require(post.img)}
+                src={require("../../assets/blog/1.jpeg")}
+              /> : <></>}
               <p className={styles.postMessage}>{post.message}</p>
             </li>
           ))}

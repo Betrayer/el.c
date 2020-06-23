@@ -10,6 +10,7 @@ const Form = (props) => {
   const [defLangState, setDefLangState] = useState(
     localStorage.getItem("lang")
   );
+  const [blackArrow, setBlackArrow] = useState(false);
 
   useEffect(() => {}, [email, feedback, formSubmitted, defLangState]);
 
@@ -144,12 +145,8 @@ const Form = (props) => {
               onClick={(e) => closeForm(e)}
             >
               <form className={css.form} onSubmit={(e) => handleSubmit(e)}>
-                <div
-                  id="close1"
-                  className={css.formX}
-                  onClick={(e) => closeForm(e)}
-                >
-                  X
+                <div id="close1" className={css.formX} onClick={(e) => closeForm(e)}>
+                  
                 </div>
                 <h3 className={css.formTitleForm}>Есть крутая задумка?</h3>
                 <h3 className={css.formTitleForm}>Пишите нам</h3>
@@ -188,13 +185,13 @@ const Form = (props) => {
 
                 <div className={css.buttonFlexWhite}>
                   <button
-                    onMouseOver={() => setArrow(true)}
-                    onMouseLeave={() => setArrow(false)}
+                    onMouseOver={() => setBlackArrow(true)}
+                    onMouseLeave={() => setBlackArrow(false)}
                     className={css.learnMoreWhite}
                     // onClick={() => openForm()}
                   >
                     <span className={css.circleWhite} aria-hidden="true">
-                      {arrow ? (
+                      {blackArrow ? (
                         <span className={css.arrowWhite}></span>
                       ) : (
                         <span className={css.iconWhite}></span>
