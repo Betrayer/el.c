@@ -10,7 +10,7 @@ const lazyBlog = lazy(
   () => import("../blog/Blog.js") /* webpackChunkName = "Blog" */
 );
 const lazyServices = lazy(
-  () => import("../services/Services.js") /* webpackChunkName = "Services" */
+  () => import("../pages/servicesPage/ServicesPage.js") /* webpackChunkName = "Services" */
 );
 const lazy404 = lazy(
   () =>
@@ -22,6 +22,7 @@ const lazyAboutUs = lazy(
       "../pages/aboutUsPage/AboutUsPage.js"
     ) /* webpackChunkName = "About" */
 );
+
 
 export const useRouter = () => {
   return (
