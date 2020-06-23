@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import Header from "../../header/Header";
 import styles from "./aboutUsPage.module.css";
 import Footer from "../../footer/Footer";
@@ -55,4 +56,4 @@ const AboutUsPage = () => {
   );
 };
 
-export default AboutUsPage;
+export default withRouter(AboutUsPage);

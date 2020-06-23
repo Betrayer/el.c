@@ -4,7 +4,7 @@ import css from "./footer.module.css";
 const Footer = () => {
   return (
     <footer className={css.footer}>
-      <span className={css.socialsHeader}>Мы в соцсетях</span>
+      {/* <span className={css.socialsHeader}>Мы в соцсетях</span>
       <ul className={css.socialsList}>
         <li className={css.menuSocialsLink}>
           <a
@@ -36,7 +36,7 @@ const Footer = () => {
             <span className={css.linkContent}>instagram link</span>
           </a>
         </li>
-      </ul>
+      </ul> */}
       <span className={css.socialsCopyright}>
         © 2020 ELC | All rights reserved
       </span>

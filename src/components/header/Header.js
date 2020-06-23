@@ -21,7 +21,7 @@ const Header = () => {
 
   const refreshTroughLogo = () => {
     if (history.location.pathname === "/") {
-      history.go();
+      refresh()
     } else {
       history.push("/");
     }
