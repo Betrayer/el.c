@@ -11,14 +11,13 @@ const Header = () => {
   const [langSwitcher, setLangSwitcher] = useState(false);
   const history = useHistory();
 
-
   useEffect(() => {
     defLang();
   }, []);
 
-  const refresh =() => {
-    history.go()
-  }
+  const refresh = () => {
+    history.go();
+  };
 
   const refreshTroughLogo = () => {
     if (history.location.pathname === "/") {
@@ -33,7 +32,7 @@ const Header = () => {
     if (!lang) {
       localStorage.setItem("lang", "ukr");
       setDefLangState("ukr");
-      refresh()
+      refresh();
     }
   };
 
@@ -44,19 +43,16 @@ const Header = () => {
   const changeLang = (e) => {
     if (e.target.id === "rus") {
       setDefLangState("rus");
-      localStorage.setItem("lang", "rus")
+      localStorage.setItem("lang", "rus");
       refresh();
-
     } else if (e.target.id === "en") {
       setDefLangState("en");
-      localStorage.setItem("lang", "en")
+      localStorage.setItem("lang", "en");
       refresh();
-
     } else {
       setDefLangState("ukr");
-      localStorage.setItem("lang", "ukr")
+      localStorage.setItem("lang", "ukr");
       refresh();
-
     }
     setLangSwitcher(!langSwitcher);
   };
@@ -78,18 +74,18 @@ const Header = () => {
           <div className={css.menuWrapper}>
             <ul className={css.menuList}>
               <li className={css.menuListItem}>
-                <NavLink to="/portfolio" className={css.menuItem}>
-                  Портфолио
-                </NavLink>
-              </li>
-              <li className={css.menuListItem}>
-                <NavLink to="/shit" className={css.menuItem}>
+                <NavLink to="/services" className={css.menuItem}>
                   Услуги
                 </NavLink>
               </li>
               <li className={css.menuListItem}>
                 <NavLink to="/about" className={css.menuItem}>
                   О нас
+                </NavLink>
+              </li>
+              <li className={css.menuListItem}>
+                <NavLink to="/blog" className={css.menuItem}>
+                  Блог
                 </NavLink>
               </li>
             </ul>

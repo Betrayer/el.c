@@ -17,7 +17,7 @@
 }
 
 .menuItem:hover {
-  color: #6495ed;
+  color: tomato;
   cursor: pointer;
 }
 
