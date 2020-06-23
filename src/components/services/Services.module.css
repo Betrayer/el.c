@@ -257,7 +257,9 @@
   }
   .learnMore {
     left: 68%;
+    width: 264px;
 }
+
 .learnMore:hover .circle {
   width: 100%;
 }
