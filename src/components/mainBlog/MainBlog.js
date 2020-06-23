@@ -1,10 +1,16 @@
 import React, { useState } from "react";
-import content from '../../posts.json'
+import { useHistory } from "react-router-dom";
+import content from "../../posts.json";
 import styles from "./mainBlog.module.css";
 
 const MainBlog = () => {
   const [arrow, setArrow] = useState(false);
 
+  const history = useHistory();
+
+  const toBlog = () => {
+    history.push("/blog");
+  };
 
   return (
     <section className={styles.bg}>
@@ -24,20 +30,22 @@ const MainBlog = () => {
           ))}
         </ul>
         <div className={styles.btnWrapper}>
-        <button
-          onMouseOver={() => setArrow(true)}
-          onMouseLeave={() => setArrow(false)}
-          className={styles.learnMore}
-        >
-          <span className={styles.circle} aria-hidden="true">
-            {arrow ? (
-              <span className={styles.arrow}></span>
-            ) : (
-              <span className={styles.icon}></span>
-            )}
-          </span>
-          <span className={styles.buttonText}>узнать подробнее</span>
-        </button></div>
+          <button
+            onMouseOver={() => setArrow(true)}
+            onMouseLeave={() => setArrow(false)}
+            className={styles.learnMore}
+            onClick={toBlog}
+          >
+            <span className={styles.circle} aria-hidden="true">
+              {arrow ? (
+                <span className={styles.arrow}></span>
+              ) : (
+                <span className={styles.icon}></span>
+              )}
+            </span>
+            <span className={styles.buttonText}>узнать подробнее</span>
+          </button>
+        </div>
       </div>
     </section>
   );
