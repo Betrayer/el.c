@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import TextTransition, { presets } from "react-text-transition";
+import { useHistory } from "react-router-dom";
 import css from "./Services.module.css";
 
 const TEXTS = ["Услуги", "Сервис", "Поддержка"];
@@ -7,6 +8,12 @@ const TEXTS = ["Услуги", "Сервис", "Поддержка"];
 const Services = () => {
   const [index, setIndex] = useState(0);
   const [arrow, setArrow] = useState(false);
+
+  const history = useHistory();
+
+  const toServices = () => {
+    history.push("/services");
+  };
 
   useEffect(() => {
     indexChange();
@@ -83,6 +90,7 @@ const Services = () => {
         <button
           onMouseOver={() => setArrow(true)}
           onMouseLeave={() => setArrow(false)}
+          onClick={toServices}
           className={css.learnMore}
         >
           <span className={css.circle} aria-hidden="true">

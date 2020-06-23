@@ -167,7 +167,6 @@
 .leftSide {
   display: none;
 }
-/* для ежика */
 .menuSocialsLink {
   width: 36px;
   height: 36px;
@@ -253,7 +252,6 @@
 .menuSocialsLink:nth-child(3):hover::after {
   background-image: url(../../assets/icons/socials/instagramWh.svg);
 }
-/* усьо */
 @media (min-width: 768px) {
   .menuBgLayerActive,
   .menuBgLayer {

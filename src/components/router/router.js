@@ -21,25 +21,13 @@ const lazyAboutUs = lazy(
       "../pages/aboutUsPage/AboutUsPage.js"
     ) /* webpackChunkName = "About" */
 );
-// const lazyPortfolio = lazy(
-//   () =>
-//     import(
-//       "../pages/portfolioPage/PortfolioPage.js"
-//     ) /* webpackChunkName = "Portfolio" */
-// );
 
 export const useRouter = () => {
   return (
     <Suspense
       fallback={
         <div className={css.loaderContainer}>
-          <img
-            src={require("../../assets/loader/loader.gif")}
-            width="auto"
-            height="auto"
-            alt="dancing_loader"
-          />
-          <p>Пока мы загружаем страницу - станцуйте с нами!</p>
+          <p className={css.loaderText}>Loading...</p>
         </div>
       }
     >
@@ -48,7 +36,6 @@ export const useRouter = () => {
         <Route exact path="/blog" component={lazyBlog} />
         <Route exact path="/services" component={lazyServices} />
         <Route exact path="/about" component={lazyAboutUs} />
-        {/* <Route exact path="/portfolio" component={lazyPortfolio} /> */}
         <Route path="*" component={lazy404} />
       </Switch>
     </Suspense>

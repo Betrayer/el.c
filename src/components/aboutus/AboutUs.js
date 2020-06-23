@@ -10,7 +10,7 @@ const [arrow, setArrow] = useState(false);
       <div className={css.aboutus_box}>
       <img
             className={css.aboutus_cirlce}
-            src={require("../../assets/photos/services_circle2.svg")}
+            src={require("../../assets/photos/aboutus_circle.svg")}
             alt="aboutus_circle"
           />
         <h2 className={css.aboutus_title}>О нас</h2>

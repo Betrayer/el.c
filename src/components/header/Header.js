@@ -11,7 +11,6 @@ const Header = () => {
   const [langSwitcher, setLangSwitcher] = useState(false);
   const history = useHistory();
 
-
   useEffect(() => {
     defLang();
   }, []);
@@ -74,18 +73,18 @@ const Header = () => {
           <div className={css.menuWrapper}>
             <ul className={css.menuList}>
               <li className={css.menuListItem}>
-                <NavLink to="/portfolio" className={css.menuItem}>
-                  Портфолио
-                </NavLink>
-              </li>
-              <li className={css.menuListItem}>
-                <NavLink to="/shit" className={css.menuItem}>
+                <NavLink to="/services" className={css.menuItem}>
                   Услуги
                 </NavLink>
               </li>
               <li className={css.menuListItem}>
                 <NavLink to="/about" className={css.menuItem}>
                   О нас
+                </NavLink>
+              </li>
+              <li className={css.menuListItem}>
+                <NavLink to="/blog" className={css.menuItem}>
+                  Блог
                 </NavLink>
               </li>
             </ul>
