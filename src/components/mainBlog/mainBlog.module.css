@@ -52,15 +52,14 @@
 .btnWrapper{
   position: absolute;
   right: 0;
-  bottom: -200px;
+  bottom: -30px;
 }
 .learnMore {
   position: relative;
   background: transparent;
   width: 214px;
   height: auto;
-  margin-top: 50px;
-  margin-bottom: 170px;
+  bottom: 0px;
 }
 .circle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -156,10 +155,8 @@
   .btnWrapper{
     position: absolute;
     right: 40px;
-    bottom: -200px;
   }
   .learnMore{
-      margin-top: 40px;
       width: 264px;
   }
   .learnMore:hover .circle {
@@ -211,8 +208,5 @@
     margin-top: 70px;
   }
  
-  .learnMore{
-    margin-top: 10px;
-}
 }
 
