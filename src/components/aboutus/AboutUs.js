@@ -1,23 +1,35 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import css from "./AboutUs.module.css";
 
 const AboutUs = () => {
+  const [arrow, setArrow] = useState(false);
+  const [defLangState] = useState(localStorage.getItem("lang"));
 
-const [arrow, setArrow] = useState(false);
+  useEffect(() => {}, [defLangState]);
 
   return (
     <section className={css.aboutus_container}>
       <div className={css.aboutus_box}>
-      <img
-            className={css.aboutus_cirlce}
-            src={require("../../assets/photos/aboutus_circle.svg")}
-            alt="aboutus_circle"
-          />
-        <h2 className={css.aboutus_title}>О нас</h2>
+        <img
+          className={css.aboutus_cirlce}
+          src={require("../../assets/photos/aboutus_circle.svg")}
+          alt="aboutus_circle"
+        />
+        <h2 className={css.aboutus_title}>
+          {defLangState === "rus" ? "О нас" : ""}
+          {defLangState === "ukr" ? "Про нас" : ""}
+          {defLangState === "en" ? "About Us" : ""}
+        </h2>
         <p className={css.aboutus_text}>
-          Команда разработчиков EL.C состоит из исключительно квалифицированных
-          кадров, поэтому каждый созданный нами сайт является результатом умелой
-          комбинации креативного дизайна и современных технологий разработки!
+          {defLangState === "rus"
+            ? "Команда разработчиков EL-C состоит из исключительно квалифицированных кадров, поэтому каждый созданный нами сайт является результатом умелой комбинации креативного дизайна и современных технологий разработки!"
+            : ""}
+          {defLangState === "ukr"
+            ? "Команда розробників EL-C складається з виключно кваліфікованих кадрів, тому кожен створений нами сайт є результатом вмілої комбінації креативного дизайну і сучасних технологій розробки!"
+            : ""}
+          {defLangState === "en"
+            ? "The EL-C development team consists of exclusively qualified personnel, so each site we create is the result of a skillful combination of creative design and modern development technologies!"
+            : ""}
         </p>
         <button
           onMouseOver={() => setArrow(true)}
@@ -31,7 +43,11 @@ const [arrow, setArrow] = useState(false);
               <span className={css.icon}></span>
             )}
           </span>
-          <span className={css.buttonText}>узнать подробнее</span>
+          <span className={css.buttonText}>
+            {defLangState === "rus" ? "Узнать подробнее" : ""}
+            {defLangState === "ukr" ? "Дізнатись детальніше" : ""}
+            {defLangState === "en" ? "Find out more" : ""}
+          </span>
         </button>
       </div>
     </section>

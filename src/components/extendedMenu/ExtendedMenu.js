@@ -1,21 +1,29 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./extendedMenu.module.css";
 
 const ExtendedMenu = ({ activeMenu }) => {
-  const menuLinks = [{name: "Портфолио", redirect: '/portfolio'}, {name: "Услуги", redirect: '/services'}, {name: "О нас", redirect: '/about'}, {name: "Блог", redirect: '/blog'}];
+  const menuLinks = [
+    { name: "Портфолио", redirect: "/portfolio" },
+    { name: "Услуги", redirect: "/services" },
+    { name: "О нас", redirect: "/about" },
+    { name: "Блог", redirect: "/blog" },
+  ];
   const [opacity, setOpacity] = useState(false);
+  const [defLangState] = useState(localStorage.getItem("lang"));
+
+  useEffect(() => {}, [defLangState]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setOpacity(true);
     }, 1100);
-    if(!activeMenu){
+    if (!activeMenu) {
       setOpacity(false);
     }
     return () => clearTimeout(timer);
   }, [activeMenu]);
- 
+
   return (
     <>
       <div className={styles.menuWrapper}>
@@ -24,17 +32,22 @@ const ExtendedMenu = ({ activeMenu }) => {
             activeMenu ? styles.menuWhiteLayerActive : styles.menuWhiteLayer
           }
         ></div>
-        <div className={activeMenu ? styles.menuBgLayerActive : styles.menuBgLayer}>
+        <div
+          className={activeMenu ? styles.menuBgLayerActive : styles.menuBgLayer}
+        >
           <div className={styles.rightSide}>
             <nav className={styles.menuNav}>
               <ul className={styles.menuNavList}>
                 {menuLinks.map((link, ind) => (
                   <NavLink
-                   to={link.redirect} 
+                    to={link.redirect}
                     key={ind}
-                    style={{ animationDelay: `${ind * 0.1 + 0.4}s` , opacity: opacity ? 1 : 0,}}
+                    style={{
+                      animationDelay: `${ind * 0.1 + 0.4}s`,
+                      opacity: opacity ? 1 : 0,
+                    }}
                     className={
-                        activeMenu
+                      activeMenu
                         ? styles.menuSocialsLinkActive
                         : styles.menuPageLink
                     }
@@ -45,7 +58,11 @@ const ExtendedMenu = ({ activeMenu }) => {
               </ul>
             </nav>
             <div className={styles.menuSocials}>
-              <h3 className={styles.menuSocialsTitle}>Мы в соцсетях</h3>
+              <h3 className={styles.menuSocialsTitle}>
+                {defLangState === "rus" ? "Мы в соцсетях" : ""}
+                {defLangState === "ukr" ? "Ми в соцмережах" : ""}
+                {defLangState === "en" ? "We are in social networks" : ""}
+              </h3>
               <ul className={styles.menuSocialsList}>
                 <li className={styles.menuSocialsLink}>
                   <a
@@ -54,6 +71,7 @@ const ExtendedMenu = ({ activeMenu }) => {
                     target="_blank"
                     href="https://twitter.com/AnteBadzim"
                   >
+
                   </a>
                 </li>
                 <li className={styles.menuSocialsLink}>
@@ -63,6 +81,7 @@ const ExtendedMenu = ({ activeMenu }) => {
                     target="_blank"
                     href="https://www.facebook.com/favouriteprimark/"
                   >
+
                   </a>
                 </li>
                 <li className={styles.menuSocialsLink}>
@@ -72,6 +91,7 @@ const ExtendedMenu = ({ activeMenu }) => {
                     target="_blank"
                     href="http://instagram.com/ante"
                   >
+                    
                   </a>
                 </li>
               </ul>

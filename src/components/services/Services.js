@@ -8,12 +8,14 @@ const TEXTS = ["Услуги", "Сервис", "Поддержка"];
 const Services = () => {
   const [index, setIndex] = useState(0);
   const [arrow, setArrow] = useState(false);
+  const [defLangState] = useState(localStorage.getItem("lang"));
 
   const history = useHistory();
 
   const toServices = () => {
     history.push("/services");
   };
+  useEffect(() => {}, [defLangState]);
 
   useEffect(() => {
     indexChange();
@@ -51,14 +53,30 @@ const Services = () => {
           <ul className={css.services_list}>
             <li className={css.service_item1}>
               <h3 className={css.services_item_title}>
-                Сопровождение <br /> и обслуживание
+                {defLangState === "rus" ? "Сопровождение и обслуживание" : ""}
+                {defLangState === "ukr"
+                  ? "Супровід <br /> та обслуговування"
+                  : ""}
+                {defLangState === "en" ? "Escort <br /> and service" : ""}
               </h3>
               <p className={css.services_item_text}>
-                Хостинг, техническое сопровождение, контроль работоспособности
+                {defLangState === "rus"
+                  ? "Хостинг, техническое сопровождение, контроль работоспособности"
+                  : ""}
+                {defLangState === "ukr"
+                  ? "Хостинг, технічний супровід, контроль працездатності"
+                  : ""}
+                {defLangState === "en"
+                  ? "Hosting, technical support, performance monitoring"
+                  : ""}
               </p>
             </li>
             <li className={css.service_item2}>
-              <h3 className={css.services_item_title}>Мобильные приложения</h3>
+              <h3 className={css.services_item_title}>
+                {defLangState === "rus" ? "Мобильные приложения" : ""}
+                {defLangState === "ukr" ? "Мобільні додатки" : ""}
+                {defLangState === "en" ? "Mobile applications" : ""}
+              </h3>
               <p className={css.services_item_text}>
                 Хостинг, техническое сопровождение, контроль работоспособности
               </p>

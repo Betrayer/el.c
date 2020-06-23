@@ -15,9 +15,9 @@ const Header = () => {
     defLang();
   }, []);
 
-  const refresh =() => {
-    history.go()
-  }
+  const refresh = () => {
+    history.go();
+  };
 
   const refreshTroughLogo = () => {
     history.go();
@@ -28,7 +28,7 @@ const Header = () => {
     if (!lang) {
       localStorage.setItem("lang", "ukr");
       setDefLangState("ukr");
-      refresh()
+      refresh();
     }
   };
 
@@ -39,19 +39,16 @@ const Header = () => {
   const changeLang = (e) => {
     if (e.target.id === "rus") {
       setDefLangState("rus");
-      localStorage.setItem("lang", "rus")
+      localStorage.setItem("lang", "rus");
       refresh();
-
     } else if (e.target.id === "en") {
       setDefLangState("en");
-      localStorage.setItem("lang", "en")
+      localStorage.setItem("lang", "en");
       refresh();
-
     } else {
       setDefLangState("ukr");
-      localStorage.setItem("lang", "ukr")
+      localStorage.setItem("lang", "ukr");
       refresh();
-
     }
     setLangSwitcher(!langSwitcher);
   };
@@ -74,31 +71,37 @@ const Header = () => {
             <ul className={css.menuList}>
               <li className={css.menuListItem}>
                 <NavLink to="/services" className={css.menuItem}>
-                  Услуги
+                  {defLangState === "rus" ? "Услуги" : ""}
+                  {defLangState === "ukr" ? "Послуги" : ""}
+                  {defLangState === "en" ? "Services" : ""}
                 </NavLink>
               </li>
               <li className={css.menuListItem}>
                 <NavLink to="/about" className={css.menuItem}>
-                  О нас
+                  {defLangState === "rus" ? "О нас" : ""}
+                  {defLangState === "ukr" ? "О нас" : ""}
+                  {defLangState === "en" ? "About us" : ""}
                 </NavLink>
               </li>
               <li className={css.menuListItem}>
                 <NavLink to="/blog" className={css.menuItem}>
-                  Блог
+                  {defLangState === "rus" ? "Блог" : ""}
+                  {defLangState === "ukr" ? "Блог" : ""}
+                  {defLangState === "en" ? "Blog" : ""}
                 </NavLink>
               </li>
             </ul>
             <div className={css.langWrapper}>
-              {defLangState === "rus" ? (
+              {defLangState === "ukr" ? (
                 <p className={css.lang} onClick={langSwitch}>
-                  RU
+                  UKR
                 </p>
               ) : (
                 <></>
               )}
-              {defLangState === "ukr" ? (
+              {defLangState === "rus" ? (
                 <p className={css.lang} onClick={langSwitch}>
-                  UKR
+                  RU
                 </p>
               ) : (
                 <></>
@@ -114,17 +117,17 @@ const Header = () => {
                 <div className={css.langs}>
                   <span
                     className={css.langSpan}
-                    id="rus"
-                    onClick={(e) => changeLang(e)}
-                  >
-                    RU
-                  </span>
-                  <span
-                    className={css.langSpan}
                     id="ukr"
                     onClick={(e) => changeLang(e)}
                   >
                     UKR
+                  </span>
+                  <span
+                    className={css.langSpan}
+                    id="rus"
+                    onClick={(e) => changeLang(e)}
+                  >
+                    RU
                   </span>
                   <span
                     className={css.langSpan}

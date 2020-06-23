@@ -2,12 +2,15 @@ import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import posts from "../../posts.json";
+import contentUkr from "../../postsUkr.json";
+import contentRus from "../../postsRus.json";
+import contentEng from "../../postsEng.json";
 import styles from "./blog.module.css";
 
 const Blog = () => {
   const [isFetching, setIsFetching] = useState(false);
   const [postsToShow, setPostsToShow] = useState([]);
+  const [defLangState] = useState(localStorage.getItem("lang"));
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -22,6 +25,7 @@ const Blog = () => {
   useEffect(() => {
     fetchMoreListItems();
   }, []);
+  useEffect(() => {}, [defLangState]);
 
   function handleScroll() {
     const windowHeight =
@@ -42,7 +46,14 @@ const Blog = () => {
   }
   function fetchMoreListItems() {
     const preloader = 11 + Number(postsToShow.length);
-    setPostsToShow(posts.filter((item, index) => index <= preloader));
+
+    if (defLangState === "rus") {
+      setPostsToShow(contentRus.filter((item, index) => index <= preloader));
+    } else if (defLangState === "ukr") {
+      setPostsToShow(contentUkr.filter((item, index) => index <= preloader));
+    } else
+      setPostsToShow(contentEng.filter((item, index) => index <= preloader));
+
     setIsFetching(false);
   }
 
@@ -52,12 +63,26 @@ const Blog = () => {
       <div className={styles.imgWrapper}>
         <div className={styles.mainImg}></div>
         <div className={styles.mainImgTextWrapper}>
-          <h3 className={styles.mainImgTitle}>Наш блог</h3>
+          <h3 className={styles.mainImgTitle}>
+            {defLangState === "rus" ? "Наш блог" : ""}
+            {defLangState === "ukr" ? "Наш блог" : ""}
+            {defLangState === "en" ? "Our blog" : ""}
+          </h3>
           <p className={styles.mainImgText}>
-            Любой может сделать из простого сложное.
+            {defLangState === "rus"
+              ? "Любой может сделать из простого сложное."
+              : ""}
+            {defLangState === "ukr"
+              ? "Будь-хто може зробити з простого складне."
+              : ""}
+            {defLangState === "en"
+              ? "Anyone can make difficult out of simple."
+              : ""}
           </p>
           <p className={styles.mainImgText}>
-            Мы умеем превратить сложное в простое.
+            {defLangState === "rus" ? "Мы умеем превратить сложное в простое." : ""}
+            {defLangState === "ukr" ? "Ми вміємо перетворити складне в просте." : ""}
+            {defLangState === "en" ? "We can turn complex into simple." : ""}
           </p>
         </div>
       </div>
@@ -65,7 +90,11 @@ const Blog = () => {
         {/* <svg className={styles.line} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <line x1="10" y1="0" x2="10" y2="200" stroke="#fff" />
         </svg> */}
-        <h2 className={styles.blogTitle}>Блог</h2>
+        <h2 className={styles.blogTitle}>
+          {defLangState === "rus" ? "Блог" : ""}
+          {defLangState === "ukr" ? "Блог" : ""}
+          {defLangState === "en" ? "Blog" : ""}
+        </h2>
         <ul className={styles.postGrid}>
           {postsToShow.map((post) => (
             <li key={post.id} className={styles.post}>
