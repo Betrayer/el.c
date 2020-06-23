@@ -7,7 +7,7 @@
 }
 
 .aboutus_box {
-    position: relative;
+  position: relative;
   width: 245px;
   height: 193px;
   background: #10131f;
@@ -15,7 +15,7 @@
 }
 
 .aboutus_title {
-    text-align: center;
+  text-align: center;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -25,10 +25,10 @@
 }
 
 .aboutus_text {
-    position: absolute;
-    left: 95px;
-    text-align: left;
-    width: 130px;
+  position: absolute;
+  left: 95px;
+  text-align: left;
+  width: 130px;
   font-style: normal;
   font-weight: normal;
   font-size: 8px;
@@ -37,75 +37,156 @@
   color: #ffffff;
 }
 
-.aboutus_cirlce{
-    position: absolute;
-    width: 95%;
-    left: 10%;
-    top: 4%;
+.aboutus_cirlce {
+  position: absolute;
+  width: 95%;
+  left: 10%;
+  top: 4%;
 }
 
 .learnMore {
+  position: absolute;
+  transform: scale(0.7);
+  left: 23%;
+  top: 50%;
+  background: transparent;
+  width: 214px;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+}
+
+.icon,
+.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #10131f;
+  left: 40%;
+  transform: translateX(-50%);
+  width: 1.125rem;
+  height: 0.125rem;
+}
+.icon {
+  background: none;
+}
+.icon::before,
+.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.294rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #10131f;
+  border-right: 0.125rem solid #10131f;
+  transform: rotate(45deg);
+}
+.buttonText {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 50px;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+@media (min-width: 768px) {
+  .aboutus_container {
+    min-height: 520px;
+    background-image: url("../../assets/photos/aboutus_tablet.svg");
+  }
+
+  .aboutus_box {
+    width: 435px;
+    height: 355px;
+  }
+
+  .aboutus_title {
+    font-size: 30px;
+    line-height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .aboutus_text {
+    width: 210px;
+    left: 176px;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+  }
+
+  .learnMore {
+    transform: scale(1);
+    left: 47%;
+    top: 67%;
+  }
+
+  .aboutus_cirlce {
+    width: 80%;
+    left: 73%;
+    top: 48%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .aboutus_container {
+    min-height: 770px;
+    background-image: url("../../assets/photos/abouts_desc.svg");
+  }
+
+  .aboutus_box {
+    width: 591px;
+    height: 441px;
+  }
+
+  .aboutus_title {
+    font-size: 45px;
+    line-height: 75px;
     position: absolute;
-    transform: scale(0.7);
-    left: 23%;
-    top: 50%;
-    background: transparent;
-    width: 214px;
-    height: auto;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    left: 29%;
   }
-  .circle {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: relative;
-    display: block;
-    margin: 0;
-    width: 40px;
-    height: 40px;
-    background: #ffffff;
-    border-radius: 20px;
+
+  .aboutus_text {
+    width: 424px;
+    height: 120px;
+    left: 176px;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0.01em;
+    top: 21%;
   }
-  
-  .icon,
-  .arrow {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    background: #10131f;
-    left: 40%;
-    transform: translateX(-50%);
-    width: 1.125rem;
-    height: 0.125rem;
+
+  .learnMore{
+    transform: scale(1.2);
+    left: 58%;
+    top: 72%;
   }
-  .icon {
-    background: none;
+
+  .aboutus_cirlce {
+    opacity: 0.4;
+    width: 90%;
+    left: 65%;
+    top: 33%;
   }
-  .icon::before,
-  .arrow::before {
-    position: absolute;
-    content: "";
-    top: -0.294rem;
-    right: 0.0625rem;
-    width: 0.625rem;
-    height: 0.625rem;
-    border-top: 0.125rem solid #10131f;
-    border-right: 0.125rem solid #10131f;
-    transform: rotate(45deg);
-  }
-  .buttonText {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: absolute;
-    top: 0;
-    left: 50px;
-    right: 0;
-    bottom: 0;
-    padding: 0.75rem 0;
-    color: #fff;
-    font-weight: 700;
-    line-height: 1.6;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 13px;
-  }
+}
