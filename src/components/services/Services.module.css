@@ -156,11 +156,12 @@
 
 .learnMore {
   position: relative;
+  left: 20%;
   background: transparent;
   width: 214px;
   height: auto;
-  left: 20%;
-  padding-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 .circle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -256,7 +257,20 @@
   }
   .learnMore {
     left: 68%;
-  }
+}
+.learnMore:hover .circle {
+  width: 100%;
+}
+.learnMore:hover .arrow {
+  transform: translate(7rem, 0);
+}
+.learnMore:hover .buttonText {
+  color: #10131f;
+}
+.buttonText {
+  left: 0px;
+  font-size: 14px;
+}
   .service_item1 {
     left: 8%;
     top: 6%;
