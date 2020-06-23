@@ -60,7 +60,7 @@ const Services = () => {
             <li className={css.service_item2}>
               <h3 className={css.services_item_title}>Мобильные приложения</h3>
               <p className={css.services_item_text}>
-                Хостинг, техническое сопровождение, контроль работоспособности
+                Разрабатываем мобильные приложения для iOS и Android
               </p>
             </li>
             <li className={css.service_item3}>
@@ -70,19 +70,22 @@ const Services = () => {
                 Продвижение
               </h3>
               <p className={css.services_item_text}>
-                Хостинг, техническое сопровождение, контроль работоспособности
+                Ведем социальные сети и создаем системы привлечения клиентов,
+                продвигаем сайты в поисковых системах.
               </p>
             </li>
             <li className={css.service_item4}>
               <h3 className={css.services_item_title}>Проработка макета</h3>
               <p className={css.services_item_text}>
-                Хостинг, техническое сопровождение, контроль работоспособности
+                Дизайн сайтов любой сложности - низкие и высокие бюджеты, дизайн
+                магазинов, промо-сайтов, сайтов компаний.
               </p>
             </li>
             <li className={css.service_item5}>
               <h3 className={css.services_item_title}>Разработка сайта</h3>
               <p className={css.services_item_text}>
-                Хостинг, техническое сопровождение, контроль работоспособности
+                Интернет-магазин, сайт компании, сайт-визитка, проекты "под
+                ключ".
               </p>
             </li>
           </ul>
