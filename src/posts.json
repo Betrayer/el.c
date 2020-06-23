@@ -1,32 +1,17 @@
 [
     {
-        "message": "Illiakov Bohdan RABOTNIK MESYACA",
-        "img": "https://ae01.alicdn.com/kf/H9cbaf0add88546ad9a81d65c114e31d2s/-.jpg_640x640q70.jpg",
-        "id": 27
-    },
-    {
-        "message": "ROMANNNNNNNN",
-        "img": "https://media-exp1.licdn.com/dms/image/C4D03AQGo3vYp3hA-VQ/profile-displayphoto-shrink_400_400/0?e=1598486400&v=beta&t=KMw0VkbfhqtZrhpBpPFiRDeQO4JXBHOYbEEs0h3jt7w",
-        "id": 28
-    },
-    {
-        "message": "coffee",
-        "img": "https://source.unsplash.com/XtUd5SiX464",
-        "id": 2
-    },
-    {
-        "message": "first post",
-        "img": "https://source.unsplash.com/5VXH4RG88gc",
-        "id": 1
-    },
-    {
-        "message": "watch hjjewflnjiokj;v m8umd9e9iwm9iimiqwim09 ni90sid9mu98fcyw y78ynd8nuonmaxl hiuqaosdhmocosix v jefmpiwoP,korpw",
-        "img": "https://source.unsplash.com/8b1cWDyvT7Y",
+        "message": "АДАПТИВНОСТЬ - без сомнений, одно из самых важных качеств сайта❗\n \nСтатистика показывает, что большинство пользователей просматривает сайты с мобильных устройств. Поэтому, если ваш сайт не адаптивный, вы можете терять немалую долю трафика - и клиентов соответственно.\n\nПри создании адаптивного сайта так же важно учитывать и особенности отдельного браузера и операционных систем.\n\nНаша команда занимается разработкой адаптивных сайтов для всех типов устройств. Главная цель для нас - качественный продукт, который обеспечивает вам высокие конверсии)",
+        "img": "../../assets/blog/3.jpeg",
         "id": 3
     },
     {
-        "message": "smth",
-        "img": "https://images.unsplash.com/photo-1460574283810-2aab119d8511?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000",
-        "id": 4
+        "message": "Что такое Landing page и кому подойдет такой сайт?\n \nЭто одностраничный сайт, который посвящён одному товару или услуге. \n\n Такой тип сайта идеально подходит для рекламных целей, когда в короткие сроки необходимо получить новых клиентов.\n\nИнформация на лендинге должна быть подана доступно и лаконично, чтобы посетитель не рассеивался и у него возникло желание совершить нужное действие: позвонить, оформить заявку, приобрести товар.",
+        "img": "../../assets/blog/2.jpeg",
+        "id": 2
+    },
+    {
+        "message": "Нужен качественный сайт для высоких конверсий? \n \n Мы создаём современные сайты, которые идеально выглядят и функционируют на всех типах устройств. \n✅Корпоративный сайт\n✅Сайт-визитка\n✅Одностраничный сайт\n✅Интернет-магазин\n✅Каталог",
+        "img": "../../assets/blog/1.jpeg",
+        "id": 1
     }
 ]
