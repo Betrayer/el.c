@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
+import Slide from "react-reveal/Slide";
 import css from "./Form.module.css";
 
 const Form = (props) => {
@@ -118,12 +119,12 @@ const Form = (props) => {
               </button>
             </div>
           </div>
-          {formSubmitted ? (
-            <div
-              id="close"
-              className={css.formContainer}
-              onClick={(e) => closeForm(e)}
-            >
+          <div
+            id="close"
+            className={css.formContainer}
+            onClick={(e) => closeForm(e)}
+          >
+            <Slide right when={formSubmitted}>
               <form className={css.form} onSubmit={(e) => handleSubmit(e)}>
                 <div
                   id="close1"
@@ -270,10 +271,8 @@ const Form = (props) => {
                   Ellie.Yelizarieva@el-c.com.ua
                 </p>
               </form>
-            </div>
-          ) : (
-            <></>
-          )}
+            </Slide>
+          </div>
         </div>
       </section>
     </>

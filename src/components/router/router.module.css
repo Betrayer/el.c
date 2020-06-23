@@ -4,9 +4,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(141, 141, 141);
 }
 
 .loaderText {
   font-size: 30px;
   font-weight: 500;
+  color: #fff;
 }
