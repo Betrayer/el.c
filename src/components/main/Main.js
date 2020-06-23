@@ -28,6 +28,4 @@ const Main = (props) => {
 //   env: PropTypes.object.isRequired,
 // };
 
-
-
 export default withRouter(Main);
