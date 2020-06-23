@@ -122,8 +122,8 @@ const Form = (props) => {
                 <div id="close1" className={css.formX} onClick={(e) => closeForm(e)}>
                   
                 </div>
-                <h3 className={css.formTitleForm}>Есть крутая задумка?</h3>
-                <h3 className={css.formTitleForm}>Пишите нам</h3>
+                <h3 className={css.formTitleForm}>Есть крутая задумка?
+                <span className={css.formTitleSpan}>Пишите нам</span></h3>
                 <p className={css.formText}>Как к вам обращаться?</p>
                 <div className={css.formDiv}>
                   <input
