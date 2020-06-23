@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import { useHistory } from "react-router-dom";
 import css from "./AboutUs.module.css";
+import LearnMore from "../btn/LearnMore";
 
 const AboutUs = () => {
-  const [arrow, setArrow] = useState(false);
 
   const history = useHistory();
 
-  const toAbout = () => {
-    history.push("/about");
-  };
+const toAbout = () => {
+  history.push("/about");
+};
 
   return (
     <section className={css.aboutus_container}>
@@ -25,21 +25,9 @@ const AboutUs = () => {
           кадров, поэтому каждый созданный нами сайт является результатом умелой
           комбинации креативного дизайна и современных технологий разработки.
         </p>
-        <button
-          onMouseOver={() => setArrow(true)}
-          onMouseLeave={() => setArrow(false)}
-          onClick={toAbout}
-          className={css.learnMore}
-        >
-          <span className={css.circle} aria-hidden="true">
-            {arrow ? (
-              <span className={css.arrow}></span>
-            ) : (
-              <span className={css.icon}></span>
-            )}
-          </span>
-          <span className={css.buttonText}>узнать подробнее</span>
-        </button>
+        <div className={css.btnWrapper}>
+          <LearnMore text={'узнать подробнее'} funcToDo={toAbout} />
+        </div>
       </div>
     </section>
   );
