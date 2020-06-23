@@ -41,7 +41,7 @@ const AboutUsPage = () => {
         </div>
       </div>
       <div className={styles.container}>
-        <h2 className={styles.aboutTitle}>Блог</h2>
+        <h2 className={styles.aboutTitle}>О нас</h2>
         <ul className={styles.aboutList}>
           {aboutRus.map((about, ind) => (
             <li key={ind} className={styles.aboutListTarget}>
