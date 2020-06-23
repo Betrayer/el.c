@@ -15,12 +15,16 @@ const Header = () => {
     defLang();
   }, []);
 
-  const refresh =() => {
-    history.go()
-  }
+  const refresh = () => {
+    history.go();
+  };
 
   const refreshTroughLogo = () => {
-    history.go();
+    if (history.location.pathname === "/") {
+      refresh()
+    } else {
+      history.push("/");
+    }
   };
 
   const defLang = () => {
@@ -28,7 +32,7 @@ const Header = () => {
     if (!lang) {
       localStorage.setItem("lang", "ukr");
       setDefLangState("ukr");
-      refresh()
+      refresh();
     }
   };
 
@@ -39,19 +43,16 @@ const Header = () => {
   const changeLang = (e) => {
     if (e.target.id === "rus") {
       setDefLangState("rus");
-      localStorage.setItem("lang", "rus")
+      localStorage.setItem("lang", "rus");
       refresh();
-
     } else if (e.target.id === "en") {
       setDefLangState("en");
-      localStorage.setItem("lang", "en")
+      localStorage.setItem("lang", "en");
       refresh();
-
     } else {
       setDefLangState("ukr");
-      localStorage.setItem("lang", "ukr")
+      localStorage.setItem("lang", "ukr");
       refresh();
-
     }
     setLangSwitcher(!langSwitcher);
   };
