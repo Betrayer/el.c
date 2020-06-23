@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import TextTransition, { presets } from "react-text-transition";
 import { useHistory } from "react-router-dom";
 import css from "./Services.module.css";
+import LearnMore from "../btn/LearnMore";
 
 const TEXTS = ["Услуги", "Сервис", "Поддержка"];
 
@@ -90,22 +91,11 @@ const Services = () => {
             </li>
           </ul>
         </div>
-        <button
-          onMouseOver={() => setArrow(true)}
-          onMouseLeave={() => setArrow(false)}
-          onClick={toServices}
-          className={css.learnMore}
-        >
-          <span className={css.circle} aria-hidden="true">
-            {arrow ? (
-              <span className={css.arrow}></span>
-            ) : (
-              <span className={css.icon}></span>
-            )}
-          </span>
-          <span className={css.buttonText}>узнать подробнее</span>
-        </button>
+        
       </div>
+      <div className={css.btnWrapper}>
+          <LearnMore text={'узнать подробнее'} funcToDo={toServices} />
+        </div>
     </section>
   );
 };

@@ -62,20 +62,17 @@ const Blog = () => {
         </div>
       </div>
       <div className={styles.container}>
-        {/* <svg className={styles.line} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <line x1="10" y1="0" x2="10" y2="200" stroke="#fff" />
-        </svg> */}
         <h2 className={styles.blogTitle}>Блог</h2>
         <ul className={styles.postGrid}>
           {postsToShow.map((post) => (
             <li key={post.id} className={styles.post}>
+            
               {post.img ? (
                 <img
                   className={styles.postImg}
                   height="auto"
                   alt=""
-                  // src={require(post.img)}
-                  src={require("../../assets/blog/1.jpeg")}
+                  src={require(`../../assets/blog/${post.img}.jpeg`)}
                 />
               ) : (
                 <></>

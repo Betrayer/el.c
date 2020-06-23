@@ -35,7 +35,7 @@
   height: calc(100% + 28px);
   width: 1px;
   bottom: 0px;
-  left: 18%;
+  left: 8%;
   background-color: #fff;
 }
 .container::before{
@@ -49,16 +49,13 @@
 .blogTitle {
   font-size: 26px;
   margin: 28px 0;
-  margin-left: 30%;
+  margin-left: 13.6%;
   font-weight: 500;
 }
 .mainImgTextWrapper {
   position: absolute;
   top: 120px;
   left: 20px;
-}
-.mainImgTitle {
-  font-weight: 800;
 }
 .mainImgText {
   font-weight: 400;
@@ -67,16 +64,16 @@
 .postGrid {
   width: 100%;
   text-align: center;
-  padding-left: 18%;
+  padding-left: 8%;
   height: auto;
 }
 .post {
   width: 100%;
-  padding: 10px 0;
+  padding: 10px 10px;
 }
 .postImg {
   width: 100%;
-  max-width: 266px;
+  max-width: 366px;
 }
 .postMessage {
   font-size: 15px;
@@ -84,14 +81,9 @@
   margin-top: 8px;
   font-weight: 300;
   margin-bottom: 50px;
-  max-width: 250px;
+  max-width: 350px;
 }
-.line{
-  position: absolute;
-  stroke-dashoffset: 100;
-  stroke-dasharray: 143 10 30 10 2;
-  animation: offset 1.2s cubic-bezier(0.1, -0.6, 0.2, 0) forwards;
-}
+
 @keyframes offset {
   to{
     stroke-dashoffset: 00;
@@ -103,7 +95,7 @@
     width: 100%;
   }
   .container:after {
-    left: 59%;
+    left: 56.4%;
   }
   .mainImg {
     height: 389px;
@@ -126,9 +118,10 @@
     grid-template-columns: 2fr 2fr;
     column-gap: 30px;
     margin-left: 0;
-    padding-left: 24%;
+    padding-left: 16%;
     width: 97%;
     margin-top: 28px;
+    padding-top: 64px;
   }
   .post {
     display: flex;
@@ -145,13 +138,7 @@
   }
 }
 @media (min-width: 1200px) {
-  .container::after {
-    left: 72%;
-  }
-  .container::before{
-    display: block;
-    left: 44.8%;
-  }
+ 
   .mainImg {
     height: 752px;
   }
@@ -172,11 +159,21 @@
     font-size: 45px;
     top: 1%;
   }
-  .postGrid {
+  /* .postGrid {
     column-gap: 0px;
     grid-template-columns: 462fr 433fr 415fr;
-    padding-left: 16%;
+    padding-left: 12%;
     width: 98%;
+  } */
+  .postGrid {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    column-gap: 30px;
+    margin-left: 0;
+    padding-left: 16%;
+    width: 97%;
+    margin-top: 28px;
+    padding-top: 64px;
   }
   .post {
     display: flex;
@@ -200,5 +197,20 @@
   }
   .post:nth-child(3) {
     margin-top: 70px;
+  }
+}
+@media (min-width: 1440px) {
+  .container::after {
+    left: 71%;
+  }
+  .container::before{
+    display: block;
+    left: 42.0%;
+  }
+  .postGrid {
+    column-gap: 0px;
+    grid-template-columns: 462fr 433fr 415fr;
+    padding-left: 12%;
+    width: 98%;
   }
 }
