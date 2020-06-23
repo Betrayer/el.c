@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
+import Bounce from "react-reveal/Bounce";
 import css from "./router.module.css";
 
 const lazyMain = lazy(
@@ -27,7 +28,9 @@ export const useRouter = () => {
     <Suspense
       fallback={
         <div className={css.loaderContainer}>
-          <p className={css.loaderText}>Loading...</p>
+          <Bounce top>
+            <p className={css.loaderText}>Loading...</p>
+          </Bounce>
         </div>
       }
     >
