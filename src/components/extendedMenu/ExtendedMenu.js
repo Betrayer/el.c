@@ -47,7 +47,6 @@ const ExtendedMenu = ({ activeMenu }) => {
             <div className={styles.menuSocials}>
               <h3 className={styles.menuSocialsTitle}>Мы в соцсетях</h3>
               <ul className={styles.menuSocialsList}>
-                {/* для ежика */}
                 <li className={styles.menuSocialsLink}>
                   <a
                     className={styles.menuSocialsCircle}
@@ -75,7 +74,6 @@ const ExtendedMenu = ({ activeMenu }) => {
                   >
                   </a>
                 </li>
-                {/* для ежика */}
               </ul>
             </div>
           </div>
