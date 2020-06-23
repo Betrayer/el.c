@@ -5,7 +5,6 @@ import styles from "./mainBlog.module.css";
 const MainBlog = () => {
   const [arrow, setArrow] = useState(false);
 
-
   return (
     <section className={styles.bg}>
       <div className={styles.container}>
