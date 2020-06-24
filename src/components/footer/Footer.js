@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import css from "./footer.module.css";
 
 const Footer = () => {
+  const [defLangState] = useState(localStorage.getItem("lang"));
+
+  useEffect(() => {}, [defLangState]);
+
   return (
     <footer className={css.footer}>
-      {/* <span className={css.socialsHeader}>Мы в соцсетях</span>
+      {/* <span className={css.socialsHeader}>
+        {defLangState === "rus" ? "Мы в соцсетях" : ""}
+        {defLangState === "ukr" ? "Ми в соцмережах" : ""}
+        {defLangState === "en" ? "We are in social networks" : ""}
+      </span> */}
+      {/* 
       <ul className={css.socialsList}>
         <li className={css.menuSocialsLink}>
           <a
