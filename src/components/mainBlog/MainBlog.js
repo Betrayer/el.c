@@ -33,7 +33,7 @@ const MainBlog = () => {
                   className={styles.postImg}
                   height="auto"
                   alt=""
-                  src={post.img}
+                  src={require(`../../assets/blog/${post.img}.jpeg`)}
                 />
                 <p className={styles.postMessage}>{post.message}</p>
               </li>
@@ -50,7 +50,7 @@ const MainBlog = () => {
                   className={styles.postImg}
                   height="auto"
                   alt=""
-                  src={post.img}
+                  src={require(`../../assets/blog/${post.img}.jpeg`)}
                 />
                 <p className={styles.postMessage}>{post.message}</p>
               </li>
@@ -67,7 +67,7 @@ const MainBlog = () => {
                   className={styles.postImg}
                   height="auto"
                   alt=""
-                  src={post.img}
+                  src={require(`../../assets/blog/${post.img}.jpeg`)}
                 />
                 <p className={styles.postMessage}>{post.message}</p>
               </li>
