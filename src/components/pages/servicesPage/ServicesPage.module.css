@@ -142,12 +142,14 @@
   padding-bottom: 50px;
 }
 .questions_item {
+  position: relative;
   width: 200px;
   height: 50px;
   transition: all 0.5s ease-in-out;
 }
 
 .animated_questions_item {
+  position: relative;
   width: 200px;
   height: 150px;
   transition: all 0.5s ease-in-out;
@@ -175,6 +177,23 @@
   line-height: 12px;
   letter-spacing: 0.02em;
   color: #ffffff;
+}
+
+.questions_button{
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  position: absolute;
+  left: -14%;
+  top: 16%;
+}
+.questions_button_minus{
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  position: absolute;
+  left: -14%;
+  top: 16%;
 }
 
 @media (min-width: 768px) {
