@@ -45,7 +45,7 @@
   padding-bottom: 5px;
 }
 
-.serviceslist_item_text {
+.services_item_text {
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
@@ -69,66 +69,100 @@
 }
 
 .serviceslist_item2::before {
-    content: "";
-    position: absolute;
-    width: 43px;
-    height: 34px;
-    left: -39%;
-    top: 3%;
-    background-image: url("../../../assets/aboutusicons/3.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  content: "";
+  position: absolute;
+  width: 43px;
+  height: 34px;
+  left: -39%;
+  top: 3%;
+  background-image: url("../../../assets/aboutusicons/3.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  .serviceslist_item3::before {
-    content: "";
-    position: absolute;
-    width: 43px;
-    height: 34px;
-    left: -39%;
-    top: 3%;
-    background-image: url("../../../assets/aboutusicons/2.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.serviceslist_item3::before {
+  content: "";
+  position: absolute;
+  width: 43px;
+  height: 34px;
+  left: -39%;
+  top: 3%;
+  background-image: url("../../../assets/aboutusicons/2.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  .serviceslist_item4::before {
-    content: "";
-    position: absolute;
-    width: 43px;
-    height: 34px;
-    left: -39%;
-    top: 3%;
-    background-image: url("../../../assets/aboutusicons/4.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.serviceslist_item4::before {
+  content: "";
+  position: absolute;
+  width: 43px;
+  height: 34px;
+  left: -39%;
+  top: 3%;
+  background-image: url("../../../assets/aboutusicons/4.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  .serviceslist_item5::before {
-    content: "";
-    position: absolute;
-    width: 43px;
-    height: 34px;
-    left: -39%;
-    top: 3%;
-    background-image: url("../../../assets/aboutusicons/5.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.serviceslist_item5::before {
+  content: "";
+  position: absolute;
+  width: 43px;
+  height: 34px;
+  left: -39%;
+  top: 3%;
+  background-image: url("../../../assets/aboutusicons/5.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  .serviceslist_item6::before {
-    content: "";
-    position: absolute;
-    width: 43px;
-    height: 34px;
-    left: -39%;
-    top: 3%;
-    background-image: url("../../../assets/aboutusicons/6.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.serviceslist_item6::before {
+  content: "";
+  position: absolute;
+  width: 43px;
+  height: 34px;
+  left: -39%;
+  top: 3%;
+  background-image: url("../../../assets/aboutusicons/6.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.methodics p {
+  width: 205px;
+  margin: 0 auto;
+}
+
+.questions_item{
+  width: 200px;
+}
+
+
+.questions_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.questions_item_title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 10px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.questions_item_text{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
