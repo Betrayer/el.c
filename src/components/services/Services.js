@@ -8,7 +8,6 @@ const TEXTS = ["Услуги", "Сервис", "Поддержка"];
 
 const Services = () => {
   const [index, setIndex] = useState(0);
-  const [arrow, setArrow] = useState(false);
   const [defLangState] = useState(localStorage.getItem("lang"));
 
   const history = useHistory();
@@ -112,7 +111,21 @@ const Services = () => {
         
       </div>
       <div className={css.btnWrapper}>
-          <LearnMore text={'узнать подробнее'} funcToDo={toServices} />
+          {defLangState === "rus" ? (
+            <LearnMore text={"Узнать подробнее"} funcToDo={toServices} />
+          ) : (
+            <></>
+          )}
+          {defLangState === "ukr" ? (
+            <LearnMore text={"Дізнатись більше"} funcToDo={toServices} />
+          ) : (
+            <></>
+          )}
+          {defLangState === "en" ? (
+            <LearnMore text={"Find out more"} funcToDo={toServices} />
+          ) : (
+            <></>
+          )}
         </div>
     </section>
   );
