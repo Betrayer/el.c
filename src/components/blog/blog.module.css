@@ -69,7 +69,8 @@
 }
 .post {
   width: 100%;
-  padding: 10px 10px;
+  padding: 10px;
+  padding-bottom: 50px;
 }
 .postImg {
   width: 100%;
@@ -80,7 +81,7 @@
   margin: 0 auto;
   margin-top: 8px;
   font-weight: 300;
-  margin-bottom: 50px;
+  margin-bottom: 2px;
   max-width: 350px;
 }
 
