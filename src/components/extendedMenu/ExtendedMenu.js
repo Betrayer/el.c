@@ -4,19 +4,19 @@ import styles from "./extendedMenu.module.css";
 
 const ExtendedMenu = ({ activeMenu }) => {
   const menuLinksRus = [
-    { name: "Портфолио", redirect: "/portfolio" },
+    // { name: "Портфолио", redirect: "/portfolio" },
     { name: "Услуги", redirect: "/services" },
     { name: "О нас", redirect: "/about" },
     { name: "Блог", redirect: "/blog" },
   ];
   const menuLinksUkr = [
-    { name: "Портфоліо", redirect: "/portfolio" },
+    // { name: "Портфоліо", redirect: "/portfolio" },
     { name: "Послуги", redirect: "/services" },
     { name: "Про нас", redirect: "/about" },
     { name: "Блог", redirect: "/blog" },
   ];
   const menuLinksEng = [
-    { name: "Portfolio", redirect: "/portfolio" },
+    // { name: "Portfolio", redirect: "/portfolio" },
     { name: "Services", redirect: "/services" },
     { name: "About us", redirect: "/about" },
     { name: "Blog", redirect: "/blog" },
@@ -161,7 +161,7 @@ const ExtendedMenu = ({ activeMenu }) => {
                 rel="noopener noreferrer"
                 target="_blank"
                 className={styles.menuContactsLink}
-                href="tel:123-456-7890"
+                href="tel:+380678095578"
               >
                 +380 67 809 55 78
               </a>{" "}
@@ -169,17 +169,17 @@ const ExtendedMenu = ({ activeMenu }) => {
                 rel="noopener noreferrer"
                 target="_blank"
                 className={styles.menuContactsLink}
-                href="mailto:yelizarieva.ellie@gmail.com"
+                href="mailto:EllieYelizarieva@el-c.com.ua"
               >
-                email1@gmail.com
+                EllieYelizarieva@el-c.com.ua
               </a>{" "}
               <a
                 rel="noopener noreferrer"
                 target="_blank"
                 className={styles.menuContactsLink}
-                href="mailto:StarDestroyer@ukr.net"
+                href="tel:+380663862689"
               >
-                email2@mail.com
+                +380 66 386 26 89
               </a>{" "}
             </div>
           </div>
