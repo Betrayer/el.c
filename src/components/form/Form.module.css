@@ -221,7 +221,7 @@
   left: 50%;
   transform: translateX(-50%); 
 }
-.formContainer {
+.formContainer, .formContainerClosed {
   margin: 0 auto;
   position: fixed;
   width: 100%;
@@ -229,6 +229,10 @@
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
   height: 100vh;
+}
+.formContainerClosed{
+  height: 200px;
+  background-color: transparent;
 }
 .formX {
   background-color: #000;

@@ -121,7 +121,7 @@ const Form = (props) => {
           </div>
           <div
             id="close"
-            className={css.formContainer}
+            className={formSubmitted ? css.formContainer : css.formContainerClosed}
             onClick={(e) => closeForm(e)}
           >
             <Slide right when={formSubmitted}>

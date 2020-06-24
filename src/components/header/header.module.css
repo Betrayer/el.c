@@ -1,9 +1,12 @@
 .header {
-  width: 100wv;
+  width: 100vw;
   height: 50px;
   display: flex;
   justify-content: center;
   background-color: #000000;
+  z-index: 3;
+  position: sticky;
+  top: 0;
 }
 
 .logo {
