@@ -114,7 +114,7 @@ const ExtendedMenu = ({ activeMenu }) => {
               <h3 className={styles.menuSocialsTitle}>
                 {defLangState === "rus" ? "Мы в соцсетях" : ""}
                 {defLangState === "ukr" ? "Ми в соцмережах" : ""}
-                {defLangState === "en" ? "We are in social networks" : ""}
+                {defLangState === "en" ? "Social media" : ""}
               </h3>
               <ul className={styles.menuSocialsList}>
                 <li className={styles.menuSocialsLink}>
@@ -154,7 +154,7 @@ const ExtendedMenu = ({ activeMenu }) => {
             <p className={styles.someText}>
             {defLangState === "rus" ? "Каждый созданный нами интернет сайт является результатом умелой комбинации маркетинговой стратегии, креативного дизайна и современных технологий разработки!" : ""}
             {defLangState === "ukr" ? "Кожен створений нами інтернет сайт є результатом вмілої комбінації маркетингової стратегіі, креативного дизайну і сучасних технологій розробки!" : ""}
-            {defLangState === "en" ? "Each web site created by us is the result of a skillful combination of marketing strategy, creative design and modern development technologies!" : ""}
+            {defLangState === "en" ? "Each web site we create is the result of a skillful combination of marketing strategy, creative design and modern development technologies!" : ""}
             </p>
             <div className={styles.menuContacts}>
               <a
