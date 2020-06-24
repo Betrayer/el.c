@@ -2,6 +2,8 @@
   min-height: 450px;
   width: 100%;
   background-color: #424b5a;
+  position: relative;
+  padding-bottom: 50px;
 }
 
 .services_wrapper {
@@ -153,8 +155,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.learnMore {
+.btnWrapper{
+  position: absolute;
+  right: 11%;
+  width: 190px;
+}
+/* .learnMore {
   position: relative;
   left: 20%;
   background: transparent;
@@ -162,61 +168,8 @@
   height: auto;
   margin-top: 50px;
   margin-bottom: 20px;
-}
-.circle {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: relative;
-  display: block;
-  margin: 0;
-  width: 40px;
-  height: 40px;
-  background: #ffffff;
-  border-radius: 20px;
-}
+} */
 
-.icon,
-.arrow {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  background: #10131f;
-  left: 40%;
-  transform: translateX(-50%);
-  width: 1.125rem;
-  height: 0.125rem;
-}
-.icon {
-  background: none;
-}
-.icon::before,
-.arrow::before {
-  position: absolute;
-  content: "";
-  top: -0.294rem;
-  right: 0.0625rem;
-  width: 0.625rem;
-  height: 0.625rem;
-  border-top: 0.125rem solid #10131f;
-  border-right: 0.125rem solid #10131f;
-  transform: rotate(45deg);
-}
-.buttonText {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  left: 50px;
-  right: 0;
-  bottom: 0;
-  padding: 0.75rem 0;
-  color: #fff;
-  font-weight: 700;
-  line-height: 1.6;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 13px;
-}
 
 @media (min-width: 768px) {
   .services_box {

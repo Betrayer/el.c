@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import LearnMore from "../btn/LearnMore";
 import content from "../../posts.json";
 import styles from "./mainBlog.module.css";
 
@@ -19,18 +20,23 @@ const MainBlog = () => {
         <ul className={styles.postGrid}>
           {content.map((post) => (
             <li key={post.id} className={styles.post}>
-              <img
-                className={styles.postImg}
-                height="auto"
-                alt=""
-                src={post.img}
-              />
+              {post.img ? (
+                <img
+                  className={styles.postImg}
+                  height="auto"
+                  alt=""
+                  src={require(`../../assets/blog/${post.img}.jpeg`)}
+                />
+              ) : (
+                <></>
+              )}
               <p className={styles.postMessage}>{post.message}</p>
             </li>
           ))}
         </ul>
         <div className={styles.btnWrapper}>
-          <button
+          <LearnMore text={'узнать подробнее'} funcToDo={toBlog} />
+          {/* <button
             onMouseOver={() => setArrow(true)}
             onMouseLeave={() => setArrow(false)}
             className={styles.learnMore}
@@ -44,7 +50,7 @@ const MainBlog = () => {
               )}
             </span>
             <span className={styles.buttonText}>узнать подробнее</span>
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

@@ -26,12 +26,16 @@
   color: #ffffff;
   font-size: 24px;
 }
-.formTitleForm {
+.formTitleForm, .formTitleSpan {
   font-weight: 600;
   text-align: left;
   padding-left: 10px;
   color: #000000;
   font-size: 24px;
+}
+.formTitleSpan{
+  display: block;
+  padding-left: 0;
 }
 .formText {
   font-weight: 900;
@@ -238,6 +242,7 @@
   margin-left: 264px;
   margin-bottom: 20px;
   position: relative;
+  cursor: pointer;
 }
 .formX::after{
   content: "";
@@ -297,7 +302,7 @@
     margin-bottom: -15px;
     margin-top: 6px;
   }
-  .formTitleForm{
+  .formTitleForm, .formTitleSpan{
     font-weight: 500;
   }
 }
@@ -328,14 +333,14 @@
   }
   .formX {
     margin-top: 22px;
-    margin-bottom: 0px;
-    width: 90px;
-    height: 90px;
+    margin-bottom: 10px;
+    width: 60px;
+    height: 60px;
     margin-left: 80%;
   }
   .formX::after{
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
   }
   .learnMoreWhite{
     margin: 49px 0;
@@ -344,8 +349,9 @@
   .formDiv{
     margin-top: 4px;
   }
-  .formTitleForm{
+  .formTitleForm, .formTitleSpan{
     font-size: 40px;
+    margin-bottom: 10px;
   }
   .formText, .formInput{
     font-size: 16px;
@@ -368,6 +374,6 @@
     font-size: 45px;
   }
   .learnMoreWhite{
-    margin: 43px 0;
+    margin: 46px 0;
   }
 }
