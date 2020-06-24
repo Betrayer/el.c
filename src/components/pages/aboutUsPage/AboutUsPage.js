@@ -8,24 +8,24 @@ const AboutUsPage = () => {
   const aboutRus = [
     {
       name: "Цель",
-      text: "Запускать стартапы мирового класса.",
+      text: "Запускать и сопровождать стартапы мирового класса",
       icon: "objective",
     },
     {
       name: "Продукт",
       text:
-        "Техническая экспертиза, сильный менеджмент и дополнительные сервисы в виде маркетинга, нишевых консультантов, выходов на инвесторов и т.д.",
+       ' Автономное, модульное, "лёгкое", уникальное и надежное Web-приложение для работы па глобальной арене',
       icon: "product",
     },
     {
       name: "Миссия",
       text:
-        "Мы технологичная компания, которая помогает строить и выводить на рынок стартапы, а также развивать бизнес клиентов путем внедрения в них IT-инноваций.",
+        "Мы видим нашу миссию в том, чтобы используя все наши знания, опыт и умения правильно воплотить ваши планы и создавать удобные и гибкие сайты.",
       icon: "mission",
     },
     {
       name: "Сила",
-      text: "Стартапы и программные продукты для бизнеса на глобальной арене.",
+      text: "Наша команда - наша сила, вкупе с грамотным распределением ролей и ответственностью.",
       icon: "strength",
     },
   ];
@@ -41,10 +41,11 @@ const AboutUsPage = () => {
         </div>
       </div>
       <div className={styles.container}>
-        <h2 className={styles.aboutTitle}>О нас</h2>
+        <h2 className={styles.aboutTitle}>Наша философия</h2>
         <ul className={styles.aboutList}>
           {aboutRus.map((about, ind) => (
             <li key={ind} className={styles.aboutListTarget}>
+              <img className={styles.aboutListIcon} alt="" src={require(`../../../assets/icons/about/${about.icon}.svg`)} />
               <h3 className={styles.aboutListTitle}>{about.name}</h3>
               <p className={styles.aboutListMessage}>{about.text}</p>
             </li>
