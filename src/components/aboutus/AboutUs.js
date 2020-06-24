@@ -9,9 +9,9 @@ const AboutUs = () => {
   useEffect(() => {}, [defLangState]);
   const history = useHistory();
 
-const toAbout = () => {
-  history.push("/about");
-};
+  const toAbout = () => {
+    history.push("/about");
+  };
 
   return (
     <section className={css.aboutus_container}>
@@ -34,7 +34,7 @@ const toAbout = () => {
             ? "Команда розробників EL-C складається з виключно кваліфікованих кадрів, тому кожен створений нами сайт є результатом вмілої комбінації креативного дизайну і сучасних технологій розробки!"
             : ""}
           {defLangState === "en"
-            ? "The EL-C development team consists of exclusively qualified personnel, so each site we create is the result of a skillful combination of creative design and modern development technologies!"
+            ? "The EL-C development team consists of exclusively qualified personnel, so each website we create is the result of a skillful combination of creative design and modern development technologies!"
             : ""}
         </p>
         <div className={css.btnWrapper}>
