@@ -55,6 +55,7 @@
   padding-bottom: 15px;
 }
 
+
 .serviceslist_item1::before {
   content: "";
   position: absolute;
@@ -301,12 +302,17 @@
     margin: 0 auto;
   }
 
+  .methodics_item_text{
+    width: 300px;
+  }
+
   .services_title {
     font-style: normal;
     font-weight: 500;
     font-size: 45px;
     line-height: 75px;
-    text-align: left;
+    text-align: center;
+    padding-bottom: 30px;
   }
   .serviceslist_item1,
   .serviceslist_item2,
@@ -393,5 +399,10 @@
   }
   .animated_questions_item {
     width: 50%;
+  }
+
+  .methodics p {
+    width: 350px;
+    margin: 0 auto;
   }
 }
