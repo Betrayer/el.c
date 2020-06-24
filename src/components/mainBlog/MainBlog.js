@@ -15,9 +15,7 @@ const MainBlog = () => {
     history.push("/blog");
   };
   const messageBR = (message) => {
-    console.log('message', message.substr(0, 70))
-    const newMessage = message.replace(/\n/, "<br />").substr(0, 146) + "...";
-    return newMessage
+    console.log('message', message.slice(0,2))
   };
 
   return (
@@ -38,7 +36,7 @@ const MainBlog = () => {
                   alt=""
                   src={require(`../../assets/blog/${post.img}.jpeg`)}
                 />
-                <p className={styles.postMessage}>{messageBR(post.message)}</p>
+                {post.message.slice(0,3).map(mes => <p className={styles.postMessage}>{mes}</p>)}
               </li>
             ))}
           </ul>
@@ -55,7 +53,7 @@ const MainBlog = () => {
                   alt=""
                   src={require(`../../assets/blog/${post.img}.jpeg`)}
                 />
-                <p className={styles.postMessage}>{messageBR(post.message)}</p>
+                {post.message.slice(0,3).map(mes => <p className={styles.postMessage}>{mes}</p>)}
               </li>
             ))}
           </ul>
@@ -72,7 +70,7 @@ const MainBlog = () => {
                   alt=""
                   src={require(`../../assets/blog/${post.img}.jpeg`)}
                 />
-                <p className={styles.postMessage}>{messageBR(post.message)}</p>
+                {post.message.slice(0,3).map(mes => <p className={styles.postMessage}>{mes}</p>)}
               </li>
             ))}
           </ul>
