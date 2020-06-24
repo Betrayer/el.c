@@ -46,7 +46,6 @@ const Blog = () => {
   }
   function fetchMoreListItems() {
     const preloader = 11 + Number(postsToShow.length);
-
     if (defLangState === "rus") {
       setPostsToShow(contentRus.filter((item, index) => index <= preloader));
     } else if (defLangState === "ukr") {
