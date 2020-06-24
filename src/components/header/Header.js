@@ -83,7 +83,7 @@ const Header = () => {
               <li className={css.menuListItem}>
                 <NavLink to="/about" className={css.menuItem}>
                   {defLangState === "rus" ? "О нас" : ""}
-                  {defLangState === "ukr" ? "О нас" : ""}
+                  {defLangState === "ukr" ? "Про нас" : ""}
                   {defLangState === "en" ? "About us" : ""}
                 </NavLink>
               </li>
