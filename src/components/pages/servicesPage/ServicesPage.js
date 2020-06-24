@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import Slide from "react-reveal/Slide";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import servicesPageTransition from "../../transitions/servicesPageTransition.module.css";
+import smth from "../../transitions/smth.module.css";
 import css from "./ServicesPage.module.css";
 
 const ServicesPage = () => {
@@ -89,77 +91,92 @@ const ServicesPage = () => {
       </div>
       <div className={css.questions}>
         <h2 className={css.services_title}>Часто задаваемые вопросы</h2>
-        <ul className={css.questions_list}>
-          <li className={css.questions_item}>
-            <button
-              className={css.questions_button}
-              onClick={(e) => handleClick(e)}
-              name="button1"
-            ></button>
-            <h3 className={css.questions_item_title}>
-              Сколько стоит разработка проекта?
-            </h3>
-            <Slide top when={slide1}>
-              <div>
-                {" "}
+        <CSSTransition
+          in={false}
+          classNames={smth}
+          timeout={500}
+        >
+          <ul className={css.questions_list}>
+            <li className={css.questions_item}>
+              <button
+                className={css.questions_button}
+                onClick={(e) => handleClick(e)}
+                name="button1"
+              ></button>
+              <h3 className={css.questions_item_title}>
+                Сколько стоит разработка проекта?
+              </h3>
+              <CSSTransition
+                in={slide1}
+                classNames={servicesPageTransition}
+                timeout={500}
+                unmountOnExit
+              >
                 <p className={css.questions_item_text}>
                   Стоимость проекта может быть совершенно разной, в зависимости
                   от сложности функционала, дизайна, верстки, интеграции и т.д.
                   Поэтому для уточнения стоимости обратитесь к нашим
                   специалистам.
                 </p>
-              </div>
-            </Slide>
-          </li>
-          <li className={css.questions_item}>
-            <button
-              className={css.questions_button}
-              onClick={handleClick}
-              name="button2"
-            ></button>
-            <h3 className={css.questions_item_title}>Почемы выбирают нас?</h3>
-            <Slide top when={slide2}>
-              <div>
-                {" "}
+              </CSSTransition>
+            </li>
+
+            <li className={css.questions_item}>
+              <button
+                className={css.questions_button}
+                onClick={handleClick}
+                name="button2"
+              ></button>
+              <h3 className={css.questions_item_title}>Почемы выбирают нас?</h3>
+              <CSSTransition
+                in={slide2}
+                classNames={servicesPageTransition}
+                timeout={500}
+                unmountOnExit
+              >
                 <p className={css.questions_item_text}>Потому что мы лучшие.</p>
-              </div>
-            </Slide>
-          </li>
-          <li className={css.questions_item}>
-            <button
-              className={css.questions_button}
-              onClick={handleClick}
-              name="button3"
-            ></button>
-            <h3 className={css.questions_item_title}>
-              Делаете ли вы продвижение?
-            </h3>
-            <Slide top when={slide3}>
-              <div>
-                {" "}
+              </CSSTransition>
+            </li>
+            <li className={css.questions_item}>
+              <button
+                className={css.questions_button}
+                onClick={handleClick}
+                name="button3"
+              ></button>
+              <h3 className={css.questions_item_title}>
+                Делаете ли вы продвижение?
+              </h3>
+              <CSSTransition
+                in={slide3}
+                classNames={servicesPageTransition}
+                timeout={500}
+                unmountOnExit
+              >
                 <p className={css.questions_item_text}>Да, делаем.</p>
-              </div>
-            </Slide>
-          </li>
-          <li className={css.questions_item}>
-            <button
-              className={css.questions_button}
-              onClick={handleClick}
-              name="button4"
-            ></button>
-            <h3 className={css.questions_item_title}>
-              Какие сроки исполнения?
-            </h3>
-            <Slide top when={slide4}>
-              <div>
-                {" "}
+              </CSSTransition>
+            </li>
+            <li className={css.questions_item}>
+              <button
+                className={css.questions_button}
+                onClick={handleClick}
+                name="button4"
+              ></button>
+              <h3 className={css.questions_item_title}>
+                Какие сроки исполнения?
+              </h3>
+              <CSSTransition
+                in={slide4}
+                classNames={servicesPageTransition}
+                timeout={500}
+                unmountOnExit
+              >
                 <p className={css.questions_item_text}>
                   Как только, так сразу.
                 </p>
-              </div>
-            </Slide>
-          </li>
-        </ul>
+              </CSSTransition>
+            </li>
+          </ul>
+        </CSSTransition>
       </div>
     </div>
   );

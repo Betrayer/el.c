@@ -10,9 +10,9 @@ const AboutUs = () => {
   useEffect(() => {}, [defLangState]);
   const history = useHistory();
 
-const toAbout = () => {
-  history.push("/about");
-};
+  const toAbout = () => {
+    history.push("/about");
+  };
 
   return (
     <section className={css.aboutus_container}>
@@ -41,6 +41,7 @@ const toAbout = () => {
         <button
           onMouseOver={() => setArrow(true)}
           onMouseLeave={() => setArrow(false)}
+          onClick={toAbout}
           className={css.learnMore}
         >
           <span className={css.circle} aria-hidden="true">
