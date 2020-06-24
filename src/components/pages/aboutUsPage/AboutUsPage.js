@@ -42,6 +42,7 @@ const AboutUsPage = () => {
       </div>
       <div className={styles.container}>
         <h2 className={styles.aboutTitle}>Наша философия</h2>
+        <div className={styles.aboutListWrapper}>
         <ul className={styles.aboutList}>
           {aboutRus.map((about, ind) => (
             <li key={ind} className={styles.aboutListTarget}>
@@ -50,7 +51,7 @@ const AboutUsPage = () => {
               <p className={styles.aboutListMessage}>{about.text}</p>
             </li>
           ))}
-        </ul>
+        </ul></div>
       </div>
       <Footer />
     </section>

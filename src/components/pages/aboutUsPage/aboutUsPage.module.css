@@ -37,6 +37,7 @@
 .mainImgText {
   font-weight: 400;
   font-size: 14px;
+  width: 300px;
 }
 .container {
   width: 80%;
@@ -46,13 +47,13 @@
 }
 .aboutTitle {
   font-size: 26px;
-  margin: 28px auto;
+  margin: 22px auto;
   font-weight: 800;
   text-align: left;
   width: 152px;
 }
 .aboutList {
-  padding-bottom: 40px ;
+  padding-bottom: 40px;
   width: 180px;
   margin: 0 auto;
   text-align: center;
@@ -72,12 +73,110 @@
   width: 42px;
   height: 52px;
 }
-.aboutListTitle{
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 40px;
+.aboutListTitle {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 40px;
 }
-.aboutListMessage{
-    font-weight: 300;
-    font-size: 14px;
+.aboutListMessage {
+  font-weight: 300;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .container {
+    margin: 0;
+    width: 100%;
+  }
+  .mainImg {
+    height: 389px;
+  }
+  .mainImgTextWrapper {
+    top: 220px;
+    left: 10%;
+  }
+  .mainImgTitle {
+    font-size: 35px;
+  }
+  .aboutListTitle {
+    font-size: 26px;
+    line-height: 70px;
+  }
+  .aboutTitle {
+    font-size: 50px;
+    width: 444px;
+    margin-top: 70px;
+  }
+  .aboutList {
+    margin: 0;
+    margin-left: 18%;
+    margin-top: 28px;
+    position: relative;
+    width: 610px;
+  }
+  .aboutListTarget {
+    position: relative;
+    width: 310px;
+  }
+  .aboutListTarget:nth-child(2) {
+    left: 48%;
+    top: -60px;
+  }
+  .aboutListTarget:nth-child(3) {
+    top: -60px;
+    left: 2%;
+  }
+  .aboutListTarget:nth-child(4) {
+    width: 300px;
+    left: 52%;
+    top: -100px;
+  }
+}
+@media (min-width: 928px) {
+  .aboutList {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .mainImg {
+    height: 752px;
+  }
+  .mainImgTextWrapper {
+    top: 540px;
+    left: 10%;
+  }
+  .mainImgTitle {
+    font-size: 50px;
+    line-height: 40px;
+  }
+  .mainImgText {
+    width: 330px;
+    line-height: 30px;
+  }
+  .aboutList {
+    width: 1000px;
+  }
+  .aboutListTarget:nth-child(1) {
+    left: 8%;
+  }
+  .aboutListTarget:nth-child(2) {
+    left: 58%;
+    top: -100px;
+  }
+  .aboutListTarget:nth-child(3) {
+    top: -90px;
+    left: 14%;
+  }
+  .aboutListTarget:nth-child(4) {
+    width: 300px;
+    left: 64%;
+    top: -170px;
+  }
+}
+@media (min-width: 1440px) {
+  .aboutList {
+    width: 1200px;
+  }
+  .aboutListTarget {
+    transform: scale(1.2);
+  }
 }
