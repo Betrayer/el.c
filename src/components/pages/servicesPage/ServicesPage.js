@@ -27,6 +27,7 @@ const ServicesPage = () => {
 
   return (
     <div className={css.servicespage_container}>
+      <div className={css.servicespage_box}>
       <div className={css.serviceslist_box}>
         <h2 className={css.services_title}>Услуги</h2>
         <ul className={css.serviceslist}>
@@ -75,27 +76,28 @@ const ServicesPage = () => {
       </div>
       <div className={css.methodics}>
         <h2 className={css.services_title}>Методика работы</h2>
-        <p className={css.services_item_text}>
-          Специалисты работают в digital-сфере более 7 лет. За это время мы
-          разработали более 500+ успешных проектов. Основываясь на своем опыте и
-          знании рынка, мы с уверенностью можем сказать, что будет работать, а
-          что — нет. Заказывая сайт в нашей студии, вы получаете работающие
-          решения, необходимые именно вашему бизнесу.
-        </p>
-        <p className={css.services_item_text}>
-          Сотрудничая с нами, вы будете не клиентом, а нашим партнером.
-          Благодаря этому мы будем развивать ваш бизнес как собственный. Мы так
-          же как и вы заинтересованы в успехе проекта, поскольку ваша успешность
-          будет нашей рекламой.
-        </p>
+        <ul className={css.methodics_list}>
+          <li className={css.methodics_item}>
+            <p className={css.services_item_text}>
+              Основываясь на своем опыте и знании рынка, мы с уверенностью можем
+              сказать, что будет работать, а что — нет. Заказывая сайт в нашей
+              студии, вы получаете работающие решения, необходимые именно вашему
+              бизнесу.
+            </p>
+          </li>
+          <li className={css.methodics_item}>
+            <p className={css.services_item_text}>
+              Сотрудничая с нами, вы будете не клиентом, а нашим партнером.
+              Благодаря этому мы будем развивать ваш бизнес как собственный. Мы
+              так же как и вы заинтересованы в успехе проекта, поскольку ваша
+              успешность будет нашей рекламой.
+            </p>
+          </li>
+        </ul>
       </div>
       <div className={css.questions}>
         <h2 className={css.services_title}>Часто задаваемые вопросы</h2>
-        <CSSTransition
-          in={false}
-          classNames={smth}
-          timeout={500}
-        >
+        <CSSTransition in={false} classNames={smth} timeout={500}>
           <ul className={css.questions_list}>
             <li className={css.questions_item}>
               <button
@@ -177,6 +179,7 @@ const ServicesPage = () => {
             </li>
           </ul>
         </CSSTransition>
+      </div>
       </div>
     </div>
   );
