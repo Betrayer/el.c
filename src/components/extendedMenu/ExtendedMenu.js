@@ -4,19 +4,19 @@ import styles from "./extendedMenu.module.css";
 
 const ExtendedMenu = ({ activeMenu }) => {
   const menuLinksRus = [
-    { name: "Портфолио", redirect: "/portfolio" },
+    // { name: "Портфолио", redirect: "/portfolio" },
     { name: "Услуги", redirect: "/services" },
     { name: "О нас", redirect: "/about" },
     { name: "Блог", redirect: "/blog" },
   ];
   const menuLinksUkr = [
-    { name: "Портфоліо", redirect: "/portfolio" },
+    // { name: "Портфоліо", redirect: "/portfolio" },
     { name: "Послуги", redirect: "/services" },
     { name: "Про нас", redirect: "/about" },
     { name: "Блог", redirect: "/blog" },
   ];
   const menuLinksEng = [
-    { name: "Portfolio", redirect: "/portfolio" },
+    // { name: "Portfolio", redirect: "/portfolio" },
     { name: "Services", redirect: "/services" },
     { name: "About us", redirect: "/about" },
     { name: "Blog", redirect: "/blog" },
@@ -114,7 +114,7 @@ const ExtendedMenu = ({ activeMenu }) => {
               <h3 className={styles.menuSocialsTitle}>
                 {defLangState === "rus" ? "Мы в соцсетях" : ""}
                 {defLangState === "ukr" ? "Ми в соцмережах" : ""}
-                {defLangState === "en" ? "We are in social networks" : ""}
+                {defLangState === "en" ? "Social media" : ""}
               </h3>
               <ul className={styles.menuSocialsList}>
                 <li className={styles.menuSocialsLink}>
@@ -154,14 +154,14 @@ const ExtendedMenu = ({ activeMenu }) => {
             <p className={styles.someText}>
             {defLangState === "rus" ? "Каждый созданный нами интернет сайт является результатом умелой комбинации маркетинговой стратегии, креативного дизайна и современных технологий разработки!" : ""}
             {defLangState === "ukr" ? "Кожен створений нами інтернет сайт є результатом вмілої комбінації маркетингової стратегіі, креативного дизайну і сучасних технологій розробки!" : ""}
-            {defLangState === "en" ? "Each web site created by us is the result of a skillful combination of marketing strategy, creative design and modern development technologies!" : ""}
+            {defLangState === "en" ? "Each web site we create is the result of a skillful combination of marketing strategy, creative design and modern development technologies!" : ""}
             </p>
             <div className={styles.menuContacts}>
               <a
                 rel="noopener noreferrer"
                 target="_blank"
                 className={styles.menuContactsLink}
-                href="tel:123-456-7890"
+                href="tel:+380678095578"
               >
                 +380 67 809 55 78
               </a>{" "}
@@ -169,17 +169,17 @@ const ExtendedMenu = ({ activeMenu }) => {
                 rel="noopener noreferrer"
                 target="_blank"
                 className={styles.menuContactsLink}
-                href="mailto:yelizarieva.ellie@gmail.com"
+                href="mailto:EllieYelizarieva@el-c.com.ua"
               >
-                email1@gmail.com
+                EllieYelizarieva@el-c.com.ua
               </a>{" "}
               <a
                 rel="noopener noreferrer"
                 target="_blank"
                 className={styles.menuContactsLink}
-                href="mailto:StarDestroyer@ukr.net"
+                href="tel:+380663862689"
               >
-                email2@mail.com
+                +380 66 386 26 89
               </a>{" "}
             </div>
           </div>

@@ -7,8 +7,6 @@ import LearnMore from "../btn/LearnMore";
 import styles from "./mainBlog.module.css";
 
 const MainBlog = () => {
-  // const [arrow, setArrow] = useState(false);
-
   const history = useHistory();
   const [defLangState] = useState(localStorage.getItem("lang"));
   useEffect(() => {}, [defLangState]);
@@ -16,7 +14,11 @@ const MainBlog = () => {
   const toBlog = () => {
     history.push("/blog");
   };
- 
+  const messageBR = (message) => {
+    console.log('message', message.substr(0, 70))
+    const newMessage = message.replace(/\n/, "<br />").substr(0, 146) + "...";
+    return newMessage
+  };
 
   return (
     <section className={styles.bg}>
@@ -34,9 +36,9 @@ const MainBlog = () => {
                   className={styles.postImg}
                   height="auto"
                   alt=""
-                  src={post.img}
+                  src={require(`../../assets/blog/${post.img}.jpeg`)}
                 />
-                <p className={styles.postMessage}>{post.message}</p>
+                <p className={styles.postMessage}>{messageBR(post.message)}</p>
               </li>
             ))}
           </ul>
@@ -51,9 +53,9 @@ const MainBlog = () => {
                   className={styles.postImg}
                   height="auto"
                   alt=""
-                  src={post.img}
+                  src={require(`../../assets/blog/${post.img}.jpeg`)}
                 />
-                <p className={styles.postMessage}>{post.message}</p>
+                <p className={styles.postMessage}>{messageBR(post.message)}</p>
               </li>
             ))}
           </ul>
@@ -70,7 +72,7 @@ const MainBlog = () => {
                   alt=""
                   src={post.img}
                 />
-                <p className={styles.postMessage}>{post.message}</p>
+                <p className={styles.postMessage}>{messageBR(post.message)}</p>
               </li>
             ))}
           </ul>

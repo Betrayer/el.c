@@ -21,7 +21,7 @@ const Header = () => {
 
   const refreshTroughLogo = () => {
     if (history.location.pathname === "/") {
-      refresh()
+      refresh();
     } else {
       history.push("/");
     }
@@ -157,8 +157,8 @@ const Header = () => {
             </button>
           </div>
         </div>
-      </header>
       <ExtendedMenu activeMenu={active} />
+      </header>
     </>
   );
 };

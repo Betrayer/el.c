@@ -121,7 +121,7 @@ const Form = (props) => {
           </div>
           <div
             id="close"
-            className={css.formContainer}
+            className={formSubmitted ? css.formContainer : css.formContainerClosed}
             onClick={(e) => closeForm(e)}
           >
             <Slide right when={formSubmitted}>
@@ -139,12 +139,12 @@ const Form = (props) => {
                 <h3 className={css.formTitleForm}>
                   {defLangState === "rus" ? "Пишите нам" : ""}
                   {defLangState === "ukr" ? "Пишіть нам" : ""}
-                  {defLangState === "en" ? "Write to us" : ""}
+                  {defLangState === "en" ? "Contact us" : ""}
                 </h3>
                 <p className={css.formText}>
                   {defLangState === "rus" ? "Как к вам обращаться?" : ""}
                   {defLangState === "ukr" ? "Як до вас звертатись?" : ""}
-                  {defLangState === "en" ? "How can I call you?" : ""}
+                  {defLangState === "en" ? "How may I address you?" : ""}
                 </p>
                 <div className={css.formDiv}>
                   {defLangState === "rus" ? (
@@ -264,7 +264,7 @@ const Form = (props) => {
                     ? "вул. Маршала Тимошенка 29Б, літера А"
                     : ""}
                   {defLangState === "en"
-                    ? "st. Marshal Timoshenko 29B, letter A"
+                    ? "Marshal Timoshenko St. 29B, letter A"
                     : ""}
                 </p>
                 <p className={css.formContactText}>

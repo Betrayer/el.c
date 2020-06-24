@@ -10,7 +10,6 @@ const TEXTSENG = ["Services", "Service", "Support"];
 
 const Services = () => {
   const [index, setIndex] = useState(0);
-  // const [arrow, setArrow] = useState(false);
   const [defLangState] = useState(localStorage.getItem("lang"));
 
   const history = useHistory();
