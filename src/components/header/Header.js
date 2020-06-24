@@ -74,21 +74,39 @@ const Header = () => {
           <div className={css.menuWrapper}>
             <ul className={css.menuList}>
               <li className={css.menuListItem}>
-                <NavLink to="/services" className={css.menuItem}>
+                <NavLink
+                  to="/services"
+                  className={css.menuItem}
+                  activeStyle={{
+                    color: "red",
+                  }}
+                >
                   {defLangState === "rus" ? "Услуги" : ""}
                   {defLangState === "ukr" ? "Послуги" : ""}
                   {defLangState === "en" ? "Services" : ""}
                 </NavLink>
               </li>
               <li className={css.menuListItem}>
-                <NavLink to="/about" className={css.menuItem}>
+                <NavLink
+                  to="/about"
+                  className={css.menuItem}
+                  activeStyle={{
+                    color: "red",
+                  }}
+                >
                   {defLangState === "rus" ? "О нас" : ""}
                   {defLangState === "ukr" ? "Про нас" : ""}
                   {defLangState === "en" ? "About us" : ""}
                 </NavLink>
               </li>
               <li className={css.menuListItem}>
-                <NavLink to="/blog" className={css.menuItem}>
+                <NavLink
+                  to="/blog"
+                  className={css.menuItem}
+                  activeStyle={{
+                    color: "red",
+                  }}
+                >
                   {defLangState === "rus" ? "Блог" : ""}
                   {defLangState === "ukr" ? "Блог" : ""}
                   {defLangState === "en" ? "Blog" : ""}
@@ -157,7 +175,7 @@ const Header = () => {
             </button>
           </div>
         </div>
-      <ExtendedMenu activeMenu={active} />
+        <ExtendedMenu activeMenu={active} />
       </header>
     </>
   );
