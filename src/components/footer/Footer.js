@@ -11,7 +11,11 @@ const Footer = () => {
       {/* <span className={css.socialsHeader}>
         {defLangState === "rus" ? "Мы в соцсетях" : ""}
         {defLangState === "ukr" ? "Ми в соцмережах" : ""}
+<<<<<<< HEAD
+        {defLangState === "en" ? "We are in social networks" : ""}
+=======
         {defLangState === "en" ? "Socail media" : ""}
+>>>>>>> 177052437db087e62cf8699feba36e3a6cf69609
       </span> */}
       {/* 
       <ul className={css.socialsList}>

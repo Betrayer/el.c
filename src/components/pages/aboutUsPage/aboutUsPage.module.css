@@ -58,12 +58,20 @@
   margin: 0 auto;
   text-align: center;
 }
-.aboutListTarget {
+.aboutListTarget, .aboutListTargetFirst {
   padding-top: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transform: translateX(0%);
+  transition: all 0.5s ease;
+}
+.aboutListTargetFirst:nth-child(2n-1){
+  transform: translateX(-300%);
+}
+.aboutListTargetFirst:nth-child(2n){
+  transform: translateX(300%);
 }
 .aboutListIcon {
   width: 45px;
@@ -73,14 +81,7 @@
   width: 42px;
   height: 52px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 879c6a3eee5ffd43298753c279527cf5ce526820
-=======
-
->>>>>>> c6e854bb012e57cb50b3a02abfd5cd17643f9371
 .aboutListTitle {
   font-weight: 800;
   font-size: 18px;

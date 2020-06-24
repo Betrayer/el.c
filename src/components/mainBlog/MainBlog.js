@@ -65,7 +65,7 @@ const MainBlog = () => {
                   className={styles.postImg}
                   height="auto"
                   alt=""
-                  src={require(`../../assets/blog/${post.img}.jpeg`)}
+                  src={post.img}
                 />
                 {post.message.slice(0,3).map(mes => <p className={styles.postMessage}>{mes}</p>)}
               </li>
