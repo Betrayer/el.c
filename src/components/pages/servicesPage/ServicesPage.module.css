@@ -143,6 +143,14 @@
 }
 .questions_item {
   width: 200px;
+  height: 50px;
+  transition: all 0.5s ease-in-out;
+}
+
+.animated_questions_item {
+  width: 200px;
+  height: 150px;
+  transition: all 0.5s ease-in-out;
 }
 
 .questions_list {
@@ -234,6 +242,15 @@
 
   .questions_item_title {
     font-size: 15px;
+  }
+
+  .questions_item {
+    width: 300px;
+    height: 70px;
+  }
+
+  .animated_questions_item {
+    width: 300px;
   }
 }
 
@@ -337,12 +354,15 @@
     font-size: 20px;
   }
 
-  .questions_item_text{
+  .questions_item_text {
     font-weight: 300;
     font-size: 18px;
     line-height: 20px;
   }
-  .questions_item{
+  .questions_item {
+    width: 50%;
+  }
+  .animated_questions_item {
     width: 50%;
   }
 }
