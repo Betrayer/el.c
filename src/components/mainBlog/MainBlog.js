@@ -33,7 +33,7 @@ const MainBlog = () => {
                   alt=""
                   src={require(`../../assets/blog/${post.img}.jpeg`)}
                 />
-                {post.message.slice(0,3).map(mes => <p className={styles.postMessage}>{mes}</p>)}
+                {post.message.slice(0,3).map((mes, ind) => <p key={ind} className={styles.postMessage}>{mes}</p>)}
               </li>
             ))}
           </ul>
@@ -50,7 +50,7 @@ const MainBlog = () => {
                   alt=""
                   src={require(`../../assets/blog/${post.img}.jpeg`)}
                 />
-                {post.message.slice(0,3).map(mes => <p className={styles.postMessage}>{mes}</p>)}
+                {post.message.slice(0,3).map((mes, ind) => <p key={ind} className={styles.postMessage}>{mes}</p>)}
               </li>
             ))}
           </ul>
@@ -67,7 +67,7 @@ const MainBlog = () => {
                   alt=""
                   src={post.img}
                 />
-                {post.message.slice(0,3).map(mes => <p className={styles.postMessage}>{mes}</p>)}
+                {post.message.slice(0,3).map((mes, ind) => <p key={ind} className={styles.postMessage}>{mes}</p>)}
               </li>
             ))}
           </ul>

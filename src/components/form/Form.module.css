@@ -233,7 +233,6 @@
   padding-top: 50px;
 }
 .formContainerClosed {
-  /* height: 246px; */
   display: none;
 }
 .formX {
@@ -287,7 +286,7 @@
     position: static;
     height: 410px;
   }
-  .formContainer {
+  .formContainer,  .formContainerClosed{
     transform: translateX(0);
     width: 50%;
     position: absolute;
@@ -295,6 +294,7 @@
     right: 0;
     top: 0;
     padding-top: 0px;
+    display: block;
   }
   .formTitle {
     font-size: 35px;
