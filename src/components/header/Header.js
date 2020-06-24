@@ -20,7 +20,11 @@ const Header = () => {
   };
 
   const refreshTroughLogo = () => {
-    history.go();
+    if (history.location.pathname === "/") {
+      refresh()
+    } else {
+      history.push("/");
+    }
   };
 
   const defLang = () => {

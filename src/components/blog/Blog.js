@@ -98,13 +98,13 @@ const Blog = () => {
         <ul className={styles.postGrid}>
           {postsToShow.map((post) => (
             <li key={post.id} className={styles.post}>
+            
               {post.img ? (
                 <img
                   className={styles.postImg}
                   height="auto"
                   alt=""
-                  // src={require(post.img)}
-                  src={require("../../assets/blog/1.jpeg")}
+                  src={require(`../../assets/blog/${post.img}.jpeg`)}
                 />
               ) : (
                 <></>

@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import css from "./AboutUs.module.css";
+import LearnMore from "../btn/LearnMore";
 
 const AboutUs = () => {
   const [arrow, setArrow] = useState(false);
   const [defLangState] = useState(localStorage.getItem("lang"));
 
   useEffect(() => {}, [defLangState]);
+  const history = useHistory();
+
+const toAbout = () => {
+  history.push("/about");
+};
 
   return (
     <section className={css.aboutus_container}>

@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
+import Bounce from "react-reveal/Bounce";
 import css from "./router.module.css";
 
 const lazyMain = lazy(
@@ -9,7 +10,7 @@ const lazyBlog = lazy(
   () => import("../blog/Blog.js") /* webpackChunkName = "Blog" */
 );
 const lazyServices = lazy(
-  () => import("../services/Services.js") /* webpackChunkName = "Services" */
+  () => import("../pages/servicesPage/ServicesPage.js") /* webpackChunkName = "Services" */
 );
 const lazy404 = lazy(
   () =>
@@ -22,12 +23,15 @@ const lazyAboutUs = lazy(
     ) /* webpackChunkName = "About" */
 );
 
+
 export const useRouter = () => {
   return (
     <Suspense
       fallback={
         <div className={css.loaderContainer}>
-          <p className={css.loaderText}>Loading...</p>
+          <Bounce top>
+            <p className={css.loaderText}>Loading...</p>
+          </Bounce>
         </div>
       }
     >

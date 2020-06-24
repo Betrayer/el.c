@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import TextTransition, { presets } from "react-text-transition";
 import { useHistory } from "react-router-dom";
 import css from "./Services.module.css";
+import LearnMore from "../btn/LearnMore";
 
 const TEXTS = ["Услуги", "Сервис", "Поддержка"];
 
@@ -78,7 +79,7 @@ const Services = () => {
                 {defLangState === "en" ? "Mobile applications" : ""}
               </h3>
               <p className={css.services_item_text}>
-                Хостинг, техническое сопровождение, контроль работоспособности
+                Разрабатываем мобильные приложения для iOS и Android
               </p>
             </li>
             <li className={css.service_item3}>
@@ -88,39 +89,31 @@ const Services = () => {
                 Продвижение
               </h3>
               <p className={css.services_item_text}>
-                Хостинг, техническое сопровождение, контроль работоспособности
+                Ведем социальные сети и создаем системы привлечения клиентов,
+                продвигаем сайты в поисковых системах.
               </p>
             </li>
             <li className={css.service_item4}>
               <h3 className={css.services_item_title}>Проработка макета</h3>
               <p className={css.services_item_text}>
-                Хостинг, техническое сопровождение, контроль работоспособности
+                Дизайн сайтов любой сложности - низкие и высокие бюджеты, дизайн
+                магазинов, промо-сайтов, сайтов компаний.
               </p>
             </li>
             <li className={css.service_item5}>
               <h3 className={css.services_item_title}>Разработка сайта</h3>
               <p className={css.services_item_text}>
-                Хостинг, техническое сопровождение, контроль работоспособности
+                Интернет-магазин, сайт компании, сайт-визитка, проекты "под
+                ключ".
               </p>
             </li>
           </ul>
         </div>
-        <button
-          onMouseOver={() => setArrow(true)}
-          onMouseLeave={() => setArrow(false)}
-          onClick={toServices}
-          className={css.learnMore}
-        >
-          <span className={css.circle} aria-hidden="true">
-            {arrow ? (
-              <span className={css.arrow}></span>
-            ) : (
-              <span className={css.icon}></span>
-            )}
-          </span>
-          <span className={css.buttonText}>узнать подробнее</span>
-        </button>
+        
       </div>
+      <div className={css.btnWrapper}>
+          <LearnMore text={'узнать подробнее'} funcToDo={toServices} />
+        </div>
     </section>
   );
 };

@@ -1,0 +1,40 @@
+.bg {
+    background: #10131f;
+    color: #fff;
+  }
+  
+.imgWrapper {
+    position: relative;
+  }
+  .mainImg {
+    background-image: url("../../../assets/photos/aboutPage.png");
+    width: 100%;
+    height: 256px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  .mainImg::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+  }
+  .mainImgTitle {
+    font-weight: 800;
+    margin: 16px 0;
+    font-size: 28px;
+  }
+  .mainImgTextWrapper {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+  }
+  .mainImgText {
+    font-weight: 400;
+    font-size: 14px;
+  }

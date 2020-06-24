@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import contentUkr from "../../postsUkr.json";
 import contentRus from "../../postsRus.json";
 import contentEng from "../../postsEng.json";
+import LearnMore from "../btn/LearnMore";
 import styles from "./mainBlog.module.css";
 
 const MainBlog = () => {
@@ -76,25 +77,21 @@ const MainBlog = () => {
           <></>
         )}
         <div className={styles.btnWrapper}>
-          <button
-            onMouseOver={() => setArrow(true)}
-            onMouseLeave={() => setArrow(false)}
-            className={styles.learnMore}
-            onClick={toBlog}
-          >
-            <span className={styles.circle} aria-hidden="true">
-              {arrow ? (
-                <span className={styles.arrow}></span>
-              ) : (
-                <span className={styles.icon}></span>
-              )}
-            </span>
-            <span className={styles.buttonText}>
-              {defLangState === "rus" ? "Узнать подробнее" : ""}
-              {defLangState === "ukr" ? "Дізнатись детальніше" : ""}
-              {defLangState === "en" ? "Find out more" : ""}
-            </span>
-          </button>
+          {defLangState === "rus" ? (
+            <LearnMore text={"Узнать подробнее"} funcToDo={toBlog} />
+          ) : (
+            <></>
+          )}
+          {defLangState === "ukr" ? (
+            <LearnMore text={"Дізнатись більше"} funcToDo={toBlog} />
+          ) : (
+            <></>
+          )}
+          {defLangState === "en" ? (
+            <LearnMore text={"Find out more"} funcToDo={toBlog} />
+          ) : (
+            <></>
+          )}
         </div>
       </div>
     </section>

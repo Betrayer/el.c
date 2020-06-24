@@ -1,0 +1,134 @@
+.servicespage_container {
+  width: 100%;
+  min-height: 800px;
+  background-color: #424b5a;
+}
+
+.serviceslist {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.services_title {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.serviceslist_item1,
+.serviceslist_item2,
+.serviceslist_item3,
+.serviceslist_item4,
+.serviceslist_item5,
+.serviceslist_item6 {
+  position: relative;
+  width: 150px;
+  text-align: left;
+  margin-right: 12%;
+}
+
+.serviceslist_item_title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  padding-bottom: 5px;
+}
+
+.serviceslist_item_text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  padding-bottom: 15px;
+}
+
+.serviceslist_item1::before {
+  content: "";
+  position: absolute;
+  width: 43px;
+  height: 34px;
+  left: -39%;
+  top: 3%;
+  background-image: url("../../../assets/aboutusicons/1.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.serviceslist_item2::before {
+    content: "";
+    position: absolute;
+    width: 43px;
+    height: 34px;
+    left: -39%;
+    top: 3%;
+    background-image: url("../../../assets/aboutusicons/3.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .serviceslist_item3::before {
+    content: "";
+    position: absolute;
+    width: 43px;
+    height: 34px;
+    left: -39%;
+    top: 3%;
+    background-image: url("../../../assets/aboutusicons/2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .serviceslist_item4::before {
+    content: "";
+    position: absolute;
+    width: 43px;
+    height: 34px;
+    left: -39%;
+    top: 3%;
+    background-image: url("../../../assets/aboutusicons/4.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .serviceslist_item5::before {
+    content: "";
+    position: absolute;
+    width: 43px;
+    height: 34px;
+    left: -39%;
+    top: 3%;
+    background-image: url("../../../assets/aboutusicons/5.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .serviceslist_item6::before {
+    content: "";
+    position: absolute;
+    width: 43px;
+    height: 34px;
+    left: -39%;
+    top: 3%;
+    background-image: url("../../../assets/aboutusicons/6.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

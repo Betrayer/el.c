@@ -8,11 +8,12 @@ const Footer = () => {
 
   return (
     <footer className={css.footer}>
-      <span className={css.socialsHeader}>
+      {/* <span className={css.socialsHeader}>
         {defLangState === "rus" ? "Мы в соцсетях" : ""}
         {defLangState === "ukr" ? "Ми в соцмережах" : ""}
         {defLangState === "en" ? "We are in social networks" : ""}
-      </span>
+      </span> */}
+      {/* 
       <ul className={css.socialsList}>
         <li className={css.menuSocialsLink}>
           <a
@@ -44,7 +45,7 @@ const Footer = () => {
             <span className={css.linkContent}>instagram link</span>
           </a>
         </li>
-      </ul>
+      </ul> */}
       <span className={css.socialsCopyright}>
         © 2020 ELC | All rights reserved
       </span>
