@@ -109,7 +109,7 @@ const Blog = () => {
               ) : (
                 <></>
               )}
-              <p className={styles.postMessage}>{post.message}</p>
+              {post.message.map(mes => <p className={styles.postMessage}>{mes}</p>)}
             </li>
           ))}
         </ul>

@@ -1,16 +1,16 @@
 [
     {
-        "message": "ADAPTIVITY - without a doubt, one of the most important qualities of the site❗ \n nStatistics shows that most users view websites from mobile devices. Therefore, if your page is not responsive, you can lose a considerable share of traffic and customers, respectively. \n When creating an adaptive website, it is also important to take into account the features of a different browsers and operating systems. \n \n Our team is developing responsive websites for all types of devices. The main goal for us is a quality product that provides you with high conversions)",
+        "message": ["ADAPTIVITY - without a doubt, one of the most important qualities of the site",""," Statistics shows that most users view websites from mobile devices. Therefore, if your page is not responsive, you can lose a considerable share of traffic and customers, respectively. ",""," When creating an adaptive website, it is also important to take into account the features of a different browsers and operating systems. ",""," Our team is developing responsive websites for all types of devices. The main goal for us is a quality product that provides you with high conversions)"],
         "img": "3",
         "id": 3
     },
     {
-        "message": "What is a Landing page and who should use such site? \n \n This is a single page website that is dedicated to one product or service. \n \n This type of site is ideal for advertising purposes, when it is necessary to get new customers in a short time. \n \nLanding information should be accessible and concise, so that the visitor does not dissipate and he has a desire to take the necessary action: call, fill out an application, purchase goods.",
+        "message": ["What is a Landing page and who should use such site? ",""," This is a single page website that is dedicated to one product or service. ",""," This type of site is ideal for advertising purposes, when it is necessary to get new customers in a short time.","","Landing information should be accessible and concise, so that the visitor does not dissipate and he has a desire to take the necessary action: call, fill out an application, purchase goods."],
         "img": "2",
         "id": 2
     },
     {
-        "message": "Need a quality website for high conversions? \n \n We create modern websites that look and function perfectly on all types of devices. \n✅Corporate site \n✅Business card site \n✅Single page site \n✅Online store \n✅Catalog",
+        "message": ["Need a quality website for high conversions? ",""," We create modern websites that look and function perfectly on all types of devices.","✅Corporate site ","✅Business card site","✅Single page site","✅Online store ","✅Catalog"],
         "img": "1",
         "id": 1
     }

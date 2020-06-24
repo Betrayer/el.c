@@ -36,6 +36,7 @@
 .post {
   width: 100%;
   padding: 10px 0;
+  padding-bottom: 50px;
 }
 .postImg {
   width: 100%;
@@ -46,8 +47,11 @@
   margin: 0 auto;
   margin-top: 8px;
   font-weight: 300;
-  margin-bottom: 50px;
+  margin-bottom: 2px;
   max-width: 78%;
+}
+.postMessage:last-child{
+  margin-bottom: 30px;
 }
 .btnWrapper{
   position: absolute;
