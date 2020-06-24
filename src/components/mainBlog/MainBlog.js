@@ -14,9 +14,6 @@ const MainBlog = () => {
   const toBlog = () => {
     history.push("/blog");
   };
-  const messageBR = (message) => {
-    console.log('message', message.slice(0,2))
-  };
 
   return (
     <section className={styles.bg}>

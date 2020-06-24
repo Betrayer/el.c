@@ -9,9 +9,9 @@ const AboutUs = () => {
   useEffect(() => {}, [defLangState]);
   const history = useHistory();
 
-const toAbout = () => {
-  history.push("/about");
-};
+  const toAbout = () => {
+    history.push("/about");
+  };
 
   return (
     <section className={css.aboutus_container}>
