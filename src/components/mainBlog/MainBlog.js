@@ -7,7 +7,7 @@ import LearnMore from "../btn/LearnMore";
 import styles from "./mainBlog.module.css";
 
 const MainBlog = () => {
-  const [arrow, setArrow] = useState(false);
+  // const [arrow, setArrow] = useState(false);
 
   const history = useHistory();
   const [defLangState] = useState(localStorage.getItem("lang"));
@@ -16,6 +16,7 @@ const MainBlog = () => {
   const toBlog = () => {
     history.push("/blog");
   };
+ 
 
   return (
     <section className={styles.bg}>

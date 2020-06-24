@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import css from "./AboutUs.module.css";
-import LearnMore from "../btn/LearnMore";
+// import LearnMore from "../btn/LearnMore";
 
 const AboutUs = () => {
   const [arrow, setArrow] = useState(false);
