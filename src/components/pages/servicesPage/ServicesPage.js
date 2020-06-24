@@ -109,8 +109,8 @@ const ServicesPage = () => {
                 }
               >
                 <button
-                  className={css.questions_button}
-                  onClick={(e) => handleClick(e)}
+                  className={slide1 ? css.questions_button_minus : css.questions_button }
+                  onClick={handleClick}
                   name="button1"
                 ></button>
                 <h3 className={css.questions_item_title}>
@@ -136,7 +136,7 @@ const ServicesPage = () => {
                 }
               >
                 <button
-                  className={css.questions_button}
+                  className={slide2 ? css.questions_button_minus : css.questions_button}
                   onClick={handleClick}
                   name="button2"
                 ></button>
@@ -160,7 +160,7 @@ const ServicesPage = () => {
                 }
               >
                 <button
-                  className={css.questions_button}
+                  className={slide3 ? css.questions_button_minus : css.questions_button}
                   onClick={handleClick}
                   name="button3"
                 ></button>
@@ -182,7 +182,7 @@ const ServicesPage = () => {
                 }
               >
                 <button
-                  className={css.questions_button}
+                  className={slide4 ? css.questions_button_minus : css.questions_button}
                   onClick={handleClick}
                   name="button4"
                 ></button>
