@@ -6,7 +6,8 @@ import Footer from "../../footer/Footer";
 
 const AboutUsPage = () => {
   const [defLangState] = useState(localStorage.getItem("lang"));
-  useEffect(() => {}, [defLangState]);
+  const [active, setActive] = useState(false);
+  useEffect(() => {setActive(true)}, [defLangState]);
 
   const aboutRus = [
     {
@@ -136,7 +137,7 @@ const AboutUsPage = () => {
         {defLangState === "ukr" ? (
           <ul className={styles.aboutList}>
             {aboutUkr.map((about, ind) => (
-              <li key={ind} className={styles.aboutListTarget}>
+              <li style={{transitionDelay: `${ind * 0.2}s`}} key={ind} className={active ? styles.aboutListTarget : styles.aboutListTargetFirst}>
                 <img
                   className={styles.aboutListIcon}
                   alt=""
