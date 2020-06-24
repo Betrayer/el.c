@@ -26,14 +26,15 @@
   color: #ffffff;
   font-size: 24px;
 }
-.formTitleForm, .formTitleSpan {
+.formTitleForm,
+.formTitleSpan {
   font-weight: 600;
   text-align: left;
   padding-left: 10px;
   color: #000000;
   font-size: 24px;
 }
-.formTitleSpan{
+.formTitleSpan {
   display: block;
   padding-left: 0;
 }
@@ -214,14 +215,13 @@
   padding: 20px 0;
   width: 320px;
   align-items: left;
-  /* margin: 0 auto; */
+  margin: 0 auto;
   background-color: #ffffff;
-  position: fixed;
-   top: 50px;
-  left: 50%;
-  transform: translateX(-50%); 
+  transform: translateX(50%);
+  height: 488px;
 }
-.formContainer {
+.formContainer,
+.formContainerClosed {
   margin: 0 auto;
   position: fixed;
   width: 100%;
@@ -229,6 +229,12 @@
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
   height: 100vh;
+  display: flex;
+  padding-top: 50px;
+}
+.formContainerClosed {
+  /* height: 246px; */
+  display: none;
 }
 .formX {
   background-color: #000;
@@ -244,11 +250,11 @@
   position: relative;
   cursor: pointer;
 }
-.formX::after{
+.formX::after {
   content: "";
   width: 44px;
   height: 44px;
-  background-image: url('../../assets/icons/x/close.svg');
+  background-image: url("../../assets/icons/x/close.svg");
   position: absolute;
   top: 50%;
   left: 50%;
@@ -260,10 +266,10 @@
     position: relative;
     height: 410px;
   }
-  .containerMain::after{
+  .containerMain::after {
     content: "";
     position: absolute;
-    background-image: url('../../assets/photos/first.png');
+    background-image: url("../../assets/photos/first.png");
     width: 50%;
     height: 410px;
     right: 0;
@@ -276,8 +282,10 @@
     width: 50%;
     margin: 0;
   }
-  .form , .containerForm {
+  .form,
+  .containerForm {
     position: static;
+    height: 410px;
   }
   .formContainer {
     transform: translateX(0);
@@ -286,12 +294,13 @@
     background-color: transparent;
     right: 0;
     top: 0;
+    padding-top: 0px;
   }
-  .formTitle{
+  .formTitle {
     font-size: 35px;
   }
   .form {
-    padding:  0;
+    padding: 0;
     padding-left: 10%;
     background-color: #ffffff;
     transform: translateX(0);
@@ -302,7 +311,8 @@
     margin-bottom: -15px;
     margin-top: 6px;
   }
-  .formTitleForm, .formTitleSpan{
+  .formTitleForm,
+  .formTitleSpan {
     font-weight: 500;
   }
 }
@@ -310,7 +320,9 @@
   .formImgDiv {
     display: flex;
   }
-  .containerMain , .containerMain::after, .formImgDiv{
+  .containerMain,
+  .containerMain::after,
+  .formImgDiv {
     height: 750px;
   }
   .containerForm {
@@ -322,7 +334,7 @@
     font-size: 50px;
     width: 90%;
   }
-  .learnMore{
+  .learnMore {
     margin-left: 7%;
     transform: scale(1.2);
     margin-top: 60px;
@@ -330,6 +342,7 @@
   .form {
     padding-left: 1%;
     padding-bottom: 63px;
+    height: 750px;
   }
   .formX {
     margin-top: 22px;
@@ -338,28 +351,30 @@
     height: 60px;
     margin-left: 80%;
   }
-  .formX::after{
+  .formX::after {
     width: 60px;
     height: 60px;
   }
-  .learnMoreWhite{
+  .learnMoreWhite {
     margin: 49px 0;
     transform: scale(1.2) translateX(10%);
   }
-  .formDiv{
+  .formDiv {
     margin-top: 4px;
   }
-  .formTitleForm, .formTitleSpan{
+  .formTitleForm,
+  .formTitleSpan {
     font-size: 40px;
     margin-bottom: 10px;
   }
-  .formText, .formInput{
+  .formText,
+  .formInput {
     font-size: 16px;
   }
-  .formText{
+  .formText {
     margin-top: 10px;
   }
-  .formContactText{
+  .formContactText {
     font-size: 25px;
   }
 }
@@ -370,10 +385,10 @@
   .formX {
     margin-left: 76%;
   }
-  .formTitleForm{
+  .formTitleForm {
     font-size: 45px;
   }
-  .learnMoreWhite{
+  .learnMoreWhite {
     margin: 46px 0;
   }
 }
