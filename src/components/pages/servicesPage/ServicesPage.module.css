@@ -179,23 +179,33 @@
   color: #ffffff;
 }
 
-.questions_button{
-  width: 10px;
-  height: 10px;
+.questions_button, .questions_button_minus{
+  width: 14px;
+  height: 1px;
   background-color: #fff;
   position: absolute;
   left: -14%;
   top: 16%;
+  transition: all 0.4s ease;
+}
+.questions_button:after, .questions_button_minus:after{
+  content:"";
+  width: 2px;
+  height: 14px;
+  background-color: #fff;
+  position: absolute;
+  left: 40%;
+  top: -242%;
+  transform: rotate(90deg);
+}
+.questions_button_minus:after{
+  height: 13px;
+  transform: rotate(180deg);
+  left: 42%;
 }
 .questions_button_minus{
-  width: 10px;
-  height: 10px;
-  background-color: red;
-  position: absolute;
-  left: -14%;
-  top: 16%;
+  transform: rotate(180deg);
 }
-
 @media (min-width: 768px) {
   .serviceslist {
     display: flex;
