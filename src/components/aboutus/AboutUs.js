@@ -4,7 +4,6 @@ import css from "./AboutUs.module.css";
 import LearnMore from "../btn/LearnMore";
 
 const AboutUs = () => {
-  const [arrow, setArrow] = useState(false);
   const [defLangState] = useState(localStorage.getItem("lang"));
 
   useEffect(() => {}, [defLangState]);
@@ -35,28 +34,26 @@ const AboutUs = () => {
             ? "Команда розробників EL-C складається з виключно кваліфікованих кадрів, тому кожен створений нами сайт є результатом вмілої комбінації креативного дизайну і сучасних технологій розробки!"
             : ""}
           {defLangState === "en"
-            ? "The EL-C development team consists of exclusively qualified personnel, so each site we create is the result of a skillful combination of creative design and modern development technologies!"
+            ? "The EL-C development team consists of exclusively qualified personnel, so each website we create is the result of a skillful combination of creative design and modern development technologies!"
             : ""}
         </p>
-        <button
-          onMouseOver={() => setArrow(true)}
-          onMouseLeave={() => setArrow(false)}
-          onClick={toAbout}
-          className={css.learnMore}
-        >
-          <span className={css.circle} aria-hidden="true">
-            {arrow ? (
-              <span className={css.arrow}></span>
-            ) : (
-              <span className={css.icon}></span>
-            )}
-          </span>
-          <span className={css.buttonText}>
-            {defLangState === "rus" ? "Узнать подробнее" : ""}
-            {defLangState === "ukr" ? "Дізнатись детальніше" : ""}
-            {defLangState === "en" ? "Find out more" : ""}
-          </span>
-        </button>
+        <div className={css.btnWrapper}>
+          {defLangState === "rus" ? (
+            <LearnMore text={"Узнать подробнее"} funcToDo={toAbout} />
+          ) : (
+            <></>
+          )}
+          {defLangState === "ukr" ? (
+            <LearnMore text={"Дізнатись більше"} funcToDo={toAbout} />
+          ) : (
+            <></>
+          )}
+          {defLangState === "en" ? (
+            <LearnMore text={"Find out more"} funcToDo={toAbout} />
+          ) : (
+            <></>
+          )}
+        </div>
       </div>
     </section>
   );
