@@ -1,17 +1,17 @@
 .enter {
-  max-height: 200px;
+  transform: translateY(0);
 }
 
 .enterActive {
-  max-height: 500px;
-  transition: max-height 250ms ease-in-out;
+  transform: translateY(20%);
+  transition: transform 250ms ease-in-out;
 }
 
 .exit {
-  max-height: 500px;
+  transform: translateY(20%);
 }
 
 .exitActive {
-  max-height: 200px;
-  transition: max-height 250ms ease-in-out;
+  transform: translateY(0);
+  transition: transform 250ms ease-in-out;
 }
