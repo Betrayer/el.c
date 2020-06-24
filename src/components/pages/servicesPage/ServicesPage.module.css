@@ -250,6 +250,10 @@
     width: 80%;
     margin: 0 auto;
   }
+  .serviceslist_box{
+    width: 800px;
+    margin: 0 auto;
+  }
 
   .services_title {
     font-style: normal;
@@ -258,7 +262,15 @@
     line-height: 75px;
     text-align: left;
   }
-
+  .serviceslist_item1,
+  .serviceslist_item2,
+  .serviceslist_item3,
+  .serviceslist_item4,
+  .serviceslist_item5,
+  .serviceslist_item6 {
+    width: 400px;
+    margin-right: 0;
+  }
   .serviceslist_item1,
   .serviceslist_item3,
   .serviceslist_item5 {
@@ -269,12 +281,14 @@
     font-weight: 800;
     font-size: 25px;
     line-height: 37px;
+    width: 260px;
   }
 
   .services_item_text {
     font-weight: 300;
     font-size: 18px;
     line-height: 20px;
+    width: 260px;
   }
 
   .serviceslist_item1::before {
@@ -293,7 +307,7 @@
 
   .serviceslist_item3::before {
     left: -8%;
-    top: 19%;
+    top: 14%;
     width: 68.5px;
     height: 54px;
   }
@@ -307,7 +321,7 @@
 
   .serviceslist_item5::before {
     left: -8%;
-    top: 19%;
+    top: 15%;
     width: 68.5px;
     height: 54px;
   }
@@ -317,9 +331,6 @@
     top: 16%;
     width: 68.5px;
     height: 54px;
-  }
-  .methodics_item{
-    width: 300px;
   }
 
   .questions_item_title {
