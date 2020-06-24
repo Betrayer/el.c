@@ -68,6 +68,7 @@
 .menuWrapper {
   position: sticky;
   z-index: 4;
+  top: 50px;
 }
 .menuWhiteLayer,
 .menuWhiteLayerActive,
@@ -314,6 +315,7 @@
     position: absolute;
     top: 306px;
     left: 1.6%;
+    z-index: -1;
   }
   .someText {
     max-width: 410px;
@@ -325,6 +327,9 @@
     font-size: 24px;
     display: flex;
     flex-direction: column;
+  }
+  .menuContactsLink{
+    line-height: 50px;
   }
 }
 @media (min-width: 1200px) {
@@ -341,7 +346,7 @@
     left: 34%;
   }
   .menuBgLayerActive::after {
-    top: 366px;
+    top: 310px;
   }
   .rightSide {
     width: 33%;
@@ -383,7 +388,7 @@
   .leftSide::after {
     width: 420px;
     height: 420px;
-    top: 318px;
+    top: 264px;
   }
   .someText {
     max-width: 508px;

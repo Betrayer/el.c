@@ -3,7 +3,8 @@ import { NavLink } from "react-router-dom";
 import styles from "./extendedMenu.module.css";
 
 const ExtendedMenu = ({ activeMenu }) => {
-  const menuLinks = [{name: "Портфолио", redirect: '/portfolio'}, {name: "Услуги", redirect: '/services'}, {name: "О нас", redirect: '/about'}, {name: "Блог", redirect: '/blog'}];
+  const menuLinks = [ {name: "Услуги", redirect: '/services'}, {name: "О нас", redirect: '/about'}, {name: "Блог", redirect: '/blog'}];
+  // {name: "Портфолио", redirect: '/portfolio'},
   const [opacity, setOpacity] = useState(false);
 
   useEffect(() => {
@@ -88,25 +89,25 @@ const ExtendedMenu = ({ activeMenu }) => {
                 rel="noopener noreferrer"
                 target="_blank"
                 className={styles.menuContactsLink}
-                href="tel:123-456-7890"
+                href="tel:+380678095578"
               >
-                +123-456-7890
+                067-809-55-78
               </a>{" "}
               <a
                 rel="noopener noreferrer"
                 target="_blank"
                 className={styles.menuContactsLink}
-                href="mailto:yelizarieva.ellie@gmail.com"
+                href="mailto:EllieYelizarieva@el-c.com.ua"
               >
-                email1@gmail.com
+                EllieYelizarieva@el-c.com.ua
               </a>{" "}
               <a
                 rel="noopener noreferrer"
                 target="_blank"
                 className={styles.menuContactsLink}
-                href="mailto:StarDestroyer@ukr.net"
+                href="tel:+380663862689"
               >
-                email2@mail.com
+                066-386-26-89
               </a>{" "}
             </div>
           </div>
